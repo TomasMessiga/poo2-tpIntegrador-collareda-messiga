@@ -4,7 +4,7 @@ function Mapa(){
     this.generar=function(num){
         for(var i=0;i<num;i++){
     
-                this.map[i].push([0])
+                this.mapa[i].push([0])
         }
     return this.mapa
 }
