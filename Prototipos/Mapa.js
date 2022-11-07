@@ -8,6 +8,7 @@ function Mapa(){
             }
         }
     return this.mapa
+    
 }
 }
 
