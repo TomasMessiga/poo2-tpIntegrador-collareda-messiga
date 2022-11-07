@@ -1,6 +1,6 @@
 
 function Mapa(){
-    this.mapa=["cola de salida de locas","Facturación","Calidad" , "Distribución"]
+    this.mapa=[["cola de salida de locas"],["Facturación"],["Calidad"] , ["Distribución"]]
     this.generar=function(num){
         for(var i=0;i<num;i++){
     
