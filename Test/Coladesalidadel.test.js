@@ -1,5 +1,4 @@
 test("generar Coladesalida",()=>{
     let coladesalida=new Coladesalida();
-
-    expect(coladesalida.crearcola()).toBe(true)
+    expect(coladesalida.crearcola("local")).toBe("local")
 })
