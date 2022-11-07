@@ -6,7 +6,7 @@ test("generar matriz",()=>{
     expect(mapa.generar()).toStrictEqual(["cola de salida de locas","Facturación","Calidad" , "Distribución"])
 })
 test("generar matriz con cant de locales",()=>{
-    let mapacondestion=new Mapa();
+    let mapacondestino=new Mapa();
 
     expect(mapacondestino.generar(1)).toStrictEqual([["cola de salida de locas",0],["Facturación",0],["Calidad",0] , ["Distribución",0]])
 })
