@@ -1,4 +1,4 @@
-//const Mapa=require('../Prototipos/Mapa.js');
+const Local=require('../Prototipos/Local.js');
 
 test("definir local",()=>{
     let nombre=0;
