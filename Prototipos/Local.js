@@ -1,3 +1,4 @@
+const Paquete=require('../Prototipos/Paquete.js');
 
 
 function Local(nombre){
