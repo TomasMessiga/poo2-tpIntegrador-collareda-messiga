@@ -24,23 +24,23 @@ test("local producir 1 paquete",()=>{
 test("local producir 2 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
-    expect(local.producirPaquetes(2)).toStrictEqual(2);
+    expect(local.producirPaquetes(2)).toStrictEqual(paquete,paquete);
 })
 test("local producir 3 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
-    expect(local.producirPaquetes(2)).toStrictEqual(2);
+    expect(local.producirPaquetes(3)).toStrictEqual(paquete,paquete,paquete);
 })
 test("local producir 4 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
-    expect(local.producirPaquetes(2)).toStrictEqual(2);
+    expect(local.producirPaquetes(4)).toStrictEqual(paquete,paquete,paquete,paqueta);
 })
 
 test("local producir 5 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
-    expect(local.producirPaquetes(5)).toStrictEqual(5);
+    expect(local.producirPaquetes(5)).toStrictEqual(paquete,paquete,paquete,paqueta);
 })
 
 test("local producir 6 paquetes (error)",()=>{
