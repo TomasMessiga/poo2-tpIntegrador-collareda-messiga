@@ -1,0 +1,23 @@
+{
+  "name": "poo2-tpintegrador-collareda-messiga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.test.js",
+  "scripts": {
+    "test": "echo \"Error: Shoul run test with command npm run testpush\" && exit 1",
+    "testpush": "git add . && git commit -m \"TDD iteration\" && git push && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomasMessiga/poo2-tpIntegrador-collareda-messiga.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomasMessiga/poo2-tpIntegrador-collareda-messiga/issues"
+  },
+  "homepage": "https://github.com/TomasMessiga/poo2-tpIntegrador-collareda-messiga#readme",
+  "devDependencies": {
+    "jest": "^29.3.0"
+  }
+}
