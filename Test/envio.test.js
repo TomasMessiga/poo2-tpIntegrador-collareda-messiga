@@ -3,7 +3,7 @@ let coladesalida=new Coladesalida()
 let facturacion=new Facturacion()
 let calidad=new Calidad()
 let distribucion=new Distribucion()
-test("generar matriz",()=>{
+test("generar matriz" ,()=>{
     let mapa=new Mapa();
    
     expect(mapa.generar()).toStrictEqual([[coladesalida],[facturacion],[calidad] , [distribucion]])
