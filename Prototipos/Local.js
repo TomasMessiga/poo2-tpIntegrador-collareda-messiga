@@ -4,10 +4,8 @@ function Local(nombre){
     this.nombre=nombre;
 
     this.producirPaquetes=(cantidad)=>{
-        if (cantidad>5 || cantidad<=0){
-            return undefined;
-        }
-        return cantidad;
+        let cantidadCorrespondiente={undefined:1,1:1,2:2,3:3,4:4,5:5};
+        return cantidadCorrespondiente[cantidad];
     };
 }
 
