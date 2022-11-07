@@ -1,5 +1,5 @@
 test("generar matriz",()=>{
     let mapa=new Mapa();
 
-    expect(mapa.generar()).toStrictEqual(["cola de salida de locas"])
+    expect(mapa.generar()).toStrictEqual(["cola de salida de locas","Facturación","Calidad" , "Distribución"])
 })
