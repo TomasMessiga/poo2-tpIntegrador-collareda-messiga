@@ -3,7 +3,7 @@
 function Local(nombre){
     this.nombre=nombre;
 
-    this.producirPaquete=()=>{
+    this.producirPaquete=(cantidad)=>{
         return 1;
     };
 }
