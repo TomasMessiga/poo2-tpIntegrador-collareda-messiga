@@ -15,7 +15,7 @@ test("definir destino",()=>{
 
 
 test("local producir 1 paquete",()=>{
-    let nombre=1;
+    let nombre=0;
     let local=new Local(nombre);
     let paquete=new Paquete();
     expect(local.producirPaquetes(1,paquete)).toStrictEqual([paquete]);
