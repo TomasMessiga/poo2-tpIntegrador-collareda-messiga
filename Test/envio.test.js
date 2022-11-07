@@ -1,3 +1,5 @@
+Mapa=requiere('../Protoptipos/Mapa.js');
+
 test("generar matriz",()=>{
     let mapa=new Mapa();
 
