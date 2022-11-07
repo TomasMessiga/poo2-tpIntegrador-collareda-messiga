@@ -3,7 +3,7 @@ const Mapa=require('../Prototipos/Mapa.js');
 test("generar matriz",()=>{
     let mapa=new Mapa();
 
-    expect(mapa.generar()).toStrictEqual(["cola de salida de locas","Facturación","Calidad" , "Distribución"])
+    expect(mapa.generar()).toStrictEqual([["cola de salida de locas"],["Facturación"],["Calidad"] , ["Distribución"]])
 })
 test("generar matriz con cant de locales",()=>{
     let mapacondestino=new Mapa();
