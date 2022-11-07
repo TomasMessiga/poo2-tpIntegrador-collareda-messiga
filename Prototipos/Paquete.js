@@ -1,7 +1,7 @@
 
 function Paquete(){
 
-
+   this.aux=undefined;
 
 }
 
