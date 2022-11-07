@@ -1,6 +1,10 @@
 
 function Mapa(){
 
+    this.generar=function(){
+
+    }
+
 }
 
 
