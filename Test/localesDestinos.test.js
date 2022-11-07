@@ -18,38 +18,44 @@ test("local producir 1 paquete",()=>{
     let nombre=1;
     let local=new Local(nombre);
     let paquete=new Paquete();
-    expect(local.producirPaquetes(1)).toStrictEqual([paquete]);
+    expect(local.producirPaquetes(1,paquete)).toStrictEqual([paquete]);
 })
 
 test("local producir 2 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
-    expect(local.producirPaquetes(2)).toStrictEqual(paquete,paquete);
+    let paquete=new Paquete();
+    expect(local.producirPaquetes(2,paquete)).toStrictEqual(paquete,paquete);
 })
 test("local producir 3 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
-    expect(local.producirPaquetes(3)).toStrictEqual(paquete,paquete,paquete);
+    let paquete=new Paquete();
+    expect(local.producirPaquetes(3,paquete)).toStrictEqual(paquete,paquete,paquete);
 })
 test("local producir 4 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
-    expect(local.producirPaquetes(4)).toStrictEqual(paquete,paquete,paquete,paqueta);
+    let paquete=new Paquete();
+    expect(local.producirPaquetes(4,paquete)).toStrictEqual(paquete,paquete,paquete,paqueta);
 })
 
 test("local producir 5 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
-    expect(local.producirPaquetes(5)).toStrictEqual(paquete,paquete,paquete,paqueta);
+    let paquete=new Paquete();
+    expect(local.producirPaquetes(5,paquete)).toStrictEqual(paquete,paquete,paquete,paqueta);
 })
 
 test("local producir 6 paquetes (error)",()=>{
     let nombre=2;
     let local=new Local(nombre);
-    expect(local.producirPaquetes(7)).toStrictEqual(undefined);
+    let paquete=new Paquete();
+    expect(local.producirPaquetes(7,paquete)).toStrictEqual(undefined);
 })
 test("local producir -2 paquetes (error)",()=>{
     let nombre=2;
     let local=new Local(nombre);
-    expect(local.producirPaquetes(-2)).toStrictEqual(undefined);
+    let paquete=new Paquete();
+    expect(local.producirPaquetes(-2,paquete)).toStrictEqual(undefined);
 })
