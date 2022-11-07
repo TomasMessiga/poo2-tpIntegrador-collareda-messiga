@@ -1,5 +1,5 @@
-const { test } = require('picomatch');
 const Local=require('../Prototipos/Local.js');
+const Destino=require('../Prototipos/Destino.js');
 
 test("definir local",()=>{
     let nombre=0;
