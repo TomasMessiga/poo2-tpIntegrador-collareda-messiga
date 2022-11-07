@@ -1,12 +1,9 @@
 const Mapa=require('../Prototipos/Mapa.js');
-let coladesalida=new Coladesalida()
-let facturacion=new Facturacion()
-let calidad=new Calidad()
-let distribucion=new Distribucion()
-test("generar matriz" ,()=>{
+
+test("generar matriz",()=>{
     let mapa=new Mapa();
-   
-    expect(mapa.generar()).toStrictEqual([[coladesalida],[facturacion],[calidad] , [distribucion]])
+
+    expect(mapa.generar()).toStrictEqual([["cola de salida de locas"],["Facturación"],["Calidad"] , ["Distribución"]])
 })
 test("generar matriz con cant de locales",()=>{
     let mapacondestino=new Mapa();
