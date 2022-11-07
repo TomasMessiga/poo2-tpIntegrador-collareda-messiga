@@ -17,6 +17,7 @@ test("local producir 1 paquete",()=>{
     let local=new Local(nombre);
     expect(local.producirPaquete(1)).toStrictEqual(1);
 })
+
 test("local producir 2 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
@@ -30,7 +31,7 @@ test("local producir 5 paquetes",()=>{
 })
 
 test("local producir 6 paquetes (error)",()=>{
-    let nombre=0;
+    let nombre=2;
     let local=new Local(nombre);
     expect(local.producirPaquete(6)).toStrictEqual(undefined);
 })
