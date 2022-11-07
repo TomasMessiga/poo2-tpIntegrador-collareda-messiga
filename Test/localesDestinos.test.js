@@ -54,7 +54,7 @@ test("local producir 6 paquetes (error)",()=>{
     expect(local.producirPaquetes(7,paquete)).toStrictEqual(undefined);
 })
 test("local producir -2 paquetes (error)",()=>{
-    let nombre=2;
+    let nombre=1;
     let local=new Local(nombre);
     let paquete=new Paquete();
     expect(local.producirPaquetes(-2,paquete)).toStrictEqual(undefined);
