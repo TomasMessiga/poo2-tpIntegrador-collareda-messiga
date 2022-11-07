@@ -12,5 +12,5 @@ test("generar matriz con cant de locales",()=>{
 
     expect(mapacondestino.generar(1)).toStrictEqual([["cola de salida de locas",0],["Facturación",0],["Calidad",0] , ["Distribución",0]])
     expect(mapacondestino2.generar(2)).toStrictEqual([["cola de salida de locas",0,0],["Facturación",0,0],["Calidad",0,0] , ["Distribución",0,0]])
-    expect(mapacondestino3.generar(3)).toStrictEqual([["cola de salida de locas",0,0],["Facturación",0,0],["Calidad",0,0] , ["Distribución",0,0]])
+    expect(mapacondestino3.generar(3)).toStrictEqual([["cola de salida de locas",0,0,0],["Facturación",0,0,0],["Calidad",0,0,0] , ["Distribución",0,0,0]])
 })
