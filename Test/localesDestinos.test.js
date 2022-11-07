@@ -1,5 +1,6 @@
 const Local=require('../Prototipos/Local.js');
 const Destino=require('../Prototipos/Destino.js');
+const Paquete=require('../Prototipos/Paquete.js');
 
 test("definir local",()=>{
     let nombre=0;
