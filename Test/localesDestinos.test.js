@@ -18,13 +18,9 @@ test("local producir 1 paquete",()=>{
     let nombre=1;
     let local=new Local(nombre);
     let paquete=new Paquete();
-    expect(local.producirPaquetes()).toStrictEqual([paquete]);
+    expect(local.producirPaquetes(1)).toStrictEqual([paquete]);
 })
-test("local producir 1 paquete (alternativo)",()=>{
-    let nombre=0;
-    let local=new Local(nombre);
-    expect(local.producirPaquetes(1)).toStrictEqual(1);
-})
+
 test("local producir 2 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
