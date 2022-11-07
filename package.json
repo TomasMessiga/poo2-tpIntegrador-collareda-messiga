@@ -1,7 +1,6 @@
 {
   "name": "poo2-tpintegrador-collareda-messiga",
   "version": "1.0.0",
-  "description": "",
   "main": "test.test.js",
   "dependencies": {
     "ansi-escapes": "^4.3.2",
@@ -204,5 +203,6 @@
   "bugs": {
     "url": "https://github.com/TomasMessiga/poo2-tpIntegrador-collareda-messiga/issues"
   },
-  "homepage": "https://github.com/TomasMessiga/poo2-tpIntegrador-collareda-messiga#readme"
+  "homepage": "https://github.com/TomasMessiga/poo2-tpIntegrador-collareda-messiga#readme",
+  "description": ""
 }
