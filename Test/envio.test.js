@@ -1,4 +1,4 @@
-Mapa=require('../Protoptipos/Mapa.js');
+Mapa=require('../Prototipos/Mapa.js');
 
 test("generar matriz",()=>{
     let mapa=new Mapa();
