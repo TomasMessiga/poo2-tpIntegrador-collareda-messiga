@@ -8,5 +8,5 @@ test("generar matriz",()=>{
 test("generar matriz con cant de locales",()=>{
     let mapacondestino=new Mapa();
 
-    expect(mapacondestino.generar(1)).toStrictEqual([["cola de salida de locas",0],["Facturación",0],["Calidad",0] , ["Distribución",0]])
+    expect(mapacondestino.generar(1)).toBe([["cola de salida de locas",0],["Facturación",0],["Calidad",0] , ["Distribución",0]])
 })
