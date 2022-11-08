@@ -7,7 +7,7 @@ function Local(nombre){
 
      // hay que insertar en el arreglo los paquetes o se repite el paquete insertado es el mismo
     this.producirPaquetes=(cantidad,paquete)=>{
-        let cantidadCorrespondiente={1:[1],2:[1,1],3:[1,1,1],4:[1,1,1,1],5:[1,1,1,1,1]};
+        let cantidadCorrespondiente={1:new Array(),2:[1,1],3:[1,1,1],4:[1,1,1,1],5:[1,1,1,1,1]};
         var arreglo=cantidadCorrespondiente[cantidad];
         arreglo.array.forEach(element => {
             console.log(element)
