@@ -14,7 +14,7 @@ function Local(nombre){
         let arregloAuxiliar=new Array(cantidadEspecifica[cantidad]);
         for (let i=0;i<cantidadEspecifica[cantidad];i++){
             arregloAuxiliar[i]=new Paquete(especificaciones[0],especificaciones[1],especificaciones[2]);
-        }
+        };
         return arregloAuxiliar;
     };
 }
