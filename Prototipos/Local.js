@@ -13,10 +13,10 @@ function Local(nombre){
 
 
     this.producirPaquetes=(cantidad,especificaciones)=>{
-        let cantidadEspecifica={1:[],2:[],3:[],4:[],5:[]};
+        let cantidadEspecifica={1:[1],2:[1,1],3:[1,1,1],4:[1,1,1,1],5:[1,1,1,1,1]};
         let arregloAuxiliar=cantidadEspecifica[cantidad];
         for (let i=0;i<cantidad && arregloAuxiliar!=undefined;i++){
-            arregloAuxiliar.push(crearUnPaquete(especificaciones));
+            arregloAuxiliar[i]=(crearUnPaquete(especificaciones));
         };
         return arregloAuxiliar;
     };
