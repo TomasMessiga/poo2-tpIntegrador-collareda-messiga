@@ -13,7 +13,7 @@ test("generar matriz con cant de locales",()=>{
     
 })
 est("generar matriz con cant mas de 1  de locales",()=>{
-    let mapacondestino=new Mapa();
+    let mapacondestino=new Mapa(); 
 
 
     expect(mapacondestino.generar(4)).toStrictEqual([["cola de salida de locas",0,0,0,0],["Facturación",0,0,0,0],["Calidad",0,0,0,0] , ["Distribución",0,0,0,0]])

@@ -20,44 +20,44 @@ test("local producir 1 paquete",()=>{
     let muestraPaquetes=[];
     muestraPaquetes.push(new Paquete());
     let paquete=new Paquete();
-    expect(local.producirPaquetes(1,paquete)).toStrictEqual(muestraPaquetes);
+    expect(local.producirPaquetes(1,paquete)).toBe(muestraPaquetes);
 })
 
 test("local producir 2 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
     let paquete=new Paquete();
-  //  expect(local.producirPaquetes(2,paquete)).toStrictEqual([paquete,paquete]);
+    expect(local.producirPaquetes(2,paquete)).toBe([paquete,paquete]);
 })
 test("local producir 3 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
     let paquete=new Paquete();
-  //  expect(local.producirPaquetes(3,paquete)).toStrictEqual([paquete,paquete,paquete]);
+    expect(local.producirPaquetes(3,paquete)).toStrictEqual([paquete,paquete,paquete]);
 })
 test("local producir 4 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
     let paquete=new Paquete();
- //   expect(local.producirPaquetes(4,paquete)).toStrictEqual([paquete,paquete,paquete,paquete]);
+    expect(local.producirPaquetes(4,paquete)).toStrictEqual([paquete,paquete,paquete,paquete]);
 })
 
 test("local producir 5 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
     let paquete=new Paquete();
-  //  expect(local.producirPaquetes(5,paquete)).toStrictEqual([paquete,paquete,paquete,paquete]);
+    expect(local.producirPaquetes(5,paquete)).toStrictEqual([paquete,paquete,paquete,paquete]);
 })
 
 test("local producir 6 paquetes (error)",()=>{
     let nombre=2;
     let local=new Local(nombre);
     let paquete=new Paquete();
-  //  expect(local.producirPaquetes(7,paquete)).toStrictEqual(undefined);
+    expect(local.producirPaquetes(7,paquete)).toStrictEqual(undefined);
 })
 test("local producir -2 paquetes (error)",()=>{
     let nombre=1;
     let local=new Local(nombre);
     let paquete=new Paquete();
- //   expect(local.producirPaquetes(-2,paquete)).toStrictEqual(undefined);
-})
+    expect(local.producirPaquetes(-2,paquete)).toStrictEqual(undefined);
+})  
