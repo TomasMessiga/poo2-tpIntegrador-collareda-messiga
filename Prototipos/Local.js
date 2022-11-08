@@ -28,7 +28,7 @@ function Local(nombre){
     //    for (let i=0;i<cantidad && arregloAuxiliar!=undefined;i++){
     //        arregloAuxiliar[i]=(crearUnPaquete(especificaciones));
     //    };
-        
+      //  
     }
 }
 
