@@ -18,14 +18,14 @@ test("local producir 1 paquete",()=>{
     let nombre=0;
     let local=new Local(nombre);
     let paquete=new Paquete();
-    expect(local.producirPaquetes(1,paquete)).toStrictEqual([paquete]);
+    expect(local.producirPaquetes(1,paquete)).toBe([paquete]);
 })
 
 test("local producir 2 paquetes",()=>{
     let nombre=0;
     let local=new Local(nombre);
     let paquete=new Paquete();
-    expect(local.producirPaquetes(2,paquete)).toStrictEqual([paquete,paquete]);
+    expect(local.producirPaquetes(2,paquete)).toBe([paquete,paquete]);
 })
 test("local producir 3 paquetes",()=>{
     let nombre=0;
