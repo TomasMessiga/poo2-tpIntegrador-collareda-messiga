@@ -18,13 +18,14 @@ function Local(nombre){
         
         let cantidadEspecifica={1:[1],2:[1,1],3:[1,1,1],4:[1,1,1,1],5:[1,1,1,1,1]};
         let arregloAuxiliar=cantidadEspecifica[cantidad];
-        arregloAuxiliar.forEach(value => {
+        arregloAuxiliar.forEach(value,index => {
             value=crearUnPaquete(especificaciones);
         });console.log(arregloAuxiliar)
     }
 
     this.producirPaquetes=(cantidad,especificaciones)=>{
         return (cantidadCorrecta) ? fabricarPaquetes(cantidad,especificaciones) : undefined;
+
 
     //     for (let i=0;i<cantidad && arregloAuxiliar!=undefined;i++){
     //        arregloAuxiliar[i]=(crearUnPaquete(especificaciones));
