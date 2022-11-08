@@ -10,7 +10,7 @@ function Local(nombre){
         let mapeo=function(){return paquete.crearReplica();};
         let cantidadCorrespondiente={1:[1],2:[1,1],3:[1,1,1],4:[1,1,1,1],5:[1,1,1,1,1]};
         let retorno=(cantidadCorrespondiente[cantidad]);
-        return retorno.map();
+        return retorno.map(Math.sqrt);
     };
 }
 
