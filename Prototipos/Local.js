@@ -16,7 +16,7 @@ function Local(nombre){
         let arregloAuxiliar=cantidadEspecifica[cantidad];
         for (let i=0;i<cantidad;i++){
             arregloAuxiliar.push(crearUnPaquete(especificaciones));
-        }
+        };
         return arregloAuxiliar;
     };
 }
