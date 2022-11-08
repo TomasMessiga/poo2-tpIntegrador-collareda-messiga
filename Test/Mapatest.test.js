@@ -1,6 +1,6 @@
 const Mapa=require('../Prototipos/Mapa.js');
 const Local=require('../Prototipos/Local.js');
-const Destino=require('../Prototipos/Destino.js');
+const Destino=require('../Prototipos/Destino.js'); 
 test("generar matriz",()=>{
     let mapa=new Mapa();
     let local=new Local('a')
