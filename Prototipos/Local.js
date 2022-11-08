@@ -9,6 +9,9 @@ function Local(nombre){
     this.producirPaquetes=(cantidad,paquete)=>{
         let cantidadCorrespondiente={1:[1],2:[1,1],3:[1,1,1],4:[1,1,1,1],5:[1,1,1,1,1]};
         var arreglo=cantidadCorrespondiente[cantidad];
+        arreglo.array.forEach(element => {
+            console.log(element)
+        });
         return cantidadCorrespondiente[cantidad];
     };
 }
