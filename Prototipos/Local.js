@@ -6,7 +6,7 @@ function Local(nombre){
 
 
     this.producirPaquetes=(cantidad,paquete)=>{
-        let arregloAuxiliar=new Array(5);
+        let arregloAuxiliar=new Array(cantidad);
         for (let i=0;i<cantidad;i++){
             arregloAuxiliar[i]=paquete.crearReplica();
         }
