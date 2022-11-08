@@ -7,11 +7,12 @@ function Local(nombre){
 
      // hay que insertar en el arreglo los paquetes o se repite el paquete insertado es el mismo
     this.producirPaquetes=(cantidad,paquete)=>{
-        let cantidadCorrespondiente={1:[1],2:[1,1],3:[1,1,1],4:[1,1,1,1],5:[1,1,1,1,1]};
-        let retorno=cantidadCorrespondiente[cantidad];
-        retorno.forEach(element,index => {
-            
-        });
+        let cantidadCorrespondiente={
+            1:[paquete.crearReplica()],
+            2:[paquete,paquete],
+            3:[paquete,paquete,paquete],
+            4:[paquete,paquete,paquete,paquete],
+            5:[paquete,paquete,paquete,paquete,paquete]};
         return cantidadCorrespondiente[cantidad];
     };
 }
