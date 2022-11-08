@@ -9,10 +9,11 @@ function Local(nombre){
     this.producirPaquetes=(cantidad,paquete)=>{
         let cantidadCorrespondiente={
             1:[paquete.crearReplica()],
-            2:[paquete,paquete],
+            2:[paquete.crearReplica(),paquete.crearReplica()],
             3:[paquete,paquete,paquete],
             4:[paquete,paquete,paquete,paquete],
-            5:[paquete,paquete,paquete,paquete,paquete]};
+            5:[paquete,paquete,paquete,paquete,paquete]
+        };
         return cantidadCorrespondiente[cantidad];
     };
 }
