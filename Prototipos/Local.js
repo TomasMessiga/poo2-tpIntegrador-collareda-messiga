@@ -11,18 +11,25 @@ function Local(nombre){
         return new Paquete(especificaciones[0],especificaciones[1],especificaciones[2]);
     }
 
-
-    this.producirPaquetes=(cantidad,especificaciones)=>{
+    const cantidadCorrecta=(cantidad)=>{
+        return (cantidad<=6 && cantidad>0 && cantidad%1==0);
+    }
+    const fabricarPaquetes=function(cantidad,especificaciones){
         let cantidadEspecifica={1:[1],2:[1,1],3:[1,1,1],4:[1,1,1,1],5:[1,1,1,1,1]};
         let arregloAuxiliar=cantidadEspecifica[cantidad];
-        arregloAuxiliar.forEach(e => {
-            e=crearUnPaquete(especificaciones);
+        arregloAuxiliar.forEach(value => {
+            value=crearUnPaquete(especificaciones);
         });
-        for (let i=0;i<cantidad && arregloAuxiliar!=undefined;i++){
-            arregloAuxiliar[i]=(crearUnPaquete(especificaciones));
-        };
-        return arregloAuxiliar;
-    };
+    }
+
+    this.producirPaquetes=(cantidad,especificaciones)=>{
+        return (cantidadCorrecta) ? (undefined) : fabricarPaquetes(cantidad,especificaciones)
+//
+    //    for (let i=0;i<cantidad && arregloAuxiliar!=undefined;i++){
+    //        arregloAuxiliar[i]=(crearUnPaquete(especificaciones));
+    //    };
+        
+    }
 }
 
 module.exports=Local;
