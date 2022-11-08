@@ -19,12 +19,12 @@ function Local(nombre){
 
     const fabricarPaquetes=function(cantidad,especificaciones){
         let cantidadEspecifica={1:[1],2:[1,1],3:[1,1,1],4:[1,1,1,1],5:[1,1,1,1,1]};
-    let arregloAuxiliar=cantidadEspecifica[cantidad];
-    for (let i=0;i<cantidad && arregloAuxiliar!=undefined;i++){
-        arregloAuxiliar[i]=(crearUnPaquete(especificaciones));
+        let arregloAuxiliar=cantidadEspecifica[cantidad];
+        for (let i=0;i<cantidad && arregloAuxiliar!=undefined;i++){
+            arregloAuxiliar[i]=(crearUnPaquete(especificaciones));
+        };
+        return arregloAuxiliar;
     };
-    return arregloAuxiliar;
-};
 
 
 
