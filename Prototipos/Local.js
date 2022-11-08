@@ -6,6 +6,7 @@ function Local(nombre){
 
 
 
+
     const crearUnPaquete=function(especificaciones){
         return new Paquete(especificaciones[0],especificaciones[1],especificaciones[2]);
     }
@@ -14,7 +15,7 @@ function Local(nombre){
     this.producirPaquetes=(cantidad,especificaciones)=>{
         let cantidadEspecifica={1:[],2:[],3:[],4:[],5:[]};
         let arregloAuxiliar=cantidadEspecifica[cantidad];
-        for (let i=0;i<cantidad;i++){
+        for (let i=0;i<cantidad && cantidadEspecifica!=undefined;i++){
             arregloAuxiliar.push(crearUnPaquete(especificaciones));
         };
         return arregloAuxiliar;
