@@ -10,6 +10,9 @@ function Local(nombre){
         let mapeo=function(){return paquete.crearReplica()};
         let cantidadCorrespondiente={1:new Array(1),2:new Array(2),3:new Array(3),4:new Array(4),5:new Array(5)};
         let retorno=cantidadCorrespondiente[cantidad];
+        cantidad.forEach(element => {
+            
+        });
         return retorno;
     };
 }
