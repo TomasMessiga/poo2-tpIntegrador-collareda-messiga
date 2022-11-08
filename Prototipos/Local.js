@@ -10,7 +10,8 @@ function Local(nombre){
 
 
     this.producirPaquetes=(cantidad,especificaciones)=>{
-        let arregloAuxiliar=new Array(cantidad);
+        let cantidadEspecifica={1:1,2:2,3:3,4:4,5:5};
+        let arregloAuxiliar=new Array(cantidadEspecifica[cantidad]);
         for (let i=0;i<cantidad;i++){
             arregloAuxiliar[i]=new Paquete(especificaciones[0],especificaciones[1],especificaciones[2]);
         }
