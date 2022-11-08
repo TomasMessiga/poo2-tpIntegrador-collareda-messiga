@@ -23,7 +23,7 @@ function Local(nombre){
     }
 
     this.producirPaquetes=(cantidad,especificaciones)=>{
-        return (cantidadCorrecta) ? (undefined) : fabricarPaquetes(cantidad,especificaciones)
+        return (cantidadCorrecta) ? (undefined) : fabricarPaquetes(cantidad,especificaciones);
 
     //    for (let i=0;i<cantidad && arregloAuxiliar!=undefined;i++){
     //        arregloAuxiliar[i]=(crearUnPaquete(especificaciones));
