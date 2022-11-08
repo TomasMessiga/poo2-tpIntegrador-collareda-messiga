@@ -15,7 +15,7 @@ function Local(nombre){
     this.producirPaquetes=(cantidad,especificaciones)=>{
         let cantidadEspecifica={1:[],2:[],3:[],4:[],5:[]};
         let arregloAuxiliar=cantidadEspecifica[cantidad];
-        for (let i=0;i<cantidad && cantidadEspecifica!=undefined;i++){
+        for (let i=0;i<cantidad && arregloAuxiliar!=undefined;i++){
             arregloAuxiliar.push(crearUnPaquete(especificaciones));
         };
         return arregloAuxiliar;
