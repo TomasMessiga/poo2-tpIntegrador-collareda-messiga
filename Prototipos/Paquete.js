@@ -1,8 +1,11 @@
 
-function Paquete(){
+function Paquete(destino,productos,tipoDeEnvio){
 
-   this.aux=undefined;
+   this.destino=destino;
+   this.productos=productos;
+   this.tipoDeEnvio=tipoDeEnvio;
 
+   
 
 
 }
