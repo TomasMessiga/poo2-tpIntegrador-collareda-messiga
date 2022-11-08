@@ -11,8 +11,8 @@ function Local(nombre){
         let retorno=[];
         retorno.concat(cantidadCorrespondiente[cantidad])
         
-        retorno.forEach(valor=>{
-            arreglo[indice]=paquete.crearReplica();
+        retorno.forEach(valor,indice=>{
+            retorno[indice]=paquete.crearReplica();
         });
         return retorno;
     };
