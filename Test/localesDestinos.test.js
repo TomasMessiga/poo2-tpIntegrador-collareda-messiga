@@ -68,14 +68,12 @@ test("local producir 5 paquetes",()=>{
 })
 
 test("local producir 6 paquetes (error)",()=>{
-    let nombre=2;
+    let nombre=0;
     let local=new Local(nombre);
-    let paquete=new Paquete();
-  //  expect(local.producirPaquetes(7,paquete)).toStrictEqual(undefined);
+    expect(local.producirPaquetes(7,[1,1,1])).toStrictEqual(undefined);
 })
 test("local producir -2 paquetes (error)",()=>{
-    let nombre=1;
+    let nombre=0;
     let local=new Local(nombre);
-    let paquete=new Paquete();
- //   expect(local.producirPaquetes(-2,paquete)).toStrictEqual(undefined);
+    expect(local.producirPaquetes(-2,[1,1,1])).toStrictEqual(undefined);
 })
