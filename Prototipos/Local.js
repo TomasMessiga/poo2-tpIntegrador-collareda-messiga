@@ -9,7 +9,8 @@ function Local(nombre){
     this.producirPaquetes=(cantidad,paquete)=>{
         let mapeo=function(){return paquete.crearReplica();};
         let cantidadCorrespondiente={1:[0],2:[0,0],3:[0,0,0],4:[0,0,0,0],5:[0,0,0,0,0]};
-        return (cantidadCorrespondiente[cantidad]).map(mapeo());
+        let retorno=(cantidadCorrespondiente[cantidad]);
+        return retorno.map(mapeo());
     };
 }
 
