@@ -12,7 +12,7 @@ function Local(nombre){
         retorno.concat(cantidadCorrespondiente[cantidad])
         
         retorno.forEach(valor,indice=>{
-            retorno[indice]=paquete.crearReplica();
+       //     retorno[indice]=paquete.crearReplica();
         });
         return retorno;
     };
