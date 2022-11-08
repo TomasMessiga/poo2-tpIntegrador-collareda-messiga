@@ -9,10 +9,10 @@ function Local(nombre){
     }
 
 
-    this.producirPaquetes=(cantidad,paquete)=>{
+    this.producirPaquetes=(cantidad,especificaciones)=>{
         let arregloAuxiliar=new Array(cantidad);
         for (let i=0;i<cantidad;i++){
-            arregloAuxiliar[i]=crearReplicaDePaquete(paquete);
+            arregloAuxiliar[i]=new Paquete(especificaciones[0],especificaciones[1],especificaciones[2]);
         }
         return arregloAuxiliar;
     };
