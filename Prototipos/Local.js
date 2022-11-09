@@ -1,4 +1,3 @@
-const { fuchsia } = require('color-name');
 const Paquete=require('../Prototipos/Paquete.js');
 
 
