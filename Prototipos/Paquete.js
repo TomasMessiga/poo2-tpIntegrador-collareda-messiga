@@ -1,4 +1,4 @@
-const Paquete=require('../Prototipos/Producto.js');
+const Producto=require('../Prototipos/Producto.js');
 
 
 function Paquete(destino,productos,tipoDeEnvio){
