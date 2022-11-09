@@ -6,3 +6,9 @@ test("incrementar una unidad de tiempo",()=>{
     sistema.incrementarTiempo();
     expect(sistema.getTiempo()).toBe(1);
 })
+
+test("insertar un mapa en el sistema",()=>{
+    let sistema=new Sistema();
+    let mapaAuxiliar=new Mapa();
+    expect(sistema.mapa).toBe(mapaAuxiliar);
+})
