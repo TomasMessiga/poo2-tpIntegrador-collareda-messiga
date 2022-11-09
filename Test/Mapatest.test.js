@@ -15,8 +15,3 @@ test("generar matriz",()=>{
     mapa.generar(local,destino) 
     expect(mapa.generar(local,destino)).toStrictEqual([["cola de salida de locas",0,0],["Facturación",0,0],["Calidad",0,0] , ["Distribución",0,0]])
 })
-test("Ubicacion",()=>{
-    expect(mapa.generar(local,destino)).toStrictEqual([["cola de salida de locas",0,0],["Facturación",0,0],["Calidad",0,0] , ["Distribución",0,0]])
-})
-
-
