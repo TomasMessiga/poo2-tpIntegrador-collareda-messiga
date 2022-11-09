@@ -1,6 +1,7 @@
 const Mapa=require('../Prototipos/Mapa.js');
 const Local=require('../Prototipos/Local.js');
 const Destino=require('../Prototipos/Destino.js'); 
+const { test } = require('picomatch');
 
 test("generar matriz",()=>{
     let mapa=new Mapa();

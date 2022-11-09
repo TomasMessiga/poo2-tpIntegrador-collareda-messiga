@@ -2,6 +2,7 @@ const Sistema=require('../Prototipos/Sistema.js');
 const Mapa=require('../Prototipos/Mapa.js');
 const Local=require('../Prototipos/Local.js');
 const Destino=require('../Prototipos/Destino.js'); 
+const Paquete = require('../Prototipos/Paquete.js');
 
 test("incrementar una unidad de tiempo",()=>{
     let sistema=new Sistema();
@@ -18,7 +19,9 @@ test("insertar un mapa en el sistema",()=>{
 test("mover paquete",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
-
+    let destino=new Destino();
+    let local= new Local();
     sistema.mapa=mapaAuxiliar.generar(Local,Destino)
-    expect().toStrictEqual(mapaAuxiliar.generar());
+
+    expect(sistema.mover).toStrictEqual([["cola de salida de locas",Paquete],["Facturación",0],["Calidad",0] , ["Distribución",0]]);
 })
