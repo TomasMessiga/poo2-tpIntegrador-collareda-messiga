@@ -7,7 +7,7 @@ function Sistema(){
     this.incrementarTiempo=function(){
     }
 
-    this.getTiempo=tiempo;
+    this.getTiempo=function(){return tiempo;}
 
 }
 
