@@ -1,3 +1,5 @@
+const Paquete=require('../Prototipos/Producto.js');
+
 
 function Paquete(destino,productos,tipoDeEnvio){
 
@@ -5,7 +7,10 @@ function Paquete(destino,productos,tipoDeEnvio){
    this.productos=productos;
    this.tipoDeEnvio=tipoDeEnvio;
 
-   
+
+   this.cantidadDeProductos=function(){
+      return (productos.lenght);
+   }
 
 
 }
