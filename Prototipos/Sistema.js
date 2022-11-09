@@ -7,8 +7,9 @@ function Sistema(){
     this.incrementarTiempo=function(){
         tiempo++;
     }
-
     this.getTiempo=function(){return tiempo;}
+
+    this.mapa=undefined;
 
 }
 
