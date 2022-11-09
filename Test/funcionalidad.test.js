@@ -11,5 +11,5 @@ test("insertar un mapa en el sistema",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
     sistema.mapa=mapaAuxiliar.generar();
-    expect(sistema.mapa).toBe(mapaAuxiliar);
+    expect(sistema.mapa).toStrictEqual(mapaAuxiliar.generar());
 })

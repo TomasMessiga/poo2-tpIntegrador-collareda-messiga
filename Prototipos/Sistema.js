@@ -9,7 +9,7 @@ function Sistema(){
     }
     this.getTiempo=function(){return tiempo;}
 
-    this.mapa;
+    this.mapa=undefined;
 
 }
 
