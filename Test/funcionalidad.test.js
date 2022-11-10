@@ -18,7 +18,7 @@ test("insertar un mapa en el sistema",()=>{
 })
 test("mover paquete",()=>{
     let sistema=new Sistema();
-    let mapaAuxiliar=new Mapa();
+    let mapaAuxiliar=new Mapa() ;
     let destino=new Destino();
     let local= new Local();
     let paquete= new Paquete();
