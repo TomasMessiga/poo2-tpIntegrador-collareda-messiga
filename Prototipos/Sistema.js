@@ -12,7 +12,7 @@ function Sistema(){
     this.mover=function (paquete)
     {   let bander=0
         this.mapa.forEach(element => {
-            if (this.mapa[0][1]==0 && bander==0){
+            if (this.mapa[0][1]==0 || bander==0){
                 this.mapa[0][1]=paquete;
                  bander=1;
 
