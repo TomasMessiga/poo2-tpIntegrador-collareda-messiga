@@ -11,7 +11,7 @@ function Sistema(){
     this.mapa=undefined;
     this.mover=function (paquete)
     {
-        this.mapa[1][0]=paquete
+        this.mapa[0][1]=paquete
         return this.mapa
     }
 
