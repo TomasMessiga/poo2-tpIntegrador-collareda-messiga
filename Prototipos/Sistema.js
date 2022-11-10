@@ -1,5 +1,4 @@
 
-
 function Sistema(){
 
     var tiempo=0;
@@ -10,6 +9,11 @@ function Sistema(){
     this.getTiempo=function(){return tiempo;}
 
     this.mapa=undefined;
+    this.mover=function (paquete)
+    {
+        this.mapa[1][1]=paquete
+        return this.mapa
+    }
 
 }
 
