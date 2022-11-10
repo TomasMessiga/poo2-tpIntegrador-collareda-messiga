@@ -11,11 +11,11 @@ function Sistema(){
 
     this.mapa=undefined;
     this.mover=function (paquete)
-    {   
+    {           var bandera=0
                 for( var i=0;i<this.mapa.length;i++){
 
-                     if(this.mapa[i][1]==paquete && this.mapa[i][0]!="Distribución"){
-
+                     if(this.mapa[i][1]==paquete && this.mapa[i][0]!="Distribución" && bandera==1){
+                        bander=0
                         this.mapa[i][1]=0
                         this.mapa[2][1]=paquete
 
