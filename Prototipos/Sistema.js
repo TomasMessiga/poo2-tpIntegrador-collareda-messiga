@@ -2,6 +2,7 @@
 function Sistema(){
 
     var tiempo=0;
+    var i=0
 
     this.incrementarTiempo=function(){
         tiempo++;
@@ -11,7 +12,8 @@ function Sistema(){
     this.mapa=undefined;
     this.mover=function (paquete)
     {
-        this.mapa[0][1]=paquete
+        this.mapa[this.i][1]=paquete
+        this.i=this.i+1
         return this.mapa
     }
 
