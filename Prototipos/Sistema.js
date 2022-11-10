@@ -10,11 +10,11 @@ function Sistema(){
 
     this.mapa=undefined;
     this.mover=function (paquete)
-    {
+    {   let bander=0
         this.mapa.forEach(element => {
             if (this.mapa[0][1]==0 && bandera==0){
                 this.mapa[0][1]==paquete;
-               bander=1;
+                 bander=1;
 
 
 
