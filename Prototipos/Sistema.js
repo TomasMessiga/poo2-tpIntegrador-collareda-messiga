@@ -2,7 +2,7 @@
 function Sistema(){
 
     var tiempo=0;
-    var i=0
+    this.i=0
 
     this.incrementarTiempo=function(){
         tiempo++;
