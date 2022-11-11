@@ -23,9 +23,10 @@ function Sistema(){
         mapa.mapa[index][1]=paquete
        }
        else{
+        var quesoy= mapa.mapa[index][1]
         mapa.mapa[index][1]=paquete
         mapa.mapa[index-1][1]=0
-        return mapa.mapa[index][1]
+        return quesoy
        }
       
                 
