@@ -22,7 +22,7 @@ function Sistema(){
             }
             else{
                 mapa.mapa[index][1]=0
-                mapa.mapa[2][1]=Paquete
+                mapa.mapa[1][1]=Paquete
             }
           }
         
