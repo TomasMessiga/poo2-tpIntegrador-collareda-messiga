@@ -13,7 +13,7 @@ function Sistema(){
     this.mover=function (mapa,paquete){       
        let index=0
        cond=false
-        for(var i=0;i<=mapa.mapa.length-1;i++){
+        for(var i=0;i<mapa.mapa.length;i++){
 
         if (typeof mapa.mapa[index][1]!='number'){
             index=i
@@ -21,12 +21,12 @@ function Sistema(){
 
         }
        }
-       if (index==0 && cond!=true){
+       mapa.mapa[index-1][1]=0
+       if (index==0){
         mapa.mapa[index][1]= paquete
        }
        if (index>0){
         mapa.mapa[index][1]=paquete
-        mapa.mapa[index-1][1]=0
     
        }
         return cond
