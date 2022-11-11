@@ -14,10 +14,10 @@ function Sistema(){
     {       
         let index=[];
      
-        for (let i = 0; i <mapa.mapa.length ; i++) {
-            index.push(mapa.mapa[i++][1])
+        mapa.mapa.forEach(element => {
+            index.push(element[1])
             
-          }
+        });
           
         return index
         
