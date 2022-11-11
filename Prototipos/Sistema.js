@@ -14,9 +14,9 @@ function Sistema(){
         let index=0;  
         for (var i = 0; i <mapa.mapa.length ; i++) {
             if (mapa.mapa[i][1].id===Paquete.id){
-                index=i
+                
             }
-        
+            index=i
           }
           if (index==0){
 
