@@ -14,7 +14,7 @@ function Sistema(){
         mapa.mapa.forEach(element => {
             
             if(element[1].id==Paquete.id){
-             index=element.indexof(element)
+             index=mapa.mapa.indexof(element)
             }
             
             
