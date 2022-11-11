@@ -13,9 +13,10 @@ function Sistema(){
     {       var index=0;   
         mapa.mapa.forEach(element => {
             
-            if(element[1].id==Paquete.id){
-             index=mapa.mapa.indexOf(element)
+            if(element[1].id==Paquete.id && index==0){
+             index=i
             }
+            i++
             
             
         });
