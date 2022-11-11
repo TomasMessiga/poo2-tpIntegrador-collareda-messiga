@@ -13,7 +13,7 @@ function Sistema(){
     this.mover=function (mapa,paquete)
     {       
         let index=[];
-        mapa.forEach(element => {
+        mapa.mapa.forEach(element => {
             if (element[1]==paquete)
                 return true         
         });
