@@ -15,7 +15,7 @@ function Sistema(){
         let index=[];
         mapa.mapa[0][1]=paquete
         
-        return mapa.mapa
+        return mapa.mapa[0][1].id
         
         
                 
