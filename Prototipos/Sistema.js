@@ -15,7 +15,7 @@ function Sistema(){
        let mat=[]
         for(var i=0;i<4;i++){
 
-        if (mapa.mapa[i][1]!=0){
+        if (mapa.mapa[i][1].id!=undefined){
             index=index+i
 
         }
