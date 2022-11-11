@@ -10,8 +10,9 @@ function Sistema(){
     }
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,Paquete)
-    {       var index=0;  
-        for (var i = 0; i < 9; i++) {
+    {       
+        let index=0;  
+        for (var i = 0; i <mapa.mapa.length ; i++) {
             if (mapa.mapa[i][1]===Paquete){
                 index=i
             }
