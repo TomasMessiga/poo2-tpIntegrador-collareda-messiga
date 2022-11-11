@@ -12,7 +12,7 @@ function Sistema(){
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,paquete){       
        let index=0
-        for(var i=0;i<4;i++){
+        for(var i=0;i<mapa.mapa.length;i++){
 
         if (typeof mapa.mapa[index][1]!='number'){
             index=i

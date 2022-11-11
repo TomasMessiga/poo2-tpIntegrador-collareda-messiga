@@ -31,7 +31,5 @@ test("mover paquete en 2 pos",()=>{
     sistema.mover(mapaAuxiliar,paquete)
     
     expect(mapaAuxiliar.mapa[1][1]).toStrictEqual(paquete)
-    sistema.mover(mapaAuxiliar,paquete)
-    expect(mapaAuxiliar.mapa[2][1]).toStrictEqual(paquete)
-
+    
 })
