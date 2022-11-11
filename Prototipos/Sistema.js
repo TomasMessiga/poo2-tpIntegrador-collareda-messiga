@@ -12,7 +12,7 @@ function Sistema(){
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,paquete){       
        let index=0
-       let mat=[]
+       cond=true
         for(var i=0;i<4;i++){
 
         if (mapa.mapa[i][1].id!=undefined){
@@ -25,7 +25,7 @@ function Sistema(){
         mapa.mapa[index][1]=paquete
        }
        else{
-        return index
+        return true
         
 
        }
