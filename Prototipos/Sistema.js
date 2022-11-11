@@ -19,10 +19,10 @@ function Sistema(){
 
                 mapa.mapa[index][1]=Paquete
             }
-            else(
+            else{
                 mapa.mapa[index][1]=0
                 mapa.mapa[index+1][1]=Paquete
-            )
+            }
           }
         
         
