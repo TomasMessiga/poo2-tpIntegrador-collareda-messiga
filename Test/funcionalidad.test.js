@@ -13,6 +13,8 @@ test("incrementar una unidad de tiempo",()=>{
 test("insertar un mapa en el sistema",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
+    let local=new Local(A)
+    let destino=new Destino(0)
     sistema.mapa=mapaAuxiliar.generar(local,destino);
     expect(sistema.mapa).toStrictEqual([["cola de salida de locas",0],["Facturación",0],["Calidad",0] , ["Distribución",0]]);
 })
