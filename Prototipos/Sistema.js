@@ -16,15 +16,15 @@ function Sistema(){
         for(var i=0;i<4;i++){
 
         if (mapa.mapa[i][1].id!=undefined){
-            index=index+i
+            index=true
 
         }
-        mat.push(mapa.mapa[index][1])
+        mat.push(mapa.mapa[i][1])
        }
 
     
        
-        return mat
+        return index
         
                 
                 }
