@@ -24,7 +24,7 @@ function Sistema(){
        }
       
                 
-            return typeof( mapa.mapa[i][1])
+            return typeof( mapa.mapa[i][1]==='number')
      
     }
 }
