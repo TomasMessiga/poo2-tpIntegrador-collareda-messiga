@@ -13,9 +13,9 @@ function Sistema(){
     this.mover=function (mapa,paquete)
     {       
         let index=[];
-     
+        mapa.mapa[0][1]=paquete
         
-        return mapa.mapa[0]
+        return mapa.mapa
         
         
                 
