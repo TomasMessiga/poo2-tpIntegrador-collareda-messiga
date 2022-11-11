@@ -14,7 +14,7 @@ function Sistema(){
     {       
         let index=0;  
         for (var i = 0; i <mapa.mapa.length ; i++) {
-            if (typeof mapa.mapa[i][1]== typeof Paquete)
+            if (typeof (mapa.mapa[i][1])== typeof (Paquete))
             {
                 index=i
             }
