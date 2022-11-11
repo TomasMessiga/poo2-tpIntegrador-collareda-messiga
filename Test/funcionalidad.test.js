@@ -29,6 +29,7 @@ test("mover paquete en 2 pos",()=>{
     mapaAuxiliar.generar(local,destino);
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
+    sistema.mover(mapaAuxiliar,paquete)
     expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",0],["Facturación",paquete],["Calidad",0] , ["Distribución",0]])
     
 })
