@@ -10,9 +10,9 @@ function Sistema(){
         tiempo++;
     }
     this.getTiempo=function(){return tiempo;}
-    this.mover=function (mapa,paquete)
-    {       
-       for(var i=0;i<4;i++){
+    this.mover=function (mapa,paquete){       
+       let index=0
+        for(var i=0;i<4;i++){
 
         if (mapa.mapa[i][1]!=0){
             index=i
