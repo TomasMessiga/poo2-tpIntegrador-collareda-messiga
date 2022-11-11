@@ -14,7 +14,7 @@ function Sistema(){
     {       
         let index=[];
         mapa.mapa.forEach(element => {
-            if (element[1]==paquete)
+            if (element[1]==0)
                 return true         
         });
        
