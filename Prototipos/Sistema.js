@@ -12,11 +12,15 @@ function Sistema(){
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,paquete)
     {       
-        let index=[];
        for(var i=0;i<4;i++){
 
-        index.push(mapa.mapa[i][1])
+        if (mapa.mapa[i][1]!=0){
+            index=i
+
+        }
        }
+
+    
        
         return index
         
