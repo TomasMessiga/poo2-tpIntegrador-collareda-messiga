@@ -15,7 +15,7 @@ function Sistema(){
         let index=[];
      
         
-        return mapa.mapa
+        return mapa.mapa[0][1]
         
         
                 
