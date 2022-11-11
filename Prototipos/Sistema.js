@@ -20,6 +20,7 @@ function Sistema(){
             cond=true
 
         }
+    }
        if (index==0 && cond==false ){
         mapa.mapa[index][1]= paquete
        }
@@ -32,7 +33,7 @@ function Sistema(){
                 
             
      
-    }
+    
 }
 }
 
