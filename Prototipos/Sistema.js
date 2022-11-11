@@ -10,8 +10,16 @@ function Sistema(){
     }
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,Paquete)
-    {          
-            mapa.mapa[0][1]=Paquete
+    {       var index=0;   
+        mapa.mapa.forEach(element => {
+            
+            if(element[1].id==id){
+             index=element.indexof(element)
+            }
+            
+            
+        });
+            mapa.mapa[index][1]=Paquete
     
              return mapa
                 
