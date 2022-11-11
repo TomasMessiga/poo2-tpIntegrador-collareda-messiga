@@ -27,7 +27,7 @@ function Sistema(){
         mapa.mapa[index][1]=paquete
     
        }
-        return i
+        return mapa.mapa
       
                 
             
