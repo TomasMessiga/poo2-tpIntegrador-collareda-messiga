@@ -24,10 +24,11 @@ function Sistema(){
        }
        else{
         mapa.mapa[index+1][1]=paquete
+        mapa.mapa[index][1]=0
        }
       
                 
-            return index
+            
      
     }
 }
