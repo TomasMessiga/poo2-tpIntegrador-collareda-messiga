@@ -13,9 +13,10 @@ function Sistema(){
     this.mover=function (mapa,paquete)
     {       
         let index=[];
-        mapa.mapa.forEach(element => {
-            index.push(element[1])     
-        });
+       for(var i=0;i<4;i++){
+
+        index.push(mapa.mapa[i][0])
+       }
        
         return index
         
