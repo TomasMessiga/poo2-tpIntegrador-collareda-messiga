@@ -18,3 +18,12 @@ test("insertar un mapa en el sistema",()=>{
     sistema.mapa=mapaAuxiliar.generar(local,destino);
     expect(sistema.mapa).toStrictEqual([["cola de salida de locas",0],["Facturación",0],["Calidad",0] , ["Distribución",0]]);
 })
+test("mover",()=>{
+    let sistema=new Sistema();
+    let mapaAuxiliar=new Mapa();
+    let local=new Local('a')
+    let destino=new Destino(0)
+    sistema.mapa=mapaAuxiliar.generar(local,destino);
+    expect(sistema.mover(paquete)).toStrictEqual([["cola de salida de locas",paquete],["Facturación",0],["Calidad",0] , ["Distribución",0]]);
+})
+
