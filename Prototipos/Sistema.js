@@ -13,9 +13,11 @@ function Sistema(){
     this.mover=function (mapa,paquete)
     {       
         let index=[];
-        mapa.mapa[0][1]=paquete
-        
-        return mapa.mapa[0][1]==mapa.mapa[0][2]
+        mapa.forEach(element => {
+            if (element[1]==paquete)
+                return true         
+        });
+       
         
         
                 
