@@ -25,6 +25,7 @@ function Sistema(){
         else{
             mapa.mapa[index][1]=0
             mapa.mapa[index+1][1]=Paquete
+            return index
         }
         
         
