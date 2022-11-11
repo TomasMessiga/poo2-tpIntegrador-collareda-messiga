@@ -11,7 +11,7 @@ function Sistema(){
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,Paquete)
     {          
-            mapa.mapa[1][0]=Paquete
+            mapa.mapa[0][1]=Paquete
     
              return mapa
                 
