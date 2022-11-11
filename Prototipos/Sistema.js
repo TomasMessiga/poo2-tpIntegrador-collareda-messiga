@@ -13,21 +13,23 @@ function Sistema(){
     this.mover=function (mapa,paquete){       
        let index=0
        cond=false
-        for(var i=0;i<mapa.mapa.length-1;i++){
+       auxmap=mapa.mapa
+        for(var i=0;i<auxmap.length-1;i++){
 
-        if (typeof mapa.mapa[index][1]!='number'){
+        if (typeof auxmap[index][1]!='number'){
             index=i
             cond=true
 
         }
     }
        if (index==0 && cond==false ){
-        mapa.mapa[index][1]= paquete
+        auxmap[index][1]= paquete
+        mapa.mapa=auxmap
        }
        else{
-        mapa.mapa[index][1]=paquete
-        mapa.mapa[index-1][1]=0
-    
+        auxmap[index][1]=paquete
+        auxmap[index-1][1]=0
+        mapa.mapa=auxmap
        }
 
       
