@@ -20,7 +20,7 @@ test("insertar pauqete en mapa",()=>{
     expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",paquete],["Facturación",0],["Calidad",0] , ["Distribución",0]])
 })
 
-test("insertar pauqete en mapa",()=>{
+test("mover paquete en 2 pos",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
     let local=new Local('a')
