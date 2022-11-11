@@ -11,7 +11,20 @@ function Sistema(){
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,Paquete)
     {       var index=0;  
-            mapa.mapa[0][1]=Paquete
+        for (var i = 0; i < 9; i++) {
+            if (mapa.mapa[i][1]===Paquete){
+                index=i
+            }
+            if (index==0){
+
+                mapa.mapa[index][1]=Paquete
+            }
+            else(
+                mapa.mapa[index][1]=0
+                mapa.mapa[index+1][1]=Paquete
+            )
+          }
+        
         
                 
                 }
