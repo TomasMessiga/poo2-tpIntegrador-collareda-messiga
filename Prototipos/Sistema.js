@@ -21,8 +21,8 @@ function Sistema(){
 
         }
        }
-       if (index==0 &&cond!=true){
-        mapa.mapa[index][1]=paquete
+       if (index==0 && cond!=true){
+        mapa.mapa[index][1]= paquete
        }
        if (index>0){
         mapa.mapa[index][1]=paquete
