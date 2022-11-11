@@ -14,7 +14,7 @@ function Sistema(){
     {       
         let index=0;  
         for (let i = 0; i <mapa.mapa.length ; i++) {
-            if (paquete===mapa.mapa[i][1].id)
+            if (paquete===mapa.mapa[index][1].id)
             {
                 index=i
             }
