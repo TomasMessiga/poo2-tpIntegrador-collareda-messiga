@@ -24,7 +24,7 @@ function Sistema(){
        }
       
                 
-            return index
+            return mapa.mapa[i][1]!=0
      
     }
 }
