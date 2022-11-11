@@ -19,7 +19,7 @@ function Sistema(){
             index=index+i
 
         }
-        mat.push(mapa.mapa[i][1])
+        mat.push(mapa.mapa[index][1])
        }
 
     
