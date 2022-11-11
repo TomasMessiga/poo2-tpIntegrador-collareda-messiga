@@ -28,6 +28,6 @@ test("mover paquete en 2 pos",()=>{
     let paquete=new Paquete(1,1,1,1);
     mapaAuxiliar.generar(local,destino);
     sistema.mover(mapaAuxiliar,paquete)
-    sistema.mover(mapaAuxiliar,paquete)
-    expect(mapaAuxiliar.mapa[1][1]).toStrictEqual(paquete)
+    
+    expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual(paquete)
 })

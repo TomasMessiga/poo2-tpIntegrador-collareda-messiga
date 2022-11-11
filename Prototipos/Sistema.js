@@ -19,13 +19,12 @@ function Sistema(){
 
         }
        }
-       mapa.mapa[index][1]=0
        if (index==0){
         mapa.mapa[index][1]=paquete
        }
        else{
         mapa.mapa[index+1][1]=paquete
-        
+        return true
        }
       
                 
