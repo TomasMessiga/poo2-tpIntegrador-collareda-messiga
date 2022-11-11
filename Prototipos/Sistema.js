@@ -22,11 +22,7 @@ function Sistema(){
 
             mapa.mapa[index][1]=Paquete
         }
-        else{
-            mapa.mapa[index][1]=0
-            mapa.mapa[index+1][1]=Paquete
-            return index
-        }
+        return index
         
         
                 
