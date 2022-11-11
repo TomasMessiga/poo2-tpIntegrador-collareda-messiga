@@ -12,10 +12,12 @@ function Sistema(){
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,paquete){       
        let index=0
+       cond=true
         for(var i=0;i<mapa.mapa.length-1;i++){
 
         if (typeof mapa.mapa[index][1]!='number'){
             index=i
+            cond=true
 
         }
        }
@@ -23,10 +25,9 @@ function Sistema(){
         mapa.mapa[index][1]=paquete
        }
        else{
-        var quesoy= mapa.mapa[index][1]
         mapa.mapa[index][1]=paquete
         mapa.mapa[index-1][1]=0
-        return quesoy
+        return cond
        }
       
                 
