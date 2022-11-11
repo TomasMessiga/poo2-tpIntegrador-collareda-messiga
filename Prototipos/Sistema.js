@@ -14,11 +14,10 @@ function Sistema(){
     {       
         let index=[];
         mapa.mapa.forEach(element => {
-            if (element[1]==0)
-                return true         
+            index.push(element)     
         });
        
-        
+        return index
         
                 
                 }
