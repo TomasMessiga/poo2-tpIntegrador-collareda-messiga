@@ -15,7 +15,7 @@ function Sistema(){
         let index=[];
      
         for (let i = 0; i <mapa.mapa.length ; i++) {
-            index.push(mapa.mapa[i][1])
+            index.push(mapa.mapa[i++][1])
             
           }
           
