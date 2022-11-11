@@ -12,7 +12,7 @@ function Sistema(){
     this.mover=function (mapa,Paquete)
     {       
         let index=0;  
-        for (var i = 0; i <=mapa.mapa.length ; i++) {
+        for (var i = 0; i <mapa.mapa.length ; i++) {
             if (mapa.mapa[i][1]===Paquete){
                 index=i
             }
