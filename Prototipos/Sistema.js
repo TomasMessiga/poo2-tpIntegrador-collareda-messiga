@@ -12,7 +12,7 @@ function Sistema(){
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,paquete){       
        let index=0
-       cond=true
+       cond=false
         for(var i=0;i<mapa.mapa.length-1;i++){
 
         if (typeof mapa.mapa[index][1]!='number'){
@@ -27,8 +27,9 @@ function Sistema(){
        else{
         mapa.mapa[index][1]=paquete
         mapa.mapa[index-1][1]=0
-        return cond
+    
        }
+        return cond
       
                 
             
