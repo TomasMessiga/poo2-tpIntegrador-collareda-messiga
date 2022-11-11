@@ -9,17 +9,10 @@ function Sistema(){
         tiempo++;
     }
     this.getTiempo=function(){return tiempo;}
-    this.salida=function (mapa,local,n,especificaciones)
-    {           var i=0
-            mapa.LocalDestino.forEach(element => { 
-                i=0
-                if (local.nombre==element[0]){
-                    mapa.mapa[1][i]=local.fabricarPaquetes(n,especificaciones)
-
-                }
-                i++
-                
-             });
+    this.mover=function (mapa,Paquete)
+    {          
+            mapa.mapa[1][0]=Paquete
+    
              return mapa.mapa
                 
                 }

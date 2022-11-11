@@ -9,20 +9,12 @@ test("incrementar una unidad de tiempo",()=>{
     sistema.incrementarTiempo();
     expect(sistema.getTiempo()).toBe(1);
 })
-
-test("insertar un mapa en el sistema",()=>{
+test("insertar pauqete en mapa",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
     let local=new Local('a')
     let destino=new Destino(0)
-    sistema.mapa=mapaAuxiliar.generar(local,destino);
-    expect(sistema.mapa).toStrictEqual([["cola de salida de locas",0],["Facturación",0],["Calidad",0] , ["Distribución",0]]);
-})
-test("insertar pauqete en la salida",()=>{
-    let sistema=new Sistema();
-    let mapaAuxiliar=new Mapa();
-    let local=new Local('a')
-    let destino=new Destino(0)
+    let paquete=new Paquete(1,1,1,1);
     mapaAuxiliar.generar(local,destino);
-    expect(sistema.salida(mapaAuxiliar,local,1,"a","a","a")).toStrictEqual([["cola de salida de locas",Paquete],["Facturación",0],["Calidad",0] , ["Distribución",0]]);
+    expect(mapa.mover(paquete)).toStrictEqual([["cola de salida de locas",paquete],["Facturación",0],["Calidad",0] , ["Distribución",0]])
 })
