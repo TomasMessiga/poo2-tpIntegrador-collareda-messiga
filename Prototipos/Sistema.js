@@ -16,15 +16,16 @@ function Sistema(){
             if (mapa.mapa[i][1]===Paquete){
                 index=i
             }
-            if (index==0){
-
-                mapa.mapa[index][1]=Paquete
-            }
-            else{
-                mapa.mapa[index][1]=0
-                mapa.mapa[1][1]=Paquete
-            }
+        
           }
+          if (index==0){
+
+            mapa.mapa[index][1]=Paquete
+        }
+        else{
+            mapa.mapa[index][1]=0
+            mapa.mapa[1][1]=Paquete
+        }
         
         
                 
