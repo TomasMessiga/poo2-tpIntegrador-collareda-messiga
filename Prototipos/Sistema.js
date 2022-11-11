@@ -13,7 +13,7 @@ function Sistema(){
     {          
             mapa.mapa[1][0]=Paquete
     
-             return mapa.mapa
+             return mapa
                 
                 }
      
