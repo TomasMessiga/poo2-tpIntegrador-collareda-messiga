@@ -22,7 +22,7 @@ test("mover paquete",()=>{
     let destino=new Destino();
     let local= new Local();
     let paquete= new Paquete();
-    sistema.mapa=mapaAuxiliar.generar(Local,Destino)
+    sistema.mapa=mapaAuxiliar.generar(local,pestino)
 
     expect(sistema.mover(paquete)).toStrictEqual([["cola de salida de locas",paquete],["Facturación",0],["Calidad",0] , ["Distribución",0]]);
 })
