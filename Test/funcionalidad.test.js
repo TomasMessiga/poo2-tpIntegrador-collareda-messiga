@@ -24,6 +24,6 @@ test("mover",()=>{
     let local=new Local('a')
     let destino=new Destino(0)
     sistema.mapa=mapaAuxiliar.generar(local,destino);
-    expect(sistema.mover(paquete)).toStrictEqual([["cola de salida de locas",paquete],["Facturación",0],["Calidad",0] , ["Distribución",0]]);
+    expect(sistema.mover('paquete')).toStrictEqual([["cola de salida de locas",'paquete'],["Facturación",0],["Calidad",0] , ["Distribución",0]]);
 })
 
