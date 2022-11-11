@@ -15,7 +15,7 @@ function Sistema(){
         let index=[];
        for(var i=0;i<4;i++){
 
-        index.push(mapa.mapa[0][1])
+        index.push(mapa.mapa[i][1])
        }
        
         return index
