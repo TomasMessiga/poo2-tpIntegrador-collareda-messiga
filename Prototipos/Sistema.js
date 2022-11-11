@@ -17,6 +17,6 @@ function Sistema(){
         return this.mapa
     }
 
-}
+
 
 module.exports=Sistema;
