@@ -19,12 +19,15 @@ function Sistema(){
             index=true
 
         }
-        mat.push(mapa.mapa[i][1])
        }
+       if (index==0){
+        mapa.mapa[index][1]=paquete
+       }
+       else{
+        mapa.mapa[index+1][1]=paquete
+        mapa.mapa[index][1]=0
 
-    
-       
-        return index
+       }
         
                 
                 }
