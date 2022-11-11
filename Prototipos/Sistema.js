@@ -1,4 +1,5 @@
 const Mapa=require('../Prototipos/Mapa.js');
+const Paquete=require("../Prototipos/Paquete")
 function Sistema(){
     
 
@@ -9,11 +10,11 @@ function Sistema(){
         tiempo++;
     }
     this.getTiempo=function(){return tiempo;}
-    this.mover=function (mapa,Paquete)
+    this.mover=function (mapa,paquete)
     {       
         let index=0;  
         for (var i = 0; i <mapa.mapa.length ; i++) {
-            if (mapa.mapa[i][1]==Paquete)
+            if (mapa.mapa[i][1]== typeof Paquete)
             {
                 index=i
             }
@@ -21,7 +22,7 @@ function Sistema(){
           }
           if (index==0){
 
-            mapa.mapa[index][1]=Paquete
+            mapa.mapa[index][1]=paquete
         }
         return index
         
