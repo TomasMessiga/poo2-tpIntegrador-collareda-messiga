@@ -1,5 +1,5 @@
-const { fuchsia } = require('color-name');
 const Paquete=require('../Prototipos/Paquete.js');
+const Producto=require('../Prototipos/Producto.js');
 
 
 function Local(nombre){

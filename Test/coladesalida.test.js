@@ -1,6 +1,6 @@
 const ColaDeSalida=require("../Prototipos/Coladesalida")
 const Local=require('../Prototipos/Local.js');
-test("generar coladesalida",()=>{
+test("generar colade2salida",()=>{
     let nombre=0
     let local=new Local(nombre);
     let colasalida=new ColaDeSalida();
