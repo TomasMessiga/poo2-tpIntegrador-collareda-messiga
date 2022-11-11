@@ -14,7 +14,7 @@ function Sistema(){
        let index=0
         for(var i=0;i<4;i++){
 
-        if (mapa.mapa[i][1]!=0){
+        if (typeof mapa.mapa[index][1]!='number'){
             index=i
 
         }
@@ -24,7 +24,7 @@ function Sistema(){
        }
       
                 
-            return typeof mapa.mapa[index][1]
+            return index
      
     }
 }
