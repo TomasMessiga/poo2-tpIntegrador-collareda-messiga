@@ -30,7 +30,7 @@ test("buscar pauqete",()=>{
     let destino= new Destino(0)
     let paquete = new Paquete(1,1,1,1)
     mapa.generar([local,destino]) 
-    mapa.buscar(paquete)
+    mapa.mapa[0][1].push(paquete)
     expect(mapa.buscar(paquete)).toStrictEqual("fila:"+0+"columna:"+1)
 })
 
