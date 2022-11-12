@@ -12,6 +12,16 @@ function Sistema(){
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,paquete){
        mapa.mapa[0][1].push(paquete)
-    }
+       let i=0
+       mapa.mapa.array.forEach(element => {
+        if (element[1].length!=0){
+            i=index
+
+        }
+        i++
+
+    });
+    return index
+}
 }
 module.exports=Sistema;
