@@ -17,7 +17,7 @@ test("insertar pauqete en mapa",()=>{
     let paquete=new Paquete(1,1,1,1);
     mapaAuxiliar.generar(local,destino);
     sistema.mover(mapaAuxiliar,paquete)
-    expecsistema.mover(mapaAuxiliar,paquete).toStrictEqual([paquete])
+    expect( sistema.mover(mapaAuxiliar,paquete)).toBe(1);
 })
 
 
