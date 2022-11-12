@@ -15,10 +15,7 @@ function Sistema(){
     var index=0
     for(var i ;i<mapa.mapa.length;i++){
 
-        if  (mapa.mapa[i][1].length!=0){
-            index=i
-        }
-
+        index=mapa.mapa[i][1].length
     }
     if( index==0){
     mapa.mapa[index][1].push(paquete)
