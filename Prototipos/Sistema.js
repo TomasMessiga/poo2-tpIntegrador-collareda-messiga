@@ -31,7 +31,10 @@ function Sistema(){
             this.incrementarTiempo();
 
           }
-   return  [mapa.mapa[index][1].length,mapa.mapa[index][1],cond,index,this.tiempo]
+          else{
+            return "llego a destino:"+mapa.LocalDestino[1][1]
+          }
+   
 }
 
 }
