@@ -6,6 +6,8 @@ function Mapa(){
         this.mapa.forEach(element => {
             element.push([])
             this.LocalDestino.push(arregloAuxiliar)
+        
+        
         });
 
     return this.mapa
