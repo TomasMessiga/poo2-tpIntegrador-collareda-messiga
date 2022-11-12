@@ -9,7 +9,7 @@ test("incrementar una unidad de tiempo",()=>{
     sistema.incrementarTiempo();
     expect(sistema.getTiempo()).toBe(1);
 })
-test("insertar pauqete en mapa",()=>{
+test("mover 3 pasos pauqete en mapa",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
     let local=new Local('a')
@@ -22,7 +22,7 @@ test("insertar pauqete en mapa",()=>{
     sistema.mover(mapaAuxiliar,paquete)
     expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",[]],["Facturación",[]],["Calidad",[paquete]] , ["Distribución",[]]]);
 })
-test("insertar pauqete en mapa",()=>{
+test("mover 4 pasos pauqete en map",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
     let local=new Local('a')
