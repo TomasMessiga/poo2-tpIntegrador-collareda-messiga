@@ -20,6 +20,10 @@ function Sistema(){
 
         }
     }
+      if(index==0){
+        mapa.mapa[index][1]==paquete
+
+      }
        return index
 
       
