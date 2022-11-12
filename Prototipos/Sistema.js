@@ -20,7 +20,7 @@ function Sistema(){
     if( index==0){
     mapa.mapa[index][1].push(paquete)
     }
-    return mapa.mapa[index][1].length
+    return mapa.mapa[0][1].length
 }
 }
 module.exports=Sistema;
