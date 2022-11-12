@@ -24,6 +24,7 @@ function Sistema(){
 
           }
           else{
+            mapa.mapa[index][1].splice(0,0)
             index=index+1
             mapa.mapa[index][1].push(paquete)
 
