@@ -20,14 +20,6 @@ function Sistema(){
         }
 
     }
-    if( index==0){
-    mapa.mapa[index][1].push(paquete)
-    }
-    else{
-        mapa.mapa[index-1][1].splice(0,0)
-        mapa.mapa[index][1].push(paquete)
-    }
-    return index
-}
+   return index
 }
 module.exports=Sistema;
