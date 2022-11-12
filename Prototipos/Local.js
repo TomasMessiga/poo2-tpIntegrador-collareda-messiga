@@ -13,6 +13,9 @@ function Local(nombre){
         return new Paquete(especificaciones[0],especificaciones[1],especificaciones[2]);
     }
 
+    this.disponibilidad=function(){
+        return disponibilidad;
+    }
     
     const cantidadCorrecta=(cantidad)=>{
         return (cantidad<=disponibilidad && cantidad>0);
