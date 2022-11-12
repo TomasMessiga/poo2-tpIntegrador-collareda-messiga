@@ -14,7 +14,7 @@ function Sistema(){
       aux=mapa.buscar(paquete)
       fila=aux[0]
       columna=aux[1]
-      if (aux[3]==-1){
+      if (aux[3]===-1){
         mapa.mapa[fila][columna+2].push(paquete)
 
       }
