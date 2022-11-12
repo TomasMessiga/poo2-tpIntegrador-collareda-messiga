@@ -21,7 +21,7 @@ function Mapa(){
         for (var i = 0; i < this.mapa.length; i++) {
             for (var j = 1; j < this.mapa[i].length; j++) {
                 if (this.mapa[i][j].length>0){
-                    for (var k = 0; j < this.mapa[i][j].length; j++){
+                    for (var k = 0; k < this.mapa[i][j].length; k++){
                         if(this.mapa[i][j][k].id=paquete.id){
 
                             fila=i
