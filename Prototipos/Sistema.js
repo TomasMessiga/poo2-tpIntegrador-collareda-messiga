@@ -10,28 +10,28 @@ function Sistema(){
         tiempo++;
     }
     this.getTiempo=function(){return tiempo;}
-    this.mover=function (mapa,paquete){       
-       let index=0
-        for(var i=0;i<mapa.mapa.length-1;i++){
-
-        if (typeof mapa.mapa[index][1]!='number'){
+    this.mover=function (mapa,paquete){    
+       let aux   
+       i=0
+     mapa.mapa.forEach(element => {
+        aux.push(element(1))
+     });
+     
+     aux.forEach(element => {
+        if (typeof element === 'number'){
             index=i
-            
-
         }
-    }
-      if(index==0){
-        mapa.mapa[index][1]==paquete
-
-      }
-       return index
-
+        i++
+     });
+     if (index==0){
+        mapa.mapa[i][1]=paquete
+     }
+     return i
       
                 
             
      
     
-}
 }
 
 
