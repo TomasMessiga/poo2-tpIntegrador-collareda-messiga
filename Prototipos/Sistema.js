@@ -24,16 +24,14 @@ function Sistema(){
             this.incrementarTiempo();
 
           }
-          if(index+1!=mapa.mapa.length){
+          if(index+1<mapa.mapa.length){
             mapa.mapa[index][1].splice(0,1)
             index=index+1
             mapa.mapa[index][1].push(paquete)
             this.incrementarTiempo();
 
           }
-          else{
-            return "llego a destino:"+mapa.LocalDestino[0][1].nombre
-          }
+       
    
 }
 
