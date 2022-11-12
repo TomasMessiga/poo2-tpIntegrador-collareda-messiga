@@ -45,9 +45,9 @@ test("mover 3 pasos pauqete en mapa",()=>{
     
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
-    sistema.mover(mapaAuxiliar,paquete)
+    
  
-    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",[]],["Facturación",[]],["Calidad",[paquete]] , ["Distribución",[]]]);
+    expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual([["cola de salida de locas",[]],["Facturación",[]],["Calidad",[paquete]] , ["Distribución",[]]]);
 })
 test("mover 4 pasos pauqete en map",()=>{
     let sistema=new Sistema();
@@ -59,9 +59,8 @@ test("mover 4 pasos pauqete en map",()=>{
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
-    sistema.mover(mapaAuxiliar,paquete)
     
-    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",[]],["Facturación",[]],["Calidad",[]] , ["Distribución",[paquete]]]);
+    expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual([["cola de salida de locas",[]],["Facturación",[]],["Calidad",[]] , ["Distribución",[paquete]]]);
 })
 
 test("LLego a destino",()=>{
