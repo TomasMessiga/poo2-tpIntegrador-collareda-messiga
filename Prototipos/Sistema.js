@@ -14,6 +14,14 @@ function Sistema(){
       aux=mapa.buscar(paquete)
       fila=aux[0]
       columna=aux[1]
+      if (mapa.mapa[fila][columna].length==0){
+        mapa.mapa[fila][columna].push(paquete)
+
+      }
+      else{
+        mapa.mapa[fila+1][columna+1].push(paquete)
+        mapa.mapa[fila][columna].slice(aux[2],1)
+      }
      return mapa.mapa[fila][columna]
       
    
