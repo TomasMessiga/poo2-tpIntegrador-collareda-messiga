@@ -11,7 +11,7 @@ function Sistema(){
     }
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,paquete){    
-       let aux   
+       let aux =[]  
        i=0
      mapa.mapa.forEach(element => {
         aux.push(element[1])
