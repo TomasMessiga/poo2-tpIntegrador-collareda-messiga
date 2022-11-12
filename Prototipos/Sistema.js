@@ -22,6 +22,7 @@ function Sistema(){
           if (index==0 && cond==false){
             mapa.mapa[index][1].push(paquete)
             this.incrementarTiempo();
+            return  [mapa.mapa[index][1].length,mapa.mapa[index][1],cond,index,this.tiempo]
 
           }
           else{
@@ -29,10 +30,16 @@ function Sistema(){
             index=index+1
             if (index!=mapa.mapa.length){
               mapa.mapa[index][1].push(paquete)
-              this.incrementarTiempo();}
+              this.incrementarTiempo();
+              return  [mapa.mapa[index][1].length,mapa.mapa[index][1],cond,index,this.tiempo]
+
+            }
+            else{
+              return "llego a destino:"+mapa.LocalDestion[0][1].nombre
+            }
 
           }
-   return  [mapa.mapa[index][1].length,mapa.mapa[index][1],cond,index,this.tiempo]
+   
 }
 
 }
