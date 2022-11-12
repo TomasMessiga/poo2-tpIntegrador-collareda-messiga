@@ -13,20 +13,21 @@ function Sistema(){
     this.mover=function (mapa,paquete){    
        let aux =[]  
        var i=0
+       var index=0
      mapa.mapa.forEach(element => {
         aux.push(element[1])
      });
      
      aux.forEach(element => {
-        if (typeof element[0] == 'number'){
+        if (typeof element[1] == 'number'){
             index=i
         }
         i++
      });
      if (index==0){
-        mapa.mapa[i][1]=paquete
+        mapa.mapa[index][1]=paquete
      }
-     return aux
+     return index
       
                 
             
