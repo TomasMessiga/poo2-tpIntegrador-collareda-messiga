@@ -39,7 +39,7 @@ test("insertar 2 pauqete en mapa",()=>{
     mapaAuxiliar.generar(local,destino);
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
-    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",[paquete]],["Facturación",[]],["Calidad",[]] , ["Distribución",[]]])
+    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",[]],["Facturación",[[paquete]]],["Calidad",[]] , ["Distribución",[]]])
    
 })
 
