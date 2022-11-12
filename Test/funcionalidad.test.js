@@ -46,6 +46,7 @@ test("mover 3 pasos pauqete en mapa",()=>{
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
+    expect(sistema.getTiempo()).toBe(4);
     expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",[]],["Facturación",[]],["Calidad",[paquete]] , ["Distribución",[]]]);
 })
 test("mover 4 pasos pauqete en map",()=>{
@@ -59,6 +60,7 @@ test("mover 4 pasos pauqete en map",()=>{
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
+    expect(sistema.getTiempo()).toBe(1);
     expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",[]],["Facturación",[]],["Calidad",[]] , ["Distribución",[paquete]]]);
 })
 
