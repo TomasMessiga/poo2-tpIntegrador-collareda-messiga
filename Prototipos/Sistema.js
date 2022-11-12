@@ -17,6 +17,7 @@ function Sistema(){
         mapa.mapa[aux[0]][aux[0]].push(paquete)
 
       }
+      this.incrementarTiempo()
       
    
 }
