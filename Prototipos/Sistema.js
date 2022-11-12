@@ -19,10 +19,10 @@ function Sistema(){
 
       }
       else{
-        mapa.mapa[fila+1][columna+1].push(paquete)
+        mapa.mapa[fila+1][columna].push(paquete)
         mapa.mapa[fila][columna].slice(aux[2],1)
       }
-     return 
+     return mapa.mapa
       
    
 }
