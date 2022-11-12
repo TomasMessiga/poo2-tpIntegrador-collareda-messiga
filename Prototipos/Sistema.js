@@ -35,7 +35,7 @@ function Sistema(){
 
             }
             else{
-              return "llego a destino:"+mapa.LocalDestino[0][1]
+              return "llego a destino:"+mapa.LocalDestino[0][1].nombre
             }
 
           }
