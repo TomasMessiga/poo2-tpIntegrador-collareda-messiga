@@ -19,7 +19,7 @@ test("mover 2 pasos pauqete en mapa",()=>{
     
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
-    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",[]],["Facturación",[]],["Calidad",[paquete]] , ["Distribución",[]]]);
+    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",[]],["Facturación",[paquete]],["Calidad",[]] , ["Distribución",[]]]);
 })
 test("mover 3 pasos pauqete en mapa",()=>{
     let sistema=new Sistema();
