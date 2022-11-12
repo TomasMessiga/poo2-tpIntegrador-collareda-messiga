@@ -13,7 +13,7 @@ function Local(nombre){
         return new Paquete(especificaciones[0],especificaciones[1],especificaciones[2]);
     }
 
-    this.disponibilidad=function(){
+    this.mostrarDisponibilidad=function(){
         return disponibilidad;
     }
     
