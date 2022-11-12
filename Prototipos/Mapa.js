@@ -17,7 +17,7 @@ function Mapa(){
         fila=0
         columna=0
         for (var i = 1; i <= this.mapa.length-1; i++) {
-            for (var j = 0; j <= this.mapa[i].length-1; i++) {
+            for (var j = 0; j <= this.mapa[i][j].length-1; i++) {
                 
                 if (this.mapa[i]>0){
 
