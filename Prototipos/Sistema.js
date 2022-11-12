@@ -25,7 +25,7 @@ function Sistema(){
 
 
       }
-     return aux
+     return mapa.mapa[fila+1][columna]
       
    
 }
