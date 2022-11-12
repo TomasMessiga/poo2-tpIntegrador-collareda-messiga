@@ -19,8 +19,12 @@ function Sistema(){
                 cond=true
             }
           }
+          if (index==0 && cond==false){
+            mapa.mapa[i][1].push(paquete)
 
-   return  [mapa.mapa[index][1].length,mapa.mapa[3][1],cond,index]
+
+          }
+   return  [mapa.mapa[index][1].length,mapa.mapa[index][1],cond,index]
 }
 
 }
