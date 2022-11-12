@@ -20,14 +20,14 @@ function Local(nombre){
 
     
     const cantidadCorrecta=(cantidad)=>{
-        return (cantidad<=disponibilidad && cantidad>0);
+        return (cantidad<=this.disponibilidad && cantidad>0);
     }
 
     const fabricarPaquetes=function(cantidad,especificaciones){
         let arregloAuxiliar=new Array();
         for (let i=0;i<cantidad;i++){
             arregloAuxiliar.push(crearUnPaquete(especificaciones));
-        };disponibilidad=disponibilidad-i;
+        };this.disponibilidad=this.disponibilidad-i;
         return arregloAuxiliar;
     };
 
