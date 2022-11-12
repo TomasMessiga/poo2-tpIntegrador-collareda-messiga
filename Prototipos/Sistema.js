@@ -11,16 +11,6 @@ function Sistema(){
     }
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,paquete){
-       let i=0
-       var index =0
-       mapa.mapa.forEach(element => {
-        if (element[1].length!=0){
-            i=index
-
-        }
-        i++
-
-    });
     mapa.mapa[index][1].push(paquete)
 
     return mapa.mapa[index][1]
