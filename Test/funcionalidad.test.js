@@ -34,6 +34,7 @@ test("mover 2 pasos pauqete en mapa",()=>{
       
    
     expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual(mapaAuxiliar.mapa[1][1]);
+    expect(mapaAuxiliar.mapa[0][1]).toStrictEqual([]);
 })
 test("mover 3 pasos pauqete en mapa",()=>{
     let sistema=new Sistema();
