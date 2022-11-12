@@ -22,7 +22,7 @@ function Sistema(){
         mapa.mapa[fila+1][columna+1].push(paquete)
         mapa.mapa[fila][columna].slice(aux[2],1)
       }
-     return mapa.mapa[fila][columna]
+     return 
       
    
 }
