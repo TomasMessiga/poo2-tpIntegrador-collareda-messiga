@@ -83,13 +83,6 @@ test("local producir -2 paquetes (error)",()=>{
 test("local producir 5 paquetes (disponibilidad cero)",()=>{
     let nombre=0;
     let local=new Local(nombre);
-    let muestraPaquetes=[];
-    let paquete=new Paquete(1,1,1);    
-    muestraPaquetes.push(paquete);
-    muestraPaquetes.push(paquete);
-    muestraPaquetes.push(paquete);
-    muestraPaquetes.push(paquete);
-    muestraPaquetes.push(paquete);
     let paquetes=local.producirPaquetes(5,[1,1,1]);
     expect(local.mostrarDisponibilidad()).toStrictEqual(0);
 })
@@ -99,11 +92,11 @@ test("local producir 6 paquetes (solo produce 5)",()=>{
     let local=new Local(nombre);
     let muestraPaquetes=[];
     let paquete=new Paquete(1,1,1);    
-    muestraPaquetes.push(paquete);
-    muestraPaquetes.push(paquete);
-    muestraPaquetes.push(paquete);
-    muestraPaquetes.push(paquete);
-    muestraPaquetes.push(paquete);
+    muestraPaquetes.concat(paquete);
+    muestraPaquetes.concat(paquete);
+    muestraPaquetes.concat(paquete);
+    muestraPaquetes.concat(paquete);
+    muestraPaquetes.concat(paquete);
     let paquetesProducidos=local.producirPaquetes(5,[1,1,1]);
     paquetesProducidos.push(local.producirPaquete([1,1,1]));
     if (paquetesProducidos[5]===undefined){paquetesProducidos.splice(5)}
@@ -113,13 +106,32 @@ test("local producir 6 paquetes (solo produce 5)",()=>{
 test("local producir 6 paquetes (disponibilidad)",()=>{
     let nombre=0;
     let local=new Local(nombre);
-    let muestraPaquetes=[];
-    let paquete=new Paquete(1,1,1);  
     let paquetesProducidos=[];  
-    paquetesProducidos.push(local.producirPaquete([1,1,1]));
-    paquetesProducidos.push(local.producirPaquete([1,1,1]));
-    paquetesProducidos.push(local.producirPaquete([1,1,1]));
-    paquetesProducidos.push(local.producirPaquete([1,1,1]));
-    paquetesProducidos.push(local.producirPaquete([1,1,1]));
-    paquetesProducidos.push(local.producirPaquete([1,1,1]));
-    expect(local.mostrarDisponibilidad()).toStrictEqual(0);})
+    paquetesProducidos.concat(local.producirPaquete([1,1,1]));
+    paquetesProducidos.concat(local.producirPaquete([1,1,1]));
+    paquetesProducidos.concat(local.producirPaquete([1,1,1]));
+    paquetesProducidos.concat(local.producirPaquete([1,1,1]));
+    paquetesProducidos.concat(local.producirPaquete([1,1,1]));
+    paquetesProducidos.concat(local.producirPaquete([1,1,1]));
+    expect(local.mostrarDisponibilidad()).toStrictEqual(0);
+})
+
+test("locales con produccion simultanea",()=>{
+    let nombre=0;
+    let a=new Local("a");
+    let b=new Local("b");
+    let c=new Local("c");
+    let d=new Local("d");
+    let destinoPaquetes=[];
+    destinoPaquetes.concat(b.producirPaquete([1,1,1]));
+    destinoPaquetes.concat(b.producirPaquete([1,1,1]));
+    destinoPaquetes.concat(b.producirPaquete([1,1,1]));
+    destinoPaquetes.concat(b.producirPaquete([1,1,1]));
+    destinoPaquetes.concat(b.producirPaquete([1,1,1]));
+    destinoPaquetes.concat(c.producirPaquete([1,1,1]));
+    destinoPaquetes.concat(c.producirPaquete([1,1,1]));
+    destinoPaquetes.concat(c.producirPaquete([1,1,1]));
+    destinoPaquetes.concat(c.producirPaquete([1,1,1]));
+    destinoPaquetes.concat(d.producirPaquete([1,1,1]));
+    expect(a.mostrarDisponibilidad()+b.mostrarDisponibilidad()).toStrictEqual(c.mostrarDisponibilidad()+d.mostrarDisponibilidad());
+})
