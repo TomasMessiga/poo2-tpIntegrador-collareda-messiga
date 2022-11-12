@@ -3,6 +3,7 @@ const Mapa=require('../Prototipos/Mapa.js');
 const Local=require('../Prototipos/Local.js');
 const Destino=require('../Prototipos/Destino.js'); 
 const Paquete = require('../Prototipos/Paquete.js');
+const { test } = require('picomatch');
 
 test("incrementar una unidad de tiempo",()=>{
     let sistema=new Sistema();
@@ -52,8 +53,7 @@ test("mover 4 pasos pauqete en map",()=>{
     let local=new Local('a')
     let destino=new Destino(0)
     let paquete=new Paquete(1,1,1,1);
-    mapaAuxiliar.generar(local,destino);
-    
+    mapaAuxiliar.generar(local,destino);    
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
@@ -61,6 +61,20 @@ test("mover 4 pasos pauqete en map",()=>{
     expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",[]],["Facturación",[]],["Calidad",[]] , ["Distribución",[paquete]]]);
 })
 
+test("LLego a destino",()=>{
+    let sistema=new Sistema();
+    let mapaAuxiliar=new Mapa();
+    let local=new Local('a')
+    let destino=new Destino(0)
+    let paquete=new Paquete(1,1,1,1);
+    mapaAuxiliar.generar(local,destino);    
+    sistema.mover(mapaAuxiliar,paquete)
+    sistema.mover(mapaAuxiliar,paquete)
+    sistema.mover(mapaAuxiliar,paquete)
+    sistema.mover(mapaAuxiliar,paquete)
+    
+    expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual("llego a destino:"+destino.nombre);
 
 
 
+})

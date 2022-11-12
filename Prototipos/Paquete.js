@@ -2,7 +2,6 @@
 const Producto=require('../Prototipos/Producto.js');
 
 
-
 function Paquete(destino,productos,tipoDeEnvio,id){
 
    this.destino=destino;                                                                                                                                                                                                                               
