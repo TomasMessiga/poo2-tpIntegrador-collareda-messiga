@@ -120,10 +120,11 @@ test("locales con produccion simultanea",()=>{
     let a=new Local("a");
     let b=new Local("b");
     let c=new Local("c");
-    let destinoPaquetes=[];
     let aux=a.producirPaquetes(2,[1,1,1]);
-    destinoPaquetes.concat(destinoPaquetes.push(aux[0]));
+    aux=b.producirPaquetes(5,[1,1,1]);
+    aux=b.producirPaquete([1,1,1]);
+    aux=a.producirPaquetes(2,[1,1,1]);
   
 
-    expect(a.mostrarDisponibilidad()).toStrictEqual(destinoPaquetes)
+    expect(a.mostrarDisponibilidad()).toStrictEqual(b.mostrarDisponibilidad()+c.mostrarDisponibilidad())
 })
