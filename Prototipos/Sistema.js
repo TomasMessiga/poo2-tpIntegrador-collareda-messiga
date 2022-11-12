@@ -11,7 +11,6 @@ function Sistema(){
     }
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,paquete){
-       mapa.mapa[0][1].push(paquete)
        let i=0
        var index =0
        mapa.mapa.forEach(element => {
@@ -22,6 +21,8 @@ function Sistema(){
         i++
 
     });
+    mapa.mapa[index][1].push(paquete)
+
     return index
 }
 }

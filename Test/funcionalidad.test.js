@@ -28,7 +28,6 @@ test("insertar pauqete en mapa",()=>{
     mapaAuxiliar.generar(local,destino);
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
-    
     expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual(1)
    
 })
