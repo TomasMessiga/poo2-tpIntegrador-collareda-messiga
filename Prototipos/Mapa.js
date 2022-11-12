@@ -16,20 +16,8 @@ function Mapa(){
     this.buscar=function(paquete){
         fila=0
         columna=0
-        for (var i = 1; i <= this.mapa.length-1; i++) {
-            for (var j = 0; j <= this.mapa[i][j].length-1; i++) {
-                
-                if (this.mapa[i]>0){
-
-                    fila=i
-                    columna=j
-                }
-
-        
-            }
-        
-          }
-        return ('fila:'+i+'columna'+j)
+ 
+        return (this.mapa[0][1])
             
         };
         
