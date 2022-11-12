@@ -105,5 +105,7 @@ test("local producir 6 paquetes (solo produce 5)",()=>{
     muestraPaquetes.push(paquete);
     muestraPaquetes.push(paquete);
     let paquetesProducidos=local.producirPaquetes(5,[1,1,1]);
-    expect(local.producirPaquetes(5,[1,1,1])).toStrictEqual(muestraPaquetes);
+    paquetesProducidos.push(local.producirPaquete([1,1,1]));
+    if (paquetesProducidos[5]===undefined){paquetesProducidos.splice(5)}
+    expect(paquetesProducidos).toStrictEqual(muestraPaquetes);
 })

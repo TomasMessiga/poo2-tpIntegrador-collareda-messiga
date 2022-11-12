@@ -26,7 +26,6 @@ function Local(nombre){
         for (let i=0;i<cantidad;i++){
             arregloAuxiliar.push(crearUnPaquete(especificaciones));
             disponibilidad=disponibilidad-1;
-            console.log(disponibilidad+" prueba")
         };
         return arregloAuxiliar;
     };
