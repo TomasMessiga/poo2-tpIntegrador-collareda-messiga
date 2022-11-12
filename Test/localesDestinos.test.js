@@ -91,5 +91,5 @@ test("local producir 5 paquetes (disponibilidad cero)",()=>{
     muestraPaquetes.push(paquete);
     muestraPaquetes.push(paquete);
     let paquetes=local.producirPaquetes(5,[1,1,1]);
-    expect(local.disponibilidad).toStrictEqual(0);
+    expect(local.mostrarDisponibilidad()).toStrictEqual(0);
 })

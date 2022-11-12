@@ -7,7 +7,7 @@ function Local(nombre){
     
     this.nombre=nombre;
     
-    this.disponibilidad=5;
+    var disponibilidad=5;
 
     const crearUnPaquete=function(especificaciones){
         return new Paquete(especificaciones[0],especificaciones[1],especificaciones[2]);
@@ -15,15 +15,15 @@ function Local(nombre){
 
     
     const cantidadCorrecta=(cantidad)=>{
-        return (cantidad<=this.disponibilidad && cantidad>0);
+        return (cantidad<=disponibilidad && cantidad>0);
     }
 
     const fabricarPaquetes=function(cantidad,especificaciones){
         let arregloAuxiliar=new Array();
         for (let i=0;i<cantidad;i++){
             arregloAuxiliar.push(crearUnPaquete(especificaciones));
-            this.disponibilidad=this.disponibilidad-1;
-            console.log(this.disponibilidad+" prueba")
+            disponibilidad=disponibilidad-1;
+            console.log(disponibilidad+" prueba")
         };
         return arregloAuxiliar;
     };
