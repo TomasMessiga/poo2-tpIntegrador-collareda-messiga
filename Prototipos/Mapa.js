@@ -7,9 +7,12 @@ function Mapa(){
         this.mapa.forEach(element => {
             element.push([])
             this.LocalDestino.push([local,destino])
+
         
         
         });
+        return this.mapa
+    }
     this.buscar=function(paquete){
         fila=0
         columna=0
@@ -33,9 +36,6 @@ function Mapa(){
 
     }    
 
-    return this.mapa
-
-}
 
 
 module.exports=Mapa;
