@@ -36,7 +36,6 @@ function Mapa(){
     return this.mapa
 
 }
-}
 
 
 module.exports=Mapa;
