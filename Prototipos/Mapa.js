@@ -4,7 +4,7 @@ function Mapa(){
     this.LocalDestino=[]
     this.generar=function(arregloAuxiliar){
         this.mapa.forEach(element => {
-            element.push('')
+            element.push([])
             this.LocalDestino.push(arregloAuxiliar)
         
         
