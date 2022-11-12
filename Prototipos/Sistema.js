@@ -21,7 +21,7 @@ function Sistema(){
             i++
             
         });
-        element[index][1].push(paquete)
+        mapa.mapa[index][1].push(paquete)
         return mapa
 }
 }
