@@ -23,12 +23,12 @@ function Mapa(){
                     fila=i
                     columna=j
                 }
-                aux.push(this.mapa[i][j])
+               
         
             }
         
           }
-        return (aux)
+        return ("fila:"+fila+"columna:"+columna)
             
         };
         
