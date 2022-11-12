@@ -92,14 +92,14 @@ test("local producir 6 paquetes (solo produce 5)",()=>{
     let local=new Local(nombre);
     let muestraPaquetes=[];
     let paquete=new Paquete(1,1,1);    
-    muestraPaquetes.concat(paquete);
-    muestraPaquetes.concat(paquete);
-    muestraPaquetes.concat(paquete);
-    muestraPaquetes.concat(paquete);
-    muestraPaquetes.concat(paquete);
+    muestraPaquetes.push(paquete);
+    muestraPaquetes.push(paquete);
+    muestraPaquetes.push(paquete);
+    muestraPaquetes.push(paquete);
+    muestraPaquetes.push(paquete);
     let paquetesProducidos=local.producirPaquetes(5,[1,1,1]);
- //   paquetesProducidos.concat(local.producirPaquete([1,1,1]));
-   // if (paquetesProducidos[5]===undefined){paquetesProducidos.splice(5)}
+    paquetesProducidos.concat(local.producirPaquete([1,1,1]));
+    if (paquetesProducidos[5]===undefined){paquetesProducidos.splice(5)}
     expect(paquetesProducidos).toStrictEqual(muestraPaquetes);
 })
 
