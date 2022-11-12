@@ -19,4 +19,17 @@ test("insertar pauqete en mapa",()=>{
     sistema.mover(mapaAuxiliar,paquete)
     expect(mapaAuxiliar.mapa[0][1]).toStrictEqual([paquete])
 })
+test("insertar pauqete en mapa",()=>{
+    let sistema=new Sistema();
+    let mapaAuxiliar=new Mapa();
+    let local=new Local('a')
+    let destino=new Destino(0)
+    let paquete=new Paquete(1,1,1,1);
+    mapaAuxiliar.generar(local,destino);
+    sistema.mover(mapaAuxiliar,paquete)
+    sistema.mover(mapaAuxiliar,paquete)
+    expect(mapaAuxiliar.mapa[0][1]).toStrictEqual([])
+    expect(mapaAuxiliar.mapa[0][2]).toStrictEqual([paquete])
+})
+
 
