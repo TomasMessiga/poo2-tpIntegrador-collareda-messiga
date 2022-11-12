@@ -33,7 +33,7 @@ test("mover 2 pasos pauqete en mapa",()=>{
     sistema.mover(mapaAuxiliar,paquete)
       
    
-    expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual(mapa.mapa[1][1]);
+    expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual(mapaAuxiliar.mapa[1][1]);
 })
 test("mover 3 pasos pauqete en mapa",()=>{
     let sistema=new Sistema();
@@ -47,7 +47,7 @@ test("mover 3 pasos pauqete en mapa",()=>{
     sistema.mover(mapaAuxiliar,paquete)
     
  
-    expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual(mapa.mapa[2][1]);
+    expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual(mapaAuxiliar.mapa[2][1]);
 })
 test("mover 4 pasos pauqete en map",()=>{
     let sistema=new Sistema();
@@ -60,6 +60,6 @@ test("mover 4 pasos pauqete en map",()=>{
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
     
-    expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual(mapa.mapa[3][1]);
+    expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual(mapaAuxiliar.mapa[3][1]);
 })
 
