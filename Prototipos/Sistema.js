@@ -20,6 +20,10 @@ function Sistema(){
         }
 
     }
+    if (index==0){
+        mapa.mapa[i][1].push(paquete)
+    }
    return index
+}
 }
 module.exports=Sistema;
