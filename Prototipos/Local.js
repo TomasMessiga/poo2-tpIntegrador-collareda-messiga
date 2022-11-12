@@ -23,6 +23,7 @@ function Local(nombre){
         for (let i=0;i<cantidad;i++){
             arregloAuxiliar.push(crearUnPaquete(especificaciones));
             this.disponibilidad=this.disponibilidad-1;
+            console.log(i+" prueba")
         };
         return arregloAuxiliar;
     };
