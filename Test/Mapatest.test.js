@@ -28,7 +28,7 @@ test("buscar pauqete",()=>{
     let mapa=new Mapa();
     let local=new Local('a')
     let destino= new Destino(0)
-    let paquete = new (1,1,1,1)
+    let paquete = new Paquete(1,1,1,1)
     mapa.generar([local,destino]) 
     mapa.buscar(paquete)
     expect(mapa.generar(local,destino)).toStrictEqual([["cola de salida de locas",[]],["Facturación",[]],["Calidad",[]] , ["Distribución",[]]])
