@@ -10,8 +10,18 @@ function Sistema(){
         tiempo++;
     }
     this.getTiempo=function(){return tiempo;}
-    this.mover=function (mapa,paquete){    
-        mapa.mapa[0][1].push(paquete)   
+    this.mover=function (mapa,paquete){
+        var index=0
+        var i=0    
+        mapa.mapa.forEach(element => {
+
+            if (element[1].length==0){
+                index=i
+            }
+            i++
+            
+        });
+        element[index][1].push(paquete)
         return mapa
 }
 }
