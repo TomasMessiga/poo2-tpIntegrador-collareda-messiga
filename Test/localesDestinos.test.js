@@ -121,7 +121,6 @@ test("locales con produccion simultanea",()=>{
     let a=new Local("a");
     let b=new Local("b");
     let c=new Local("c");
-    let d=new Local("d");
     let destinoPaquetes=[];
     destinoPaquetes.concat(b.producirPaquete([1,1,1]));
     destinoPaquetes.concat(b.producirPaquete([1,1,1]));
@@ -132,6 +131,6 @@ test("locales con produccion simultanea",()=>{
     destinoPaquetes.concat(c.producirPaquete([1,1,1]));
     destinoPaquetes.concat(c.producirPaquete([1,1,1]));
     destinoPaquetes.concat(c.producirPaquete([1,1,1]));
-    destinoPaquetes.concat(d.producirPaquete([1,1,1]));
+    destinoPaquetes.concat(c.producirPaquete([1,1,1]));
     expect(a.mostrarDisponibilidad()+b.mostrarDisponibilidad()).toStrictEqual(c.mostrarDisponibilidad()+d.mostrarDisponibilidad());
 })
