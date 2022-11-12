@@ -14,14 +14,7 @@ function Sistema(){
       aux=mapa.buscar(paquete)
       fila=aux[0]
       columna=aux[1]
-      if (aux[3]===-1){
-        mapa.mapa[fila][columna+2].push(paquete)
-
-      }
-      else{
-        mapa.mapa[fila+1][columna].push(paquete)
-        mapa.mapa[fila][columna].slice(aux[2],1)
-      }
+      poscola=aux[2]
      return aux
       
    
