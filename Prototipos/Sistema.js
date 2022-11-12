@@ -18,7 +18,7 @@ function Sistema(){
      });
      
      aux.forEach(element => {
-        if (typeof element[1] != 'number'){
+        if (typeof element[0] == 'number'){
             index=i
         }
         i++
