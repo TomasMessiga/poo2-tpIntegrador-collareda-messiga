@@ -11,8 +11,12 @@ function Sistema(){
     }
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,paquete){
-
- 
+        var index=0
+        for (var i = 0; i < mapa.mapa.length; i++) {
+            if (mapa.mapa[0][1].length>0){
+                index=i
+            }
+          }
 
    return  [mapa.mapa[0][1].length,mapa.mapa[0][1]]
 }
