@@ -110,14 +110,16 @@ test("local producir 6 paquetes (solo produce 5)",()=>{
     expect(paquetesProducidos).toStrictEqual(muestraPaquetes);
 })
 
-test("local producir 6 paquetes (dos locales)",()=>{
+test("local producir 6 paquetes (disponibilidad)",()=>{
     let nombre=0;
-    let local_1=new Local(nombre);
-    let local_2=new Local(nombre);
+    let local=new Local(nombre);
     let muestraPaquetes=[];
-    let paquetesProducidos_1=local_1.producirPaquetes(5,[1,1,1]);
-    let paquetesProducidos_2=local_2.producirPaquetes(3,[1,1,1]);
-    paquetesProducidos_1.push(local_2.producirPaquete([1,1,1]));
-    paquetesProducidos_2.push(local_2.producirPaquete([1,1,1]));
-    expect(local_1.mostrarDisponibilidad()).toStrictEqual(local_2.mostrarDisponibilidad()-1);
-})
+    let paquete=new Paquete(1,1,1);  
+    let paquetesProducidos=[];  
+    paquetesProducidos.push(local.producirPaquete([1,1,1]));
+    paquetesProducidos.push(local.producirPaquete([1,1,1]));
+    paquetesProducidos.push(local.producirPaquete([1,1,1]));
+    paquetesProducidos.push(local.producirPaquete([1,1,1]));
+    paquetesProducidos.push(local.producirPaquete([1,1,1]));
+    paquetesProducidos.push(local.producirPaquete([1,1,1]));
+    expect(local.mostrarDisponibilidad()).toStrictEqual(0);})
