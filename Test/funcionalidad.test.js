@@ -75,7 +75,6 @@ test("LLego a destino",()=>{
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
-    
     expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual("llego a destino:"+destino.nombre);
  
 
