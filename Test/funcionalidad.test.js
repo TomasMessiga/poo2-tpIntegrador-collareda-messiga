@@ -29,7 +29,7 @@ test("insertar pauqete en mapa",()=>{
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
     expect(mapaAuxiliar.mapa[0][1]).toStrictEqual([])
-    expect(mapaAuxiliar.mapa[0][2]).toStrictEqual([paquete])
+    expect(mapaAuxiliar.mapa[1][2]).toStrictEqual([paquete])
 })
 
 
