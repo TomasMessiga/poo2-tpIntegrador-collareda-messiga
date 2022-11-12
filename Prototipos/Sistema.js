@@ -25,7 +25,7 @@ function Sistema(){
 
 
       }
-     return mapa.mapa[fila][columna].slice(poscola,1)
+     return mapa.mapa
       
    
 }
