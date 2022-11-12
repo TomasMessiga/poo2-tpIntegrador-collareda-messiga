@@ -19,7 +19,7 @@ function Mapa(){
         for (var i = 1; i <= this.mapa.length-1; i++) {
             for (var j = 0; j <= i; i++) {
                 
-                if (this.mapa[i][j]>0){
+                if (this.mapa[i][j].length>0){
 
                     fila=i
                     columna=j
