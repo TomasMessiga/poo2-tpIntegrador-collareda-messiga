@@ -22,7 +22,6 @@ function Sistema(){
           if (index==0 && cond==false){
             mapa.mapa[index][1].push(paquete)
 
-
           }
           else{
             index=index+1

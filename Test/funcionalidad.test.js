@@ -20,7 +20,7 @@ test("insertar pauqete en mapa",()=>{
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
-    expect(sistema.mover(mapaAuxiliar,paquete)).toBe(1);
+    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",[paquete]],["Facturación",[paquete]],["Calidad",[paquete]] , ["Distribución",[]]]);
 })
 
 
