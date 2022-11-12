@@ -16,19 +16,26 @@ function Mapa(){
     this.buscar=function(paquete){
         fila=0
         columna=0
+        poscola=0
         aux=[]
         for (var i = 0; i < this.mapa.length; i++) {
             for (var j = 1; j < this.mapa[i].length; j++) {
                 if (this.mapa[i][j].length>0){
-                    fila=i
-                    columna=j
+                    for (var k = 0; j < this.mapa[i][j].length; j++){
+                        if(this.mapa[i][j][k].id=paquete.id){
+
+                            fila=i
+                            columna=j
+                            poscola=k
+                        }
+                    }
                 }
                
         
             }
         
           }
-        return ("fila:"+fila+"columna:"+columna)
+        return ("fila:"+fila+"columna:"+columna+"Poscola:"+poscola)
             
         };
         
