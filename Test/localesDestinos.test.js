@@ -128,6 +128,7 @@ test("locales con produccion simultanea",()=>{
     destinoPaquetes.concat(b.producirPaquete([1,1,1]));
     destinoPaquetes.concat(b.producirPaquete([1,1,1]));
     destinoPaquetes.concat(b.producirPaquete([1,1,1]));
+    destinoPaquetes.concat(b.producirPaquete([1,1,1]));
    
-    expect(a.mostrarDisponibilidad()-1+b.mostrarDisponibilidad()).toStrictEqual(c.mostrarDisponibilidad());
+    expect(a.mostrarDisponibilidad()).toStrictEqual(b.mostrarDisponibilidad());
 })
