@@ -2,10 +2,10 @@
 function Mapa(){ 
     this.mapa=[["cola de salida de locas"],["Facturación"],["Calidad"] , ["Distribución"]]
     this.LocalDestino=[]
-    this.generar=function(arregloAuxiliar){
+    this.generar=function(local,destino){
         this.mapa.forEach(element => {
             element.push([])
-            this.LocalDestino.push(arregloAuxiliar)
+            this.LocalDestino.push([local,destino])
         
         
         });
