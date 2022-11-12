@@ -13,4 +13,5 @@ function Sistema(){
     this.mover=function (mapa,paquete){
        mapa.mapa[0][1].push(paquete)
     }
+}
 module.exports=Sistema;
