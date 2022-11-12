@@ -22,7 +22,7 @@ function Local(nombre){
         let arregloAuxiliar=new Array();
         for (let i=0;i<cantidad;i++){
             arregloAuxiliar.push(crearUnPaquete(especificaciones));
-            this.disponibilidad--;
+            this.disponibilidad=this.disponibilidad-1;
         };
         return arregloAuxiliar;
     };
