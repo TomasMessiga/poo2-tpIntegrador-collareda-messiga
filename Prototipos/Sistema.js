@@ -18,7 +18,7 @@ function Sistema(){
             }
           }
 
-   return  [mapa.mapa[0][1].length,mapa.mapa[0][1]]
+   return  [mapa.mapa[3][1].length,mapa.mapa[3][1]]
 }
 
 }
