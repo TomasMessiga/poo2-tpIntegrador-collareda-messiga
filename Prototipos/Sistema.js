@@ -11,14 +11,7 @@ function Sistema(){
     }
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,paquete){    
-        mapa.mapa[0][1]=paquete
-      
-                
-            
-     
-    
+           
 }
-
 }
-
 module.exports=Sistema;
