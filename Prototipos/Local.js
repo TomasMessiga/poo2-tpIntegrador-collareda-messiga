@@ -24,7 +24,8 @@ function Local(nombre){
         let arregloAuxiliar=new Array();
         for (let i=0;i<cantidad;i++){
             arregloAuxiliar.push(crearUnPaquete(especificaciones));
-        };this.disponibilidad=this.disponibilidad-i;
+            this.disponibilidad--;
+        };
         return arregloAuxiliar;
     };
 
