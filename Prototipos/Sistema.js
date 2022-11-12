@@ -20,7 +20,7 @@ function Sistema(){
             }
           }
           if (index==0 && cond==false){
-            mapa.mapa[i][1].push(paquete)
+            mapa.mapa[index][1].push(paquete)
 
 
           }
