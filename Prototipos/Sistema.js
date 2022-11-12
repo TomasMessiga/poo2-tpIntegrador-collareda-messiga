@@ -29,7 +29,7 @@ function Sistema(){
             index=index+1
             mapa.mapa[index][1].push(paquete)
             this.incrementarTiempo();
-
+ 
           }
        
    
