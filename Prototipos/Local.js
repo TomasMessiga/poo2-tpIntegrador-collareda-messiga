@@ -4,10 +4,6 @@ const Producto=require('../Prototipos/Producto.js');
 
 function Local(nombre){
     this.nombre=nombre;
-
-
-
-
     const crearUnPaquete=function(especificaciones){
         return new Paquete(especificaciones[0],especificaciones[1],especificaciones[2]);
     }

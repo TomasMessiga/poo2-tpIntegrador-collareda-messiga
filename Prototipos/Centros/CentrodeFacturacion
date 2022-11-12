@@ -1,0 +1,11 @@
+const Local=require('../Prototipos/Local.js');
+function CentrodeFacturcion(mapa){
+
+    this.generar=(local)=>{
+        this.local=local
+        return "cola de salida de"+local.nombre
+
+    }
+}
+
+module.exports=CentrodeFacturcion;
