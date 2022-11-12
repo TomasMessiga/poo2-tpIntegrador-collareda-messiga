@@ -23,7 +23,7 @@ function Sistema(){
     });
     mapa.mapa[index][1].push(paquete)
 
-    return mapa.mapa[index][1].length
+    return mapa.mapa[index][1]
 }
 }
 module.exports=Sistema;
