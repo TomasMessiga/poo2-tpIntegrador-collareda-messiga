@@ -15,12 +15,19 @@ function Sistema(){
     var index=0
     for(var i ;i<mapa.mapa.length-1;i++){
 
-        index=mapa.mapa[i][1].length
+        if  (mapa.mapa[i][1].length<1){
+            index=i
+        }
+
     }
     if( index==0){
     mapa.mapa[index][1].push(paquete)
     }
-    return mapa.mapa[0][1].length
+    else{
+        mapa.mapa[index-1][1].splice(0,0)
+        mapa.mapa[index][1].push(paquete)
+    }
+    return index
 }
 }
 module.exports=Sistema;
