@@ -13,7 +13,7 @@ function Sistema(){
     this.mover=function (mapa,paquete){
 
     var index=0
-    for(var i ;i<mapa.mapa.length;i++){
+    for(var i ;i<mapa.mapa.length-1;i++){
 
         index=mapa.mapa[i][1].length
     }
