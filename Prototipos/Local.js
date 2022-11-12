@@ -6,7 +6,7 @@ function Local(nombre){
     const limiteProduccion=5;
     
     this.nombre=nombre;
-
+    this.disponibilidad=5;
 
 
 
@@ -17,14 +17,14 @@ function Local(nombre){
 
     
     const cantidadCorrecta=(cantidad)=>{
-        return (cantidad<=5 && cantidad>0);
+        return (cantidad<=disponibilidad && cantidad>0);
     }
 
     const fabricarPaquetes=function(cantidad,especificaciones){
         let arregloAuxiliar=new Array();
         for (let i=0;i<cantidad;i++){
             arregloAuxiliar.push(crearUnPaquete(especificaciones));
-        };
+        };disponibilidad=disponibilidad-i;
         return arregloAuxiliar;
     };
 
@@ -36,7 +36,7 @@ function Local(nombre){
     };
 
     this.producirPaquete=(especificaciones)=>{
-        return fabricarPaquetes(1,especificaciones);
+        return (cantidadCorrecta(1)) ? (fabricarPaquetes(1,especificaciones)):(undefined);
     }
 }
 
