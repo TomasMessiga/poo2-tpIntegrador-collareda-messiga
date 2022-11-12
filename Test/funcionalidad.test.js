@@ -3,7 +3,7 @@ const Mapa=require('../Prototipos/Mapa.js');
 const Local=require('../Prototipos/Local.js');
 const Destino=require('../Prototipos/Destino.js'); 
 const Paquete = require('../Prototipos/Paquete.js');
-const { test } = require('picomatch');
+
 
 test("incrementar una unidad de tiempo",()=>{
     let sistema=new Sistema();
