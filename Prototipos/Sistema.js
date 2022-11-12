@@ -19,6 +19,12 @@ function Sistema(){
         mapa.mapa[fila][columna+1].push(paquete)
 
       }
+      else{
+        mapa.mapa[fila+1][columna].push(paquete)
+        mapa.mapa[fila+1][columna].slice(poscola,1)
+
+
+      }
      return aux
       
    
