@@ -117,6 +117,7 @@ test("local producir 6 paquetes (dos locales)",()=>{
     let muestraPaquetes=[];
     let paquetesProducidos_1=local_1.producirPaquetes(5,[1,1,1]);
     let paquetesProducidos_2=local_2.producirPaquetes(3,[1,1,1]);
+    paquetesProducidos_1.push(local_2.producirPaquete([1,1,1]));
     paquetesProducidos_2.push(local_2.producirPaquete([1,1,1]));
-    expect(local_1.mostrarDisponibilidad()).toStrictEqual(local_2.mostrarDisponibilidad());
+    expect(local_1.mostrarDisponibilidad()).toStrictEqual(local_2.mostrarDisponibilidad()-1);
 })
