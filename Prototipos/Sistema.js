@@ -20,7 +20,7 @@ function Sistema(){
             }
           }
 
-   return  [mapa.mapa[3][1].length,mapa.mapa[3][1],cond]
+   return  [mapa.mapa[3][1].length,mapa.mapa[3][1],cond,index]
 }
 
 }
