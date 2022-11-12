@@ -15,8 +15,8 @@ function Mapa(){
     }
     this.buscar=function(paquete){
         fila=0
-        columna=1
-        poscola=0
+        columna=0
+        poscola=-1
         aux=[]
         for (var i = 0; i < this.mapa.length; i++) {
             for (var j = 1; j < this.mapa[i].length; j++) {
