@@ -17,7 +17,7 @@ function Mapa(){
         fila=0
         columna=0
         for (var i = 0; i <= this.mapa.length-1; i++) {
-            for (var j = 1; j <= this.mapa[i].length-2; i++) {
+            for (var j = 1; j <= this.mapa[i].length-2; j++) {
                 
                 if (this.mapa[i][j].length>0){
 
@@ -29,7 +29,7 @@ function Mapa(){
             }
         
           }
-        return ('fila:'+fila+'columna:'+columna+this.mapa[0][1].length)
+        return ('fila:'+fila+'columna:'+columna+'the length is 'this.mapa[0][1].length)
             
         };
         
