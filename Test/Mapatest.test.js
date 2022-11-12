@@ -31,7 +31,7 @@ test("buscar pauqete",()=>{
     let paquete = new Paquete(1,1,1,1)
     mapa.generar([local,destino]) 
     mapa.mapa[0][1].push(paquete)
-    expect(mapa.buscar(paquete)).toStrictEqual("fila:"+0+"columna:"+1+"Poscola:"+0)
+    expect(mapa.buscar(paquete)).toStrictEqual([0,1,0])
 })
 test("buscar pauqete cuando hay 2 paquetes",()=>{
     let mapa=new Mapa();
@@ -42,7 +42,7 @@ test("buscar pauqete cuando hay 2 paquetes",()=>{
     mapa.generar([local,destino]) 
     mapa.mapa[0][1].push(paquete2)
     mapa.mapa[1][1].push(paquete)
-    expect(mapa.buscar(paquete)).toStrictEqual("fila:"+1+"columna:"+1+"Poscola:"+0)
+    expect(mapa.buscar(paquete)).toStrictEqual([1,1,0])
 })
 test("buscar pauqete cuando hay 2 paquetes",()=>{
     let mapa=new Mapa();
@@ -55,7 +55,7 @@ test("buscar pauqete cuando hay 2 paquetes",()=>{
     mapa.mapa[0][1].push(paquete2)
     mapa.mapa[1][1].push(paquete3)
     mapa.mapa[1][1].push(paquete)
-    expect(mapa.buscar(paquete)).toStrictEqual("fila:"+1+"columna:"+1+"Poscola:"+1)
+    expect(mapa.buscar(paquete)).toStrictEqual([1,1,1])
 })
 
 
