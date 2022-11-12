@@ -15,7 +15,8 @@ function Sistema(){
         var i=0    
         mapa.mapa.forEach(element => {
 
-            if (element[1].length==0){
+            if (element[1].length==0)
+            {
                 index=i
             }
             i++
