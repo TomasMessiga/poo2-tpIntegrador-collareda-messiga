@@ -29,7 +29,7 @@ function Mapa(){
             }
         
           }
-        return ('fila:'+fila+'columna:'+columna+'the length is 'this.mapa[0][1].length)
+        return ('fila:'+fila+'columna:'+columna+'the length is '+this.mapa[fila][columna].length)
             
         };
         
