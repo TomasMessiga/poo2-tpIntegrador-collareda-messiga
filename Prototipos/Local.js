@@ -3,7 +3,10 @@ const Producto=require('../Prototipos/Producto.js');
 
 
 function Local(nombre){
+    const limiteProduccion=5;
+    
     this.nombre=nombre;
+
 
 
 
@@ -19,7 +22,7 @@ function Local(nombre){
 
     const fabricarPaquetes=function(cantidad,especificaciones){
         let arregloAuxiliar=new Array();
-        for (let i=0;i<cantidad && arregloAuxiliar!=undefined;i++){
+        for (let i=0;i<cantidad;i++){
             arregloAuxiliar.push(crearUnPaquete(especificaciones));
         };
         return arregloAuxiliar;
@@ -31,6 +34,10 @@ function Local(nombre){
         return (cantidadCorrecta(cantidad)) ? (fabricarPaquetes(cantidad,especificaciones)):(undefined);
  
     };
+
+    this.producirPaquete=(especificaciones)=>{
+        return fabricarPaquetes(1,especificaciones);
+    }
 }
 
 module.exports=Local;
