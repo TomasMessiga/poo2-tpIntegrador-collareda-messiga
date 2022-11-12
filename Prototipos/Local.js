@@ -6,6 +6,9 @@ function Local(nombre){
     const limiteProduccion=5;
     
     this.nombre=nombre;
+    
+    this.disponibilidad=5;
+
     const crearUnPaquete=function(especificaciones){
         return new Paquete(especificaciones[0],especificaciones[1],especificaciones[2]);
     }
