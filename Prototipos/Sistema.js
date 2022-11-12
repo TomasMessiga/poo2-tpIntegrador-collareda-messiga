@@ -24,7 +24,7 @@ function Sistema(){
 
 
           }
-          if (index>0 && index<mapa.mapa.length-1){
+          else{
             index=index+1
             mapa.mapa[index][1].push(paquete)
 
