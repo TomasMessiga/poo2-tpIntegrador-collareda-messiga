@@ -93,3 +93,17 @@ test("local producir 5 paquetes (disponibilidad cero)",()=>{
     let paquetes=local.producirPaquetes(5,[1,1,1]);
     expect(local.mostrarDisponibilidad()).toStrictEqual(0);
 })
+
+test("local producir 6 paquetes (solo produce 5)",()=>{
+    let nombre=0;
+    let local=new Local(nombre);
+    let muestraPaquetes=[];
+    let paquete=new Paquete(1,1,1);    
+    muestraPaquetes.push(paquete);
+    muestraPaquetes.push(paquete);
+    muestraPaquetes.push(paquete);
+    muestraPaquetes.push(paquete);
+    muestraPaquetes.push(paquete);
+    let paquetes=local.producirPaquetes(5,[1,1,1]);
+    expect(local.producirPaquetes(5,[1,1,1])+local.producirPaquete([1,1,1])).toStrictEqual(muestraPaquetes);
+})
