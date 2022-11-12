@@ -12,7 +12,7 @@ function Sistema(){
     this.getTiempo=function(){return tiempo;}
     this.mover=function (mapa,paquete){
       aux=mapa.buscar(paquete)
-      if(aux[0]==0 && aux[0]==1 && aux[2]==0){
+      if(aux[0]==0 && aux[1]==0 && aux[2]==0){
 
         mapa.mapa[aux[0]][aux[0]].push(paquete)
 
