@@ -16,8 +16,8 @@ function Mapa(){
     this.buscar=function(paquete){
         fila=0
         columna=0
-        for (var i = 1; i <= this.mapa.length-1; i++) {
-            for (var j = 0; j <= i; i++) {
+        for (var i = 0; i <= this.mapa.length-1; i++) {
+            for (var j = 1; j <= this.mapa[i].length-1; i++) {
                 
                 if (this.mapa[i][j].length>0){
 
