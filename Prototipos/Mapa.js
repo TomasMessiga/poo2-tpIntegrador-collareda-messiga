@@ -9,6 +9,10 @@ function Mapa(){
         
         
         });
+    this.buscarpaquete=function(paquete){
+        
+
+    }    
 
     return this.mapa
 
