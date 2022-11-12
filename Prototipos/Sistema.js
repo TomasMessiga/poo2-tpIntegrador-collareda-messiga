@@ -21,15 +21,17 @@ function Sistema(){
           }
           if (index==0 && cond==false){
             mapa.mapa[index][1].push(paquete)
+            this.incrementarTiempo();
 
           }
           else{
             mapa.mapa[index][1].splice(0,1)
             index=index+1
             mapa.mapa[index][1].push(paquete)
+            this.incrementarTiempo();
 
           }
-   return  [mapa.mapa[index][1].length,mapa.mapa[index][1],cond,index]
+   return  [mapa.mapa[index][1].length,mapa.mapa[index][1],cond,index,this.tiempo]
 }
 
 }
