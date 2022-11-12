@@ -24,7 +24,7 @@ function Sistema(){
             this.incrementarTiempo();
 
           }
-          else{
+          if(index+1!=mapa.mapa.length){
             mapa.mapa[index][1].splice(0,1)
             index=index+1
             mapa.mapa[index][1].push(paquete)
