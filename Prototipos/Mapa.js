@@ -18,7 +18,7 @@ function Mapa(){
         columna=0
         aux=[]
         for (var i = 0; i <= this.mapa.length-1; i++) {
-            for (var j = 1; j <= this.mapa[i].length-2; j++) {
+            for (var j = 1; j < this.mapa[i].length-2; j++) {
                 if (this.mapa[i][j].length>0){
                     fila=i
                     columna=j
