@@ -14,7 +14,7 @@ function Sistema(){
        let aux   
        i=0
      mapa.mapa.forEach(element => {
-        aux.push(element(1))
+        aux.push(element[1])
      });
      
      aux.forEach(element => {
