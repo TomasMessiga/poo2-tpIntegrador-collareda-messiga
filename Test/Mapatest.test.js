@@ -12,6 +12,6 @@ test("generar matriz",()=>{
     let mapa=new Mapa();
     let local=new Local('a')
     let destino= new Destino(0)
-    mapa.generar(local,destino) 
+    mapa.generar([local,destino]) 
     expect(mapa.generar(local,destino)).toStrictEqual([["cola de salida de locas",[],[]],["Facturación",[],[]],["Calidad",[],[]] , ["Distribución",[],[]]])
 })
