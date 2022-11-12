@@ -88,9 +88,9 @@ test(" no puedo mover facturacion",()=>{
     let paquete3=new Paquete(1,1,1,3);
     let paquete4=new Paquete(1,1,1,4);
     mapaAuxiliar.generar(local,destino);
-    mapaAuxiliar.mapa[0][2].push(paquete2)
-    mapaAuxiliar.mapa[0][2].push(paquete3)
-    mapaAuxiliar.mapa[0][2].push(paquete4)    
+    mapaAuxiliar.mapa[1][1].push(paquete2)
+    mapaAuxiliar.mapa[1][1].push(paquete3)
+    mapaAuxiliar.mapa[1][1].push(paquete4)    
     sistema.mover(mapaAuxiliar,paquete)
     expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual([["cola de salida de locas",[paquete]],["Facturación",[paquet2,paquete3,paquete4]],["Calidad",[]] , ["Distribución",[]]]);
 })
