@@ -36,4 +36,4 @@ function Local(nombre){
     }
 }
 
-module.exports=Local;
+module.exports=Local; 
