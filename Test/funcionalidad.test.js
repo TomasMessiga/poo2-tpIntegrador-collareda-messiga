@@ -74,7 +74,7 @@ test("fabricar paquetes para la cola de salida del local",()=>{
     let destino=new Destino(1);
     mapaAuxiliar.generar(local,destino);
     mapaAuxiliar.producirPaquete("A",[1,1,1,1]);
-    expect(mapaAuxiliar.mapa).toStrictEqual(new Paquete(1,1,1,1));
+    expect(mapaAuxiliar.mapa[0]).toStrictEqual(new Paquete(1,1,1,1));
 })
 
 
