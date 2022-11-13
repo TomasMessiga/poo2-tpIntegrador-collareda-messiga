@@ -40,7 +40,7 @@ function Mapa(){
     this.producirPaquete=function(nombreDeLocal,especificaciones){
         let cont=0;
         this.LocalDestino.forEach(extremos => {
-            if (extremos[0].nombre=nombreDeLocal){
+            if (extremos[0].nombre==nombreDeLocal){
                 let nuevoPaquete=extremos[0].producirPaquete(especificaciones);
                 if (!(nuevoPaquete===undefined)){
                     this.mapa[0][cont+1].push(nuevoPaquete);
