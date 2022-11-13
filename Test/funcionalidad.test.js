@@ -102,8 +102,8 @@ test("avanzar tiempo",()=>{
     mapaAuxiliar.generar(local3,destino3);
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
     sistema.especificarFabricacion('b',mapaAuxiliar,[2,2,2,2]);
-    this.avanzartiempo()
-    expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete],[],[],[]],[[paquete2],[],[],[]],[[],[],[],[]]]);
+    sistema.avanzartiempo(mapaAuxiliar)
+    expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[paquete],[],[]],[[],[paquete2],[],[]],[[],[],[],[]]]);
 })
 
  

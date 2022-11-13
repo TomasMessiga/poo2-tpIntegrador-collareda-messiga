@@ -77,7 +77,7 @@ test("buscar todo los pauqete q hay ",()=>{
     mapa.mapa[1][0].push(paquete2)
     mapa.mapa[1][0].push(paquete)
     mapa.mapa[2][2].push(paquete3)
-    expect(mapa.buscartodos(paquete)).toStrictEqual([[1, 0, 0], [1, 0, 1], [2, 2, 0]]) 
+    expect(mapa.buscartodos()).toStrictEqual([[1, 0, 0], [1, 0, 1], [2, 2, 0]]) 
 })
 
 

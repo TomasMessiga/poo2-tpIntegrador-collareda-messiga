@@ -38,6 +38,14 @@ function Sistema(){
         
     
     }
+    this.avanzartiempo=function(mapa){
+      aux=mapa.buscartodos()
+      aux.forEach(element => {
+        this.mover(mapa.mapa[element[0]][element[1]][element[2]])
+        
+      });
+
+    }
 
 }
 }
