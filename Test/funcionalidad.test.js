@@ -62,7 +62,7 @@ test("mover 1 pasos  en mapa bidi",()=>{
     mapaAuxiliar.generar(local,destino);
     mapaAuxiliar.generar(local1,destino2);    
     sistema.mover(mapaAuxiliar,paquete1)
-    
+    sistema.mover(mapaAuxiliar,paquete2)
     expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",[paquete1],[]],["Facturación",[],[]],["Calidad",[],[]] , ["Distribución",[],[]]])
 })
 
