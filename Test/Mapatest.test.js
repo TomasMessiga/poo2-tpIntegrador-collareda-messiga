@@ -37,7 +37,7 @@ test("buscar pauqete cuando hay vario paquetes",()=>{
     mapa.mapa[1][0].push(paquete)
     mapa.mapa[2][2].push(paquete3)
 
-    expect(paquete.id).toStrictEqual(mapa.mapa[1][0][1].id)
+    expect(paquete.productos).toStrictEqual(mapa.mapa[1][0][1].productos)
 })
 
 
