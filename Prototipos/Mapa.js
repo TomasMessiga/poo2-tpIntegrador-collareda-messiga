@@ -6,7 +6,7 @@ function Mapa(){
      this.LocalDestino.push([local,destino])
      var aux=[]
      for(var i = 0 ; i<this.mapa[0].length-1;i++ ){
-        aux.push=([])
+        aux.push=([ ])
 
      }
      this.mapa.push(aux)
