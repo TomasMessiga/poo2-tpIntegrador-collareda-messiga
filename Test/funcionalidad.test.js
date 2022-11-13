@@ -50,7 +50,7 @@ test("mover 3 pasos pauqete en mapa",()=>{
  
     expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual(mapaAuxiliar.mapa[2][1]);
 })
-test("mover 4 pasos pauqete en map",()=>{
+test("mover 1 pasos  en mapa bidi",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
     let local=new Local('a')
