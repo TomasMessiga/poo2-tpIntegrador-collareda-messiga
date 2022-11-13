@@ -23,7 +23,7 @@ test("buscar pauqete cuando hay 2 paquetes",()=>{
     mapa.mapa[1][1].push(paquete3)
     mapa.mapa[1][2].push(paquete4)
     mapa.mapa[1][0].push(paquete)
-    expect(mapa.buscar(paquete)).toStrictEqual([1,0,1])
+    expect(mapa.buscar(paquete)).toStrictEqual(mapa.mapa[1])
 })
 
 
