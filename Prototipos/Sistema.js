@@ -41,9 +41,13 @@ function Sistema(){
     this.avanzartiempo=function(mapa){
       aux=mapa.buscartodos()
       aux.forEach(element => {
-        this.mover(mapa.mapa[element[0]][element[1]][element[2]])
+        fila=element[0]
+        columna=element[1]
+        poscola=element[2]
+        this.mover(mapa.mapa[fila][columna][poscola])
         
       });
+      return aux
 
     }
 
