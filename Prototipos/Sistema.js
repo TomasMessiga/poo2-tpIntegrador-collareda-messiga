@@ -16,7 +16,7 @@ function Sistema(){
       cant=mapa.mapa[fila].length
       if(poscola===-1){
         mapa.mapa[fila+1][columna].push(paquete)
-
+ 
       }
       else{
         mapa.mapa[fila][columna+1].push(paquete)
