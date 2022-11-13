@@ -19,7 +19,8 @@ function Sistema(){
  
       }
       else{
-        mapa.mapa[fila][columna+1].push(paquete)
+        muevoA=mapa.mapa[0][columna+1].MeMuevoA(mapa,columna)
+        mapa.mapa[muevA[0]][muevA[1]].push(paquete)
         mapa.mapa[fila][columna].splice(poscola,1)
  
 
@@ -40,6 +41,7 @@ function Sistema(){
     }
     this.avanzartiempo=function(mapa){
       aux=mapa.buscartodos()
+      coladesepera=[]
       aux.forEach(element => {
         fila=element[0]
         columna=element[1]
