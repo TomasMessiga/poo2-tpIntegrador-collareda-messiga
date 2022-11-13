@@ -24,7 +24,7 @@ function Sistema(){
  
 
       }
-     return mapa.mapa
+     return [fila,columna,poscola]
       
     
     }
