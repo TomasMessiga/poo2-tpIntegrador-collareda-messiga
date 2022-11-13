@@ -27,6 +27,7 @@ test("buscar pauqete cuando hay vario paquetes",()=>{
     let local=new Local('a')
     let destino= new Destino(0)
     let paquete = new Paquete(1,1,1,1)
+    let paquete3 = new Paquete(3,3,3,3)
     let paquete2 = new Paquete(2,2,2,2)
     let local2=new Local('b')
     let destino2= new Destino(1)
