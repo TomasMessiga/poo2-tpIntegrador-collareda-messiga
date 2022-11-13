@@ -1,12 +1,12 @@
 function Mapa(){ 
-    this.mapa=[["cola de salida de local","Facturación","Calidad","Distibucion"]]
+    this.mapa=[["cola de salida de local","Facturación","Calidad","Distibucion"],[[],[],[],[]]]
     this.LocalDestino=[]
 
     this.generar=function(local,destino){
      this.LocalDestino.push([local,destino])
      let aux=[]
      for(var i = 0 ; i<this.mapa[0].length-1;i++ ){
-        aux.push=(0)
+        aux.push([])
 
      }
      this.mapa.push(aux)
