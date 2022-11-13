@@ -26,8 +26,9 @@ function Sistema(){
       }
      return [fila,columna,poscola]
       
-   
-}
+    
+    }
+
 
 }
 module.exports=Sistema;

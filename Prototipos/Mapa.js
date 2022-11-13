@@ -1,8 +1,10 @@
 const fill = require("fill-range");
 
 function Mapa(){ 
-    this.mapa=[["cola de salida de locas"],["Facturación"],["Calidad"] , ["Distribución"]]
+    this.mapa=[["cola de salida de local"],["Facturación"],["Calidad"] , ["Distribución"]]
     this.LocalDestino=[]
+    var contadorDePaquetes=0;
+    
     this.generar=function(local,destino){
         this.mapa.forEach(element => {
             element.push([])
