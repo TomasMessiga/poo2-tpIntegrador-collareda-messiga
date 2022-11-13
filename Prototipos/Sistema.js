@@ -29,15 +29,17 @@ function Sistema(){
     
     }
     this.especificarFabricacion=function(nombreLocal,mapa,especificacionesPaquete){
-      mapa.LocalDestino.forEach(element => {
-        if (element[0].nombre==nombreLocal){
-          let paqueteCreado=element[0].producirPaquete(especificacionesPaquete);
+      for(let i=0;i<mapa.LocalDestino.length;i++){
+        if (mapa.LocalDestino[i][0].nombre==nombreLocal){
+          let paqueteCreado=mapa.LocalDestino[i][0].producirPaquete(especificacionesPaquete);
           return paqueteCreado
           this.mover(mapa,paqueteCreado);
+
         }
-      });
+        
     
     }
 
+}
 }
 module.exports=Sistema;
