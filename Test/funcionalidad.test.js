@@ -53,7 +53,7 @@ test("fabricar paquetes para un mapa",()=>{
     let paquete=new Paquete(1,1,1,1);
     mapaAuxiliar.generar(local,destino);
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
-    expect(mapaAuxiliar.mapa[1][0]).toStrictEqual([paquete]);
+    expect(mapaAuxiliar.mapa[1][0],id).toStrictEqual([paquete].id);
 })
 
 
