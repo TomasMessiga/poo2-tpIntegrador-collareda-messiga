@@ -43,7 +43,6 @@ function Mapa(){
             if (extremos[0].nombre==nombreDeLocal){
                 let nuevoPaquete=extremos[0].producirPaquete(especificaciones);
                 if (!(nuevoPaquete===undefined)){
-                    return (cont)
              //       this.mapa[0][cont+1].push(nuevoPaquete);
                 }
             }cont++;
