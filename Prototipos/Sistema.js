@@ -32,7 +32,6 @@ function Sistema(){
       for(let i=0;i<mapa.LocalDestino.length;i++){
         if (mapa.LocalDestino[i][0].nombre==nombreLocal){
           let paqueteCreado=mapa.LocalDestino[i][0].producirPaquete(especificacionesPaquete);
-          return paqueteCreado
           this.mover(mapa,paqueteCreado);
 
         }
