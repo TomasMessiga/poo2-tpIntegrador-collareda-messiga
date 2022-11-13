@@ -33,8 +33,6 @@ test("generar matriz",()=>{
     mapa.generar(local,destino)
     
     mapa.generar(local,destino)
-    
-    mapa.centro([])
     expect(mapa.generar(local,destino)).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[],[],[]],[[],[],[],[]],[[],[],[],[]]])
 })
 test("buscar pauqete cuando hay 2 paquetes",()=>{
