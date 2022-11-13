@@ -8,14 +8,14 @@ function Sistema(){
         tiempo++;
     }
     this.getTiempo=function(){return tiempo;}
-    this.mover=function (mapa,paquete){
+    this.mover=function (mapa,paquete,i){
       aux=mapa.buscar(paquete)
       fila=aux[0]
       columna=aux[1]
       poscola=aux[2]
       cant=mapa.mapa[fila].length
       if(poscola===-1){
-        mapa.mapa[fila+1][columna].push(paquete)
+        mapa.mapa[fila+1+i][columna].push(paquete)
  
       }
       else{
@@ -31,8 +31,8 @@ function Sistema(){
     this.especificarFabricacion=function(nombreLocal,mapa,especificacionesPaquete){
       for(let i=0;i<mapa.LocalDestino.length;i++){
         if (mapa.LocalDestino[i][0].nombre==nombreLocal){
-          let paqueteCreado=mapa.LocalDestino[i][0].producirPaquete(especificacionesPaquete);
-          this.mover(mapa,paqueteCreado);
+          let paqueteCreado=mapa.LocalDestino[i][0].producirPaquete(especificacionesPaquete,i);
+          this.mover(mapa,paqueteCreado,i);
 
         }
         
