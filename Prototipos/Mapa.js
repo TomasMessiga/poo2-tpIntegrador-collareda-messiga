@@ -10,7 +10,7 @@ function Mapa(){
 
      }
      this.mapa.push(aux)
-     return this.mapa
+     return aux
     }
     this.buscar=function(paquete){
         fila=0
