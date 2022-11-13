@@ -60,7 +60,7 @@ test("mover 4 pasos pauqete en map",()=>{
     let paquete1=new Paquete(1,1,1,1);
     let paquete2=new Paquete(1,1,1,2);
     mapaAuxiliar.generar(local,destino);
-    mapaAuxiliar.generar(local2,destino2);    
+    mapaAuxiliar.generar(local1,destino2);    
     sistema.mover(mapaAuxiliar,paquete1)
     sistema.mover(mapaAuxiliar,paquete2)
     
