@@ -15,9 +15,8 @@ test("buscar pauqete cuando hay 2 paquetes",()=>{
     let local=new Local('a')
     let destino= new Destino(0)
     let paquete = new Paquete(1,1,1,1)
-    let paquete3 = new Paquete(1,1,1,3)
-    let paquete2 = new Paquete(1,1,1,2)
-    let paquete4 = new Paquete(1,1,1,4)
+    let paquete2 = new Paquete(2,2,2,2)
+   
     mapa.generar([local,destino]) 
     mapa.mapa[1][0].push(paquete2)
     mapa.mapa[1][0].push(paquete)
