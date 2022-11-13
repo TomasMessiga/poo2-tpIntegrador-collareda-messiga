@@ -8,7 +8,7 @@ const Paquete = require('../Prototipos/Paquete.js');
 test("incrementar una unidad de tiempo",()=>{
     let sistema=new Sistema();
     sistema.incrementarTiempo();
-    expect(sistema.getTiempo()).toBe(1);
+    expect(sistema.getTiempo()).toBe(1); 
 })
 // test("mover 1 pasos pauqete en mapa",()=>{
 //     let sistema=new Sistema();
