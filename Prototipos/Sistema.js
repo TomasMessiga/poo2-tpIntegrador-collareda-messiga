@@ -24,7 +24,7 @@ function Sistema(){
  
 
       }
-     return [fila,columna,poscola]
+     return [fila,columna,cant]
       
     
     }
