@@ -64,8 +64,8 @@ test("fabricar paquetes para un mapa",()=>{
     let paquete2=new Paquete(2,2,2,2);
     let local2=new Local('b')
     let destino2=new Destino(2)
-    let local3=new Local('b')
-    let destino3=new Destino(2)
+    let local3=new Local('c')
+    let destino3=new Destino(3)
     mapaAuxiliar.generar(local,destino);
     mapaAuxiliar.generar(local2,destino2);
     mapaAuxiliar.generar(local3,destino3);
