@@ -52,8 +52,7 @@ test("fabricar paquetes para un mapa",()=>{
     let destino=new Destino(1)
     let paquete=new Paquete(1,1,1,1);
     mapaAuxiliar.generar(local,destino);
-    //sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
-    sistema.especificarFabricacion(mapaAuxiliar.mapa)
+    sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
     expect(mapa.mapa).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[paquete],[],[],[]]]);
 })
 
