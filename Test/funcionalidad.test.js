@@ -55,7 +55,7 @@ test("fabricar paquetes para un mapa",()=>{
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
     expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[paquete],[],[],[]]]);
 })
-test("2 fabricar paquetes para un mapa",()=>{
+test("fabricar paquetes para un mapa",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
     let local=new Local('a')
@@ -64,14 +64,11 @@ test("2 fabricar paquetes para un mapa",()=>{
     let paquete2=new Paquete(2,2,2,2);
     let local2=new Local('b')
     let destino2=new Destino(2)
-    let local3=new Local('c')
-    let destino3=new Destino(3)
     mapaAuxiliar.generar(local,destino);
     mapaAuxiliar.generar(local2,destino2);
-    mapaAuxiliar.generar(local3,destino3);
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
     sistema.especificarFabricacion('b',mapaAuxiliar,[2,2,2,2]);
-    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[paquete],[],[],[]],[[paquete2],[],[],[]]],[[],[],[],[]]);
+    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[paquete],[],[],[]],[[paquete2],[],[],[]]]);
 })
 
  
