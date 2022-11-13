@@ -20,7 +20,7 @@ test("buscar pauqete cuando hay 2 paquetes",()=>{
     mapa.generar([local,destino]) 
     mapa.mapa[1][0].push(paquete2)
     mapa.mapa[1][0].push(paquete)
-    expect(mapa.buscar(paquete)).toStrictEqual(mapa.mapa[1][0][1])
+    expect(mapa.buscar(paquete)).toStrictEqual([1,0,1])
 })
 test("buscar pauqete cuando hay vario paquetes",()=>{
     let mapa=new Mapa();
