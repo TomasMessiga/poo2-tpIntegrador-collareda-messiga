@@ -32,9 +32,11 @@ function Sistema(){
       mapa.LocalDestino.forEach(element => {
         if (element[0].nombre==nombreLocal){
           let paqueteCreado=element[0].producirPaquete(especificacionesPaquete);
+          return paqueteCreado
           this.mover(mapa,paqueteCreado);
         }
       });
+    
     }
 
 }
