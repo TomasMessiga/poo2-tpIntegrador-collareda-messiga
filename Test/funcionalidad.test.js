@@ -23,6 +23,7 @@ test("mover 1 pasos pauqete en mapa",()=>{
     let local=new Local('a')
     let destino=new Destino(0)
     let paquete=new Paquete(1,1,1,1);
+    mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
     mapaAuxiliar.generar(local,destino);
     sistema.mover(mapaAuxiliar,paquete)
     expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete],[],[],[]]]);
@@ -33,6 +34,7 @@ test("mover 2 pasos pauqete en mapa",()=>{
     let local=new Local('a')
     let destino=new Destino(0)
     let paquete=new Paquete(1,1,1,1);
+    mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
     mapaAuxiliar.generar(local,destino);
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
@@ -46,6 +48,7 @@ test("mover 2 pasos pauqete en mapa",()=>{
     let destino=new Destino(0)
     let paquete=new Paquete(1,1,1,1);
     let paquete2=new Paquete(2,2,2,2);
+    mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
     mapaAuxiliar.generar(local,destino);
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
@@ -58,6 +61,7 @@ test("fabricar paquetes para un mapa",()=>{
     let local=new Local('a')
     let destino=new Destino(1)
     let paquete=new Paquete(1,1,1,1);
+    mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
     mapaAuxiliar.generar(local,destino);
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
     expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete],[],[],[]]]);
@@ -73,6 +77,7 @@ test("fabricar paquetes para un mapa",()=>{
     let destino2=new Destino(2)
     let local3=new Local('c')
     let destino3=new Destino(3)
+    mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
     mapaAuxiliar.generar(local,destino);
     mapaAuxiliar.generar(local2,destino2);
     mapaAuxiliar.generar(local3,destino3);
