@@ -8,7 +8,7 @@ function Sistema(){
         tiempo++;
     }
     this.getTiempo=function(){return tiempo;}
-    this.mover=function (mapa,paquete,i){
+    this.mover=function (mapa,paquete,i=0){
       aux=mapa.buscar(paquete)
       fila=aux[0]
       columna=aux[1]
