@@ -55,7 +55,7 @@ test("fabricar paquetes para un mapa",()=>{
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
     expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[paquete],[],[],[]]]);
 })
-test("fabricar paquetes para un mapa",()=>{
+test("2 fabricar paquetes para un mapa",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
     let local=new Local('a')
