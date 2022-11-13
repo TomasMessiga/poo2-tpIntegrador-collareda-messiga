@@ -13,6 +13,7 @@ function Sistema(){
       fila=aux[0]
       columna=aux[1]
       poscola=aux[2]
+    
       if(poscola===-1){
         mapa.mapa[fila][columna+1].push(paquete)
 
