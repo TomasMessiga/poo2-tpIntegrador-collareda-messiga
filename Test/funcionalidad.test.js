@@ -9,7 +9,7 @@ const Facturacion = require('../Prototipos/Centros/facturacion.js');
 const Coladesalida = require('../Prototipos/Centros/Coladesalida.js');
 let coladesalida=new Coladesalida()
 let calidad= new Calidad()
-let distrbucion=new Distribucion()
+let distrbucion=new Distrbucion()
 let facturacion=new Facturacion()
 
 test("incrementar una unidad de tiempo",()=>{
