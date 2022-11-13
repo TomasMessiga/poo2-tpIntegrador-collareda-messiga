@@ -64,3 +64,12 @@ test("mover 4 pasos pauqete en map",()=>{
     expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual(mapaAuxiliar.mapa[3][1]);
 })
 
+test("fabricar paquetes para la cola de salida del local",()=>{
+    let sistema=new Sistema();
+    let mapaAuxiliar=new Mapa();
+    let local=new Local('A');
+    let destino=new Destino(1);
+    mapaAuxiliar.generar(local,destino);
+    mapaAuxiliar.producirPaquete("A",[1,1,1,1]);
+    expect(mapaAuxiliar.mapa[0][1][0]).toStrictEqual(new Paquete(1,1,1,1));
+})
