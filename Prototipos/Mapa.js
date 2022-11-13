@@ -43,7 +43,7 @@ function Mapa(){
             if (extremos[0].nombre==nombreDeLocal){
                 let nuevoPaquete=extremos[0].producirPaquete(especificaciones);
                 if (!(nuevoPaquete===undefined)){
-             //       this.mapa[0][cont+1].push(nuevoPaquete);
+                    this.mapa[0][cont+1].push(nuevoPaquete);
                 }
             }cont++;
         });
