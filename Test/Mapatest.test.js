@@ -7,15 +7,14 @@ const Calidad =require('../Prototipos/Centros/calidad.js');
 const Distrbucion = require('../Prototipos/Centros/distribucion.js');
 const Facturacion = require('../Prototipos/Centros/facturacion.js');
 const Coladesalida = require('../Prototipos/Centros/Coladesalida.js');
-
+let coladesalida=new Coladesalida()
+let calidad= new Calidad()
+let distrbucion=new Distribucion()
+let facturacion=new Facturacion()
 test("centro agregar",()=>{
     let mapa=new Mapa();
     let local=new Local('a')
     let destino= new Destino(0) 
-    let coladesalida=new Coladesalida()
-    let calidad= new Calidad()
-    let distrbucion=new Distribucion()
-    let facturacion=new Facturacion()
     mapa.centro([coladesalida,facturacion,calidad,distrbucion])
     expect(mapa.generar(local,destino)).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[],[],[]]])
 })
