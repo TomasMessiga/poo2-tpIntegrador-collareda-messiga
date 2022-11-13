@@ -67,7 +67,7 @@ test("fabricar paquetes para un mapa",()=>{
     mapaAuxiliar.generar(local2,destino2);
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
     sistema.especificarFabricacion('b',mapaAuxiliar,[2,2,2,2]);
-    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[paquete],[],[],[]]],[[paquete2],[],[],[]]]);
+    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[paquete],[],[],[]],[[paquete2],[],[],[]]]);
 })
 
  
