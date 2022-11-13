@@ -3,7 +3,7 @@ function Mapa(){
     this.mapa=[]
     this.LocalDestino=[]//[[loca],[loca1],[],[]]
     this.centro=function(arreglodecentro){
-        this.mapa.pust(arreglodecentro)
+        this.mapa.push(arreglodecentro)
     }
     this.generar=function(local,destino){
      this.LocalDestino.push([local,destino])
