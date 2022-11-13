@@ -55,12 +55,16 @@ test("mover 4 pasos pauqete en map",()=>{
     let mapaAuxiliar=new Mapa();
     let local=new Local('a')
     let destino=new Destino(0)
-    let paquete=new Paquete(1,1,1,1);
-    mapaAuxiliar.generar(local,destino);    
-    sistema.mover(mapaAuxiliar,paquete)
-    sistema.mover(mapaAuxiliar,paquete)
-    sistema.mover(mapaAuxiliar,paquete)
+    let local1=new Local('b')
+    let destino2=new Destino(1)
+    let paquete1=new Paquete(1,1,1,1);
+    let paquete2=new Paquete(1,1,1,2);
+    mapaAuxiliar.generar(local,destino);
+    mapaAuxiliar.generar(local2,destino2);    
+    sistema.mover(mapaAuxiliar,paquete1)
+    sistema.mover(mapaAuxiliar,paquete2)
     
-    expect(sistema.mover(mapaAuxiliar,paquete)).toStrictEqual(mapaAuxiliar.mapa[3][1]);
+    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de locas",[paquete1],[paquete2]],["Facturación",[],[]],["Calidad",[],[]] , ["Distribución",[],[]]])
 })
+
 
