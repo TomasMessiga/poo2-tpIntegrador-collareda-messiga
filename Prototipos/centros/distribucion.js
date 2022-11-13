@@ -37,3 +37,4 @@ function Distribucion(){
 
 
 }
+module.exports=Distribucion;

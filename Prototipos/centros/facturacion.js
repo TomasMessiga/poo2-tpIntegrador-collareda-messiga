@@ -36,3 +36,4 @@ function Facturacion(){
     }
 
 }
+module.exports=Facturacion;

@@ -1,5 +1,5 @@
 const Local=require('../Local.js');
-function Destino(nombre){
+function Coladesalida(){
     this.local='';
 
     this.generar=(local)=>{
@@ -9,4 +9,4 @@ function Destino(nombre){
     }
 }
 
-module.exports=Destino;
+module.exports=Coladesalida;

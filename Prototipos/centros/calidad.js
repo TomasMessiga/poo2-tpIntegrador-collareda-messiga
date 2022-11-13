@@ -38,3 +38,4 @@ function Calidad(){
 
 
 }
+module.exports=Calidad;
