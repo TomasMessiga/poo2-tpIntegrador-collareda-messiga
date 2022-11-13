@@ -1,8 +1,6 @@
 const Mapa=require('../Prototipos/Mapa.js');
 const Paquete=require("../Prototipos/Paquete")
 function Sistema(){
-    
-
     var tiempo=0;
     this.i=0
 
@@ -21,7 +19,7 @@ function Sistema(){
       }
       else{
         mapa.mapa[fila+1][columna].push(paquete)
-        mapa.mapa[fila][columna]=[]
+        mapa.mapa[fila][columna].splice(poscola,1)
 
 
       }
