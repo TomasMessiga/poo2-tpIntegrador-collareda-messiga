@@ -4,7 +4,7 @@ function Mapa(){
     this.mapa=[["cola de salida de local"],["Facturación"],["Calidad"] , ["Distribución"]]
     this.LocalDestino=[]
     var contadorDePaquetes=0;
-    
+
     this.generar=function(local,destino){
         this.mapa.forEach(element => {
             element.push([])
@@ -36,7 +36,17 @@ function Mapa(){
         return ([fila,columna,poscola])
             
         };
-        
+    
+    this.producirPaquete=function(nombreDeLocal,especificaciones){
+        this.LocalDestino.forEach(extremos,cont => {
+            if (extremos[0].nombre=nombreDeLocal){
+                let nuevoPaquete=extremos[0].producirPaquete(especificaciones);
+                if (!(nuevoPaquete===undefined)){
+                    this.mapa[0][cont+1].push(nuevoPaquete);
+                }
+            }
+        });
+    }
 
     }    
 
