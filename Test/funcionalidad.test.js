@@ -66,7 +66,7 @@ test("mover 1 pasos  en mapa bidi",()=>{
     expect(sistema.mover(mapaAuxiliar,paquete2)).toStrictEqual(mapaAuxiliar.mapa[1][2])
 })
 
-<<<<<<< HEAD
+
 test("fabricar paquetes para la cola de salida del local",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
@@ -76,6 +76,4 @@ test("fabricar paquetes para la cola de salida del local",()=>{
     mapaAuxiliar.producirPaquete("A",[1,1,1,1]);
     expect(mapaAuxiliar.mapa[0][1][0]).toStrictEqual(new Paquete(1,1,1,1));
 })
-=======
 
->>>>>>> f1fc1577a4208a868cefdcb2cae77c5893182ead
