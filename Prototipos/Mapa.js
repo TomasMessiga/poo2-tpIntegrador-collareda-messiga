@@ -5,7 +5,7 @@ function Mapa(){
     this.generar=function(local,destino){
      this.LocalDestino.push([local,destino])
      let aux=[]
-     for(var i = 0 ; i<this.mapa[0].length-1;i++ ){
+     for(var i = 0 ; i<this.mapa[0].length;i++ ){
         aux.push([])
 
      }
