@@ -19,7 +19,7 @@ function Sistema(){
       }
       else{
         mapa.mapa[fila+1][columna].push(paquete)
-        mapa.mapa[fila][columna].slice(poscola,1)
+        mapa.mapa[fila][columna].splice(poscola,1)
 
 
       }
