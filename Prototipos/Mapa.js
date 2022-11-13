@@ -1,6 +1,6 @@
 function Mapa(){ 
     this.mapa=[["cola de salida de local","Facturación","Calidad","Distibucion"]]
-    this.LocalDestino=[]
+    this.LocalDestino=[]//[[loca],[loca1],[],[]]
 
     this.generar=function(local,destino){
      this.LocalDestino.push([local,destino])

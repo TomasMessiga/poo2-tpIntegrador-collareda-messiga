@@ -28,7 +28,6 @@ function Sistema(){
       
     
     }
-
     this.especificarFabricacion=function(nombreLocal,mapa,especificacionesPaquete){
       let cont=1;
       mapa.LocalDestino.forEach(element => {
@@ -39,7 +38,6 @@ function Sistema(){
         cont++;
       });
     }
-
 
 }
 module.exports=Sistema;
