@@ -17,8 +17,8 @@ function Mapa(){
         columna=0
         poscola=-1
         aux=[]
-        for (var i = 0; i < this.mapa.length; i++) {
-            for (var j = 1; j < this.mapa[i].length; j++) {
+        for (var i = 1; i < this.mapa.length; i++) {
+            for (var j = 0; j < this.mapa[i].length; j++) {
                 if (this.mapa[i][j].length>0){
                     for (var k = 0; k < this.mapa[i][j].length; k++){
                         if(this.mapa[i][j][k].id=paquete.id){
