@@ -44,7 +44,7 @@ function Mapa(){
                 let nuevoPaquete=extremos[0].producirPaquete(especificaciones);
                 if (!(nuevoPaquete===undefined)){
                     console.log(cont)
-                    this.mapa[0][cont+1].push(nuevoPaquete);
+             //       this.mapa[0][cont+1].push(nuevoPaquete);
                 }
             }cont++;
         });
