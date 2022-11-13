@@ -13,9 +13,9 @@ function Sistema(){
       fila=aux[0]
       columna=aux[1]
       poscola=aux[2]
-    
+      cant=mapa.mapa[fila].length
       if(poscola===-1){
-        mapa.mapa[fila][columna+1].push(paquete)
+        mapa.mapa[fila][cant-columna].push(paquete)
 
       }
       else{
@@ -24,7 +24,7 @@ function Sistema(){
  
 
       }
-     return [fila,columna,poscola]
+     return mapa.mapa
       
     
     }
