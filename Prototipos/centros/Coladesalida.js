@@ -1,4 +1,4 @@
-const Local=require('../Prototipos/Local.js');
+const Local=require('../Local.js');
 function Destino(nombre){
     this.local='';
 

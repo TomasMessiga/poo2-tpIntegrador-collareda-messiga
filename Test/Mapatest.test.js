@@ -2,23 +2,41 @@ const Mapa=require('../Prototipos/Mapa.js');
 const Local=require('../Prototipos/Local.js');
 const Destino=require('../Prototipos/Destino.js'); 
 const Paquete = require('../Prototipos/Paquete.js');
+const Calidad =require('../Prototipos/Centros/calidad.js');
 
+const Distrbucion = require('../Prototipos/Centros/distribucion.js');
+const Facturacion = require('../Prototipos/Centros/facturacion.js');
+const Coladesalida = require('../Prototipos/Centros/Coladesalida.js');
 
-test("generar matriz",()=>{
+test("centro agregar",()=>{
     let mapa=new Mapa();
     let local=new Local('a')
     let destino= new Destino(0) 
-    expect(mapa.generar(local,destino)).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[],[],[],[]]])
+    let coladesalida=new Coladesalida()
+    let calidad= new Calidad()
+    let distrbucion=new Distribucion()
+    let facturacion=new Facturacion()
+    mapa.centro([coladesalida,facturacion,calidad,distrbucion])
+    expect(mapa.generar(local,destino)).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[],[],[]]])
 })
 test("generar matriz",()=>{
     let mapa=new Mapa();
     let local=new Local('a')
     let destino= new Destino(0) 
+    mapa.centro([coladesalida,facturacion,calidad,distrbucion])
+    expect(mapa.generar(local,destino)).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[],[],[]]])
+})
+test("generar matriz",()=>{
+    let mapa=new Mapa();
+    let local=new Local('a')
+    let destino= new Destino(0) 
+    mapa.centro([coladesalida,facturacion,calidad,distrbucion])
     mapa.generar(local,destino)
     
     mapa.generar(local,destino)
     
-    expect(mapa.generar(local,destino)).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[],[],[],[]],[[],[],[],[]],[[],[],[],[]]])
+    mapa.centro([])
+    expect(mapa.generar(local,destino)).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[],[],[]],[[],[],[],[]],[[],[],[],[]]])
 })
 test("buscar pauqete cuando hay 2 paquetes",()=>{
     let mapa=new Mapa();
@@ -26,7 +44,7 @@ test("buscar pauqete cuando hay 2 paquetes",()=>{
     let destino= new Destino(0)
     let paquete = new Paquete(1,1,1,1)
     let paquete2 = new Paquete(2,2,2,2)
-   
+    mapa.centro([coladesalida,facturacion,calidad,distrbucion])
     mapa.generar([local,destino]) 
     mapa.mapa[1][0].push(paquete2)
     mapa.mapa[1][0].push(paquete)
@@ -41,6 +59,7 @@ test("buscar pauqete cuando hay vario paquetes",()=>{
     let paquete2 = new Paquete(2,2,2,2)
     let local2=new Local('b')
     let destino2= new Destino(1)
+    mapa.centro([coladesalida,facturacion,calidad,distrbucion])
     mapa.generar([local2,destino2])
     mapa.generar([local,destino]) 
     mapa.mapa[1][0].push(paquete2)

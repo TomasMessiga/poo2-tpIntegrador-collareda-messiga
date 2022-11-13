@@ -3,7 +3,15 @@ const Mapa=require('../Prototipos/Mapa.js');
 const Local=require('../Prototipos/Local.js');
 const Destino=require('../Prototipos/Destino.js'); 
 const Paquete = require('../Prototipos/Paquete.js');
+const Calidad =require('../Prototipos/Centros/calidad.js');
 
+const Distrbucion = require('../Prototipos/Centros/distribucion.js');
+const Facturacion = require('../Prototipos/Centros/facturacion.js');
+const Coladesalida = require('../Prototipos/Centros/Coladesalida.js');
+let coladesalida=new Coladesalida()
+let calidad= new Calidad()
+let distrbucion=new Distribucion()
+let facturacion=new Facturacion()
 
 test("incrementar una unidad de tiempo",()=>{
     let sistema=new Sistema();
@@ -18,7 +26,7 @@ test("mover 1 pasos pauqete en mapa",()=>{
     let paquete=new Paquete(1,1,1,1);
     mapaAuxiliar.generar(local,destino);
     sistema.mover(mapaAuxiliar,paquete)
-    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[paquete],[],[],[]]]);
+    expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete],[],[],[]]]);
 })
 test("mover 2 pasos pauqete en mapa",()=>{
     let sistema=new Sistema();
@@ -29,7 +37,7 @@ test("mover 2 pasos pauqete en mapa",()=>{
     mapaAuxiliar.generar(local,destino);
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
-    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[],[paquete],[],[]]]);
+    expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[paquete],[],[]]]);
 })
 
 test("mover 2 pasos pauqete en mapa",()=>{
@@ -43,7 +51,7 @@ test("mover 2 pasos pauqete en mapa",()=>{
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
-    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[],[],[paquete],[]]]);
+    expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[],[paquete],[]]]);
 })
 test("fabricar paquetes para un mapa",()=>{
     let sistema=new Sistema();
@@ -53,7 +61,7 @@ test("fabricar paquetes para un mapa",()=>{
     let paquete=new Paquete(1,1,1,1);
     mapaAuxiliar.generar(local,destino);
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
-    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[paquete],[],[],[]]]);
+    expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete],[],[],[]]]);
 })
 test("fabricar paquetes para un mapa",()=>{
     let sistema=new Sistema();
@@ -71,7 +79,7 @@ test("fabricar paquetes para un mapa",()=>{
     mapaAuxiliar.generar(local3,destino3);
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
     sistema.especificarFabricacion('b',mapaAuxiliar,[2,2,2,2]);
-    expect(mapaAuxiliar.mapa).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[paquete],[],[],[]],[[paquete2],[],[],[]],[[],[],[],[]]]);
+    expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete],[],[],[]],[[paquete2],[],[],[]],[[],[],[],[]]]);
 })
 
  
