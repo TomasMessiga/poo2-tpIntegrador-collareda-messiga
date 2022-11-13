@@ -29,13 +29,11 @@ function Sistema(){
     
     }
     this.especificarFabricacion=function(nombreLocal,mapa,especificacionesPaquete){
-      let cont=1;
       mapa.LocalDestino.forEach(element => {
         if (element[0].nombre==nombreLocal){
           let paqueteCreado=element[0].producirPaquete(especificacionesPaquete);
           this.mover(mapa,paqueteCreado);
         }
-        cont++;
       });
     }
 
