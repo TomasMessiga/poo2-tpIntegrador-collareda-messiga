@@ -44,7 +44,7 @@ function Sistema(){
         fila=element[0]
         columna=element[1]
         poscola=element[2]
-        this.mover(mapa.mapa[fila][columna][poscola])
+        this.mover(mapa,mapa.mapa[fila][columna][poscola])
         
       });
       return aux
