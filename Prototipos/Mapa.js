@@ -31,7 +31,7 @@ function Mapa(){
                 }             
             }
           }
-        return (this.mapa[fila][columna])
+        return (this.mapa[fila][columna][poscola])
             
         };
     
