@@ -15,10 +15,8 @@ test("generar matriz",()=>{
     let local=new Local('a')
     let destino= new Destino(0) 
     mapa.generar(local,destino)
-    mapa.generar(local,destino)
-    mapa.generar(local,destino)
     
-    expect(mapa.generar(local,destino)).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[],[],[],[]],[[],[],[],[]],[[],[],[],[]]])
+    expect(mapa.generar(local,destino)).toStrictEqual([["cola de salida de local","Facturación","Calidad","Distibucion"],[[],[],[],[]],[[],[],[],[]]])
 })
 test("buscar pauqete cuando hay 2 paquetes",()=>{
     let mapa=new Mapa();
