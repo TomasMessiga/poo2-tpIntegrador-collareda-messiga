@@ -29,6 +29,9 @@ function Sistema(){
     
     }
 
+    this.especificarFabricacion=function(nombreLocal,mapa,especificacionesPaquete){
+    }
+
 
 }
 module.exports=Sistema;
