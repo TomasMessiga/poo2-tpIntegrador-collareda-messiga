@@ -10,6 +10,7 @@ function Local(nombre){
     var disponibilidad=5;
 
     const crearUnPaquete=function(especificaciones){
+        disponibilidad--;
         return new Paquete(especificaciones[0],especificaciones[1],especificaciones[2],especificaciones[3]);
     }
 
@@ -21,24 +22,10 @@ function Local(nombre){
         return (cantidad<=disponibilidad && cantidad>0);
     }
 
-    const fabricarPaquetes=function(cantidad,especificaciones){
-        let arregloAuxiliar=new Array();
-        for (let i=0;i<cantidad;i++){
-            arregloAuxiliar.push(crearUnPaquete(especificaciones));
-            disponibilidad=disponibilidad-1;
-        };
-        return arregloAuxiliar;
-    };
 
-
-
-    this.producirPaquetes=(cantidad,especificaciones)=>{
-        return (cantidadCorrecta(cantidad)) ? (fabricarPaquetes(cantidad,especificaciones)):(undefined);
- 
-    };
 
     this.producirPaquete=(especificaciones)=>{
-        return (cantidadCorrecta(1)) ? (fabricarPaquetes(1,especificaciones)):(undefined);
+        return (cantidadCorrecta(1)) ? (crearUnPaquete(especificaciones)):(undefined);
     }
 }
 
