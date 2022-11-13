@@ -7,7 +7,8 @@ function Paquete(destino,productos,tipoDeEnvio,id){
    this.destino=destino;                                                                                                                                                                                                                               
    this.productos=productos;
    this.tipoDeEnvio=tipoDeEnvio;
-   this.id=id;      
+   this.id=id;  
+   this.tiempo=0;    
 
 
 }
