@@ -24,7 +24,7 @@ function Sistema(){
  
 
       }
-     return [fila,columna,cant]
+     return mapa.mapa[fila][columna+cant]
       
     
     }
