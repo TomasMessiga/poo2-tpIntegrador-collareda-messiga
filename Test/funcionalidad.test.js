@@ -57,6 +57,7 @@ test("fabricar paquetes para un mapa",()=>{
 })
 test("fabricar paquetes para un mapa",()=>{
     let sistema=new Sistema();
+    let mapaAuxiliar=new Mapa();
     let local=new Local('a')
     let destino=new Destino(1)
     let paquete=new Paquete(1,1,1,1);
