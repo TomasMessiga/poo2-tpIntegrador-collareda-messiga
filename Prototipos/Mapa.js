@@ -35,6 +35,27 @@ function Mapa(){
         return ([fila,columna,poscola])
              
         };
+        this.buscartodos=function(paquete){
+            fila=0
+            columna=0
+            poscola=-1
+            aux=[]
+            for (var i = 1; i < this.mapa.length; i++) {
+                for (var j = 0; j < this.mapa[i].length; j++) {
+                    if (this.mapa[i][j].length>0){
+                        for (var k = 0; k < this.mapa[i][j].length; k++){
+                                fila=i
+                                columna=j
+                                poscola=k
+                                aux.push([fila,columna,poscola])
+                        
+                        }
+                    }             
+                }
+              }
+            return (aux)
+                 
+            };
 
 
     }    
