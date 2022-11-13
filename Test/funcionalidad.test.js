@@ -17,7 +17,8 @@ test("mover 1 pasos pauqete en mapa",()=>{
     let destino=new Destino(0)
     let paquete=new Paquete(1,1,1,1);
     mapaAuxiliar.generar(local,destino);
-    expect(mapaAuxiliar.buscar(paquete)).toStrictEqual();
+    sistema.mover(mapaAuxiliar,paquete)
+    expect(mapaAuxiliar.buscar(paquete)).toStrictEqual([["cola de salida de locas","Facturación","Calidad","Distribución"],[[paquete],[],[],[]]]);
 })
 
 
