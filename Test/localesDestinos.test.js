@@ -35,7 +35,7 @@ test("local producir 6 paquetes (error)",()=>{
     paquete=local.producirPaquete([1,1,1]);
     paquete=local.producirPaquete([1,1,1]);
     paquete=local.producirPaquete([1,1,1]);
-    expect(local.producirPaquetes(paquete)).toStrictEqual(undefined);
+    expect(local.producirPaquete(paquete)).toStrictEqual(undefined);
 })
 
 
