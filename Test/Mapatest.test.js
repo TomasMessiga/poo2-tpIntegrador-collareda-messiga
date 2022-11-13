@@ -3,7 +3,6 @@ const Local=require('../Prototipos/Local.js');
 const Destino=require('../Prototipos/Destino.js'); 
 const Paquete = require('../Prototipos/Paquete.js');
 const Calidad =require('../Prototipos/Centros/calidad.js');
-
 const Distrbucion = require('../Prototipos/Centros/distribucion.js');
 const Facturacion = require('../Prototipos/Centros/facturacion.js');
 const Coladesalida = require('../Prototipos/Centros/Coladesalida.js');
@@ -30,8 +29,7 @@ test("generar matriz",()=>{
     let local=new Local('a')
     let destino= new Destino(0) 
     mapa.centro([coladesalida,facturacion,calidad,distrbucion])
-    mapa.generar(local,destino)
-    
+    mapa.generar(local,destino)   
     mapa.generar(local,destino)
     expect(mapa.generar(local,destino)).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[],[],[]],[[],[],[],[]],[[],[],[],[]]])
 })

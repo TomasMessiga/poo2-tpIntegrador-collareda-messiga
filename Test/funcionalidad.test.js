@@ -85,6 +85,26 @@ test("fabricar paquetes para un mapa",()=>{
     sistema.especificarFabricacion('b',mapaAuxiliar,[2,2,2,2]);
     expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete],[],[],[]],[[paquete2],[],[],[]],[[],[],[],[]]]);
 })
+test("avanzar tiempo",()=>{
+    let sistema=new Sistema();
+    let mapaAuxiliar=new Mapa();
+    let local=new Local('a')
+    let destino=new Destino(1)
+    let paquete=new Paquete(1,1,1,1);
+    let paquete2=new Paquete(2,2,2,2);
+    let local2=new Local('b')
+    let destino2=new Destino(2)
+    let local3=new Local('c')
+    let destino3=new Destino(3)
+    mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
+    mapaAuxiliar.generar(local,destino);
+    mapaAuxiliar.generar(local2,destino2);
+    mapaAuxiliar.generar(local3,destino3);
+    sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
+    sistema.especificarFabricacion('b',mapaAuxiliar,[2,2,2,2]);
+    this.avanzartiempo()
+    expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete],[],[],[]],[[paquete2],[],[],[]],[[],[],[],[]]]);
+})
 
  
  
