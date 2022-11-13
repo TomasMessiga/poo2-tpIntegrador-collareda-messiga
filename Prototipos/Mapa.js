@@ -30,7 +30,7 @@ function Mapa(){
             }
           }
         return ([fila,columna,poscola])
-            
+             
         };
     
     this.producirPaquete=function(nombreDeLocal,especificaciones){
