@@ -36,7 +36,8 @@ test("mover 2 pasos pauqete en mapa",()=>{
     let paquete=new Paquete(1,1,1,1);
     mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
     mapaAuxiliar.generar(local,destino);
-    sistema.mover(mapaAuxiliar,paquete)
+    sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1])
+    sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
     sistema.mover(mapaAuxiliar,paquete)
     expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[paquete],[],[]]]);
 })
