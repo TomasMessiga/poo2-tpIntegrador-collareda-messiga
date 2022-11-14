@@ -40,10 +40,10 @@ function Sistema(){
     }
     this.avanzartiempo=function(mapa){
       let aux=mapa.buscartodos()
-      let aux1=0
+      let aux1=[]
       for (var i=0 ; i<aux.length;i++){
 
-        aux= mapa.mapa[aux[i][0]][aux[i][1]][aux[i][2]]
+        aux.push( mapa.mapa[aux[i][0]][aux[i][1]][aux[i][2]])
 
     }
      return aux
