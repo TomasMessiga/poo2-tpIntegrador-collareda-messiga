@@ -42,10 +42,8 @@ function Sistema(){
       let aux=mapa.buscartodos()
       let coladesepera=[]
       aux.forEach(element => {
-        fila=element[0]
-        columna=element[1]
-        poscola=element[2]
-        return ([fila][columna][poscola])
+ 
+        return (element)
 
         
       });
