@@ -50,17 +50,12 @@ function Sistema(){
 
     }
     
-     paquete=paquete.sort((a,b) => b.id - a.id);
-
+    paquete=paquete.sort((a,b) => b.id - a.id);
     for (var i=0 ; i<paquete.length;i++){
-
       this.mover(mapa,paquete[i])
-
   }
-    
-    return paquete[0]
+    return paquete
        
-  
     }
 
 }
