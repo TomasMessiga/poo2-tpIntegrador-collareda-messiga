@@ -19,5 +19,6 @@ test("crear un mapa (1 local)",()=>{
     mapa.determinarLimites(1,4);
     mapa.definir();
     let equivalencia=[];
-    expect(mapa.locales[0]).toStrictEqual(local);
+    expect(mapa.locales[0].nombre).toStrictEqual(local.nombre);
 })
+
