@@ -53,7 +53,7 @@ test("mover 2 pasos pauqete en mapa",()=>{
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1])
     sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
     //sistema.mover(paquete)//[[coladesalida,facturacion,calidad,distrbucion],[[paquete2],[paquete],[],[]]]
-    expect(this.mover(sistema.avanzartiempo(mapaAuxiliar))).toStrictEqual();
+    expect(sistema.mover(sistema.avanzartiempo(mapaAuxiliar))).toStrictEqual();
 })
 test("fabricar paquetes para un mapa",()=>{
     let sistema=new Sistema();
