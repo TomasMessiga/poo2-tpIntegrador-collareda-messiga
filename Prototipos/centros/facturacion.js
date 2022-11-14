@@ -1,16 +1,8 @@
 
 function Facturacion(){
-    this.condicones=function(mapa,arreglocondifila=0){
-        cantdefact=mapa.cuantolocales()
-
-        if (arreglocondifila.length==cantdefact){
-            return arreglocondifila
-        }
-        else{   
-            aux=[]
-            for (var i=0 ; i<cantdefact;i++){aux.push(3)}
-            return aux
-
+    this.conidicion=[]
+    this.condicones=function(arreglocondifila){
+        this=condicion
 
 
 
@@ -28,7 +20,7 @@ function Facturacion(){
          
         for (var i=0 ; i<mapa.mapa.length;i++){
 
-            if (mapa.mapa[i][columna+1].length==0 || mapa.mapa[i][columna+1].length<this.condicones(mapa)){
+            if (mapa.mapa[i][columna+1].length==0 || mapa.mapa[i][columna+1].length<this.condicon){
                 return [i,columna+1]
 
             }
