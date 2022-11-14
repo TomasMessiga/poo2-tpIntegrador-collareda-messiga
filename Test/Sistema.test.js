@@ -13,6 +13,7 @@ let calidad= new Calidad()
 let distrbucion=new Distrbucion()
 let facturacion=new Facturacion()
 
+const proto=Object.getPrototypeOf;
 
 test("crear un mapa (1 local)",()=>{
     let mapa=new Mapa();
@@ -38,5 +39,5 @@ test("crear un mapa (insertar centros)",()=>{
     mapa.determinarLimites(1,4);
     mapa.definir();
     mapa.agregarCentroParaMapas("facturacion");
-    expect(mapa.mapa[0][1]).toStrictEqual([new Facturacion()]);
+    expect(mapa.mapa[0][1]).toStrictEqual(proto(new Facturacion()));
 })
