@@ -116,8 +116,8 @@ test("fabricar paquetes para un mapa 4",()=>{
        mapaAuxiliar.generar(local,destino);
        sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1])
        sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
-       //sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
-       //sistema.especificarFabricacion('a',mapaAuxiliar,[3,3,3,3]);
+       sistema.especificarFabricacion('a',mapaAuxiliar,[3,3,3,3]);
+       sistema.especificarFabricacion('a',mapaAuxiliar,[4,4,4,4]);
        //sistema.especificarFabricacion('a',mapaAuxiliar,[4,4,4,4]);
        aux=sistema.avanzartiempo(mapaAuxiliar)
    
