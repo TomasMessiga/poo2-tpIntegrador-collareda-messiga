@@ -115,7 +115,7 @@ test("avanzar tiempo pero 4 paquete 1 queda en cola de salida",()=>{
     mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
     mapaAuxiliar.generar(local,destino);
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
-    sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
+    //sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
     //sistema.especificarFabricacion('a',mapaAuxiliar,[3,3,3,3]);
     //sistema.especificarFabricacion('a',mapaAuxiliar,[4,4,4,4]);
     sistema.avanzartiempo(mapaAuxiliar)
