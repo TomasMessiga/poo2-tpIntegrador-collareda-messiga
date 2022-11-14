@@ -12,7 +12,7 @@ function Facturacion(){
 
 
         }
-        return [0,columna]
+        return [1,columna]
 
     }
 
