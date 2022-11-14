@@ -45,11 +45,11 @@ function Sistema(){
         fila=element[0]
         columna=element[1]
         poscola=element[2]
-        coladesepera.push(mapa.mapa[fila][columna][poscola])
-        
+        return (mapa.mapa[fila][columna][poscola])
+
         
       });
-      return coladesepera
+     
     }
 }
 }
