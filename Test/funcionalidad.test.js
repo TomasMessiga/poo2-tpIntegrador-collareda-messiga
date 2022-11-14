@@ -127,6 +127,29 @@ test("fabricar paquetes para un mapa 4",()=>{
    
        expect(mapaAuxiliar.mapa[1][1]).toStrictEqual([paquete,paquete2,paquete3]);
     })
+    test("avanzar tiempo pero 4 paquete 1 queda en cola de salida",()=>{
+        let sistema=new Sistema();
+        let mapaAuxiliar=new Mapa();
+       let local=new Local('a')
+      let destino=new Destino(1)
+
+      mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
+      mapaAuxiliar.generar(local,destino);
+      sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1])
+      sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
+      sistema.especificarFabricacion('a',mapaAuxiliar,[3,3,3,3]);
+      sistema.especificarFabricacion('a',mapaAuxiliar,[4,4,4,4]);
+      sistema.especificarFabricacion('a',mapaAuxiliar,[5,5,5,5]);
+      aux=sistema.avanzartiempo(mapaAuxiliar)
+      let paquete=new Paquete(5,5,5,5);
+      let paquete2=new Paquete(4,4,4,4);
+      let paquete3=new Paquete(3,3,3,3);
+      aux=sistema.avanzartiempo(mapaAuxiliar)
+ 
+  
+      expect(mapaAuxiliar.mapa[1][2]).toStrictEqual([paquete]);
+   })
+
  
  
 

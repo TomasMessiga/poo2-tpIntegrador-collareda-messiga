@@ -1,6 +1,6 @@
 
 function Calidad(){
-    this.MeMuevoA=function(mapa,columna){
+    this.MeMuevoA=function(mapa,columna,i){
          
         for (var i=0 ; i<mapa.mapa.length;i++){
 
@@ -12,7 +12,7 @@ function Calidad(){
 
 
         }
-        return [0,0]
+        return [i,columna]
 
     }
 
