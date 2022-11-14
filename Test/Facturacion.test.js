@@ -23,4 +23,5 @@ test('prueba de fabrica',()=>{
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1])
     sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
     sistema.mover(mapaAuxiliar,paquete)//[[coladesalida,facturacion,calidad,distrbucion],[[paquete2],[paquete],[],[]]]
+    expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete2],[paquete],[],[]]]);
 })
