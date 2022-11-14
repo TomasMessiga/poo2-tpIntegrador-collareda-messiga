@@ -14,7 +14,7 @@ let facturacion=new Facturacion()
 
 test("crear un mapa (1 local)",()=>{
     let mapa=new Mapa();
-    let local=new Local('a');
+    let local=new Local('A');
     let destino= new Destino(1); 
     mapa.determinarLimites(1,4);
     mapa.definir();
