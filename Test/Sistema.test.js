@@ -10,7 +10,7 @@ const ColaSalida = require('../Prototipos/Centros/ColaSalida.js');
 
 let colaSalida= new ColaSalida()
 let calidad= new Calidad()
-let distrbucion=new Distrbucion()
+let distribucion=new Distrbucion()
 let facturacion=new Facturacion()
 
 const proto=Object.getPrototypeOf;
@@ -20,7 +20,7 @@ test("crear un mapa (1 local)",()=>{
     let local=new Local('A');
     mapa.determinarLimites(1,4);
     mapa.definir();
-    expect(mapa.locales[0].nombre).toStrictEqual(local.nombre);
+    expect(proto(mapa.locales[0])).toStrictEqual(proto(local));
 })
 
 
@@ -32,12 +32,33 @@ test("crear un mapa (1 destino)",()=>{
     expect(proto(mapa.destinos[0])).toStrictEqual(proto(destino));
 })
 
-
-test("crear un mapa (insertar centros)",()=>{
+test("crear un mapa (tiene cola de salida)",()=>{
     let mapa=new Mapa();
-    let destino= new Destino('1'); 
     mapa.determinarLimites(1,4);
     mapa.definir();
     mapa.agregarCentroParaMapas("facturacion");
-    expect(proto(mapa.mapa[0][1])).toStrictEqual(proto(new Facturacion()));
+    expect(proto(mapa.mapa[0][0])).toStrictEqual(proto(colaSalida));
+})
+
+test("crear un mapa (insertar 1 centros)",()=>{
+    let mapa=new Mapa();
+    mapa.determinarLimites(1,4);
+    mapa.definir();
+    mapa.agregarCentroParaMapas("facturacion");
+    expect(proto(mapa.mapa[0][1])).toStrictEqual(proto(facturacion));
+})
+
+test("crear un mapa (insertar 2 centros)",()=>{
+    let mapa=new Mapa();
+    mapa.determinarLimites(1,4);
+    mapa.definir();
+    mapa.agregarCentroParaMapas("calidad");
+    expect(proto(mapa.mapa[0][2])).toStrictEqual(proto(calidad));
+})
+test("crear un mapa (insertar 3 centros)",()=>{
+    let mapa=new Mapa();
+    mapa.determinarLimites(1,4);
+    mapa.definir();
+    mapa.agregarCentroParaMapas("distribucion");
+    expect(proto(mapa.mapa[0][3])).toStrictEqual(proto(distribucion));
 })
