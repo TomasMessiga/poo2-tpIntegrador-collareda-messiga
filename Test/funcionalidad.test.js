@@ -11,6 +11,7 @@ let coladesalida=new Coladesalida()
 let calidad= new Calidad()
 let distrbucion=new Distrbucion()
 let facturacion=new Facturacion()
+facturacion.condicones([3,3,3,3])
 
 test("incrementar una unidad de tiempo",()=>{
     let sistema=new Sistema();
