@@ -1,6 +1,6 @@
 
 function Facturacion(){
-    this.MeMuevoA=function(mapa,columna){
+    this.MeMuevoA=function(mapa,columna,fila){
          
         for (var i=0 ; i<mapa.mapa.length;i++){
 
@@ -12,7 +12,7 @@ function Facturacion(){
 
 
         }
-        return [1,columna]
+        return [fila,columna]
 
     }
 
