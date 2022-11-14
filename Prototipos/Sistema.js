@@ -39,8 +39,8 @@ function Sistema(){
     
     }
     this.avanzartiempo=function(mapa){
-      aux=mapa.buscartodos()
-      coladesepera=[]
+      let aux=mapa.buscartodos()
+      let coladesepera=[]
       aux.forEach(element => {
         fila=element[0]
         columna=element[1]
