@@ -1,6 +1,6 @@
 
 function Facturacion(){
-    this.condicones=function(mapa,arreglocondifila){
+    this.condicones=function(mapa,arreglocondifila=0){
         cantdefact=mapa.cuantolocales()
 
         if (arreglocondifila.length==cantdefact){
