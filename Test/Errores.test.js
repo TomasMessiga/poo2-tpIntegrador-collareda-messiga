@@ -1,3 +1,4 @@
+const Error=require('../Prototipos/Error.js');
 
 test('Recibir un error',()=>{
     let causa=Error();
