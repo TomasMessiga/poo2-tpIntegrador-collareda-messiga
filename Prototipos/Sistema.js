@@ -47,6 +47,7 @@ function Sistema(){
         poscola=element[2]
         coladesepera.push(mapa.mapa[fila][columna][poscola])
         
+        
       });
       return coladesepera
     }
