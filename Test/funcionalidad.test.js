@@ -122,7 +122,7 @@ test("avanzar tiempo pero 4 paquete 1 queda en cola de salida",()=>{
     aux=sistema.avanzartiempo(mapaAuxiliar)
     sistema.mover(mapaAuxiliar,aux[0])
     sistema.mover(mapaAuxiliar,aux[1])
-    expect(mapaAuxiliar.mapa[1][0]).toStrictEqual();
+    expect(mapaAuxiliar.mapa[1][1]).toStrictEqual();
 })
  
  
