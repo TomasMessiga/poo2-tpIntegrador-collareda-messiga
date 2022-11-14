@@ -121,8 +121,9 @@ test("avanzar tiempo pero 4 paquete 1 queda en cola de salida",()=>{
     //sistema.especificarFabricacion('a',mapaAuxiliar,[4,4,4,4]);
     aux=sistema.avanzartiempo(mapaAuxiliar)
     paquete=aux[0]
+  
    
-    expect(paquete).toStrictEqual(mapaAuxiliar.mapa[1][0]);
+    expect(mapa.buscar(paquete)).toStrictEqual(mapaAuxiliar.mapa[1][0]);
 })
  
  
