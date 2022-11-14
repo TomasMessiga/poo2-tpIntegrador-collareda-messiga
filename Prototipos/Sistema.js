@@ -48,7 +48,7 @@ function Sistema(){
         paquete.push(aux1[aux[i][0]][aux[i][1]][aux[i][2]])
 
     }
-    this.mover(paquete[0])
+    //this.mover(paquete[0])
     return paquete[0]
        
   
