@@ -18,10 +18,18 @@ test('prueba de fabrica',()=>{
     let destino=new Destino(0)
     let paquete=new Paquete(1,1,1,1);
     let paquete2=new Paquete(2,2,2,2);
+    let paquete3=new Paquete(2,2,2,2);
+    let paquete4=new Paquete(2,2,2,2);
     mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
     mapaAuxiliar.generar(local,destino);
-    sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1])
-    sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
-    sistema.mover(mapaAuxiliar,paquete)//[[coladesalida,facturacion,calidad,distrbucion],[[paquete2],[paquete],[],[]]]
-    expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete2],[paquete],[],[]]]);
+    sistema.mover(mapaAuxiliar,paquete)
+    sistema.mover(mapaAuxiliar,paquete2)
+    sistema.mover(mapaAuxiliar,paquete3)
+    sistema.mover(mapaAuxiliar,paquete4)
+    sistema.mover(mapaAuxiliar,paquete2)
+    sistema.mover(mapaAuxiliar,paquete3)
+    sistema.mover(mapaAuxiliar,paquete4)
+
+   //[[coladesalida,facturacion,calidad,distrbucion],[[paquete2],[paquete],[],[]]]
+    expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete],[paquete2,paquete3,paquete4],[],[]]]);
 })
