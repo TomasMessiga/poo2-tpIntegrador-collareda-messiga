@@ -52,7 +52,7 @@ test("mover 2 pasos pauqete en mapa",()=>{
     mapaAuxiliar.generar(local,destino);
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1])
     sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
-    this.mover(paquete)
+    sistema.mover(paquete)
     sistema.avanzartiempo(mapaAuxiliar)
     expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete2],[paquete],[],[]]]);
 })
