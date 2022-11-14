@@ -5,6 +5,11 @@ function Validacion(){
             throw new Error(mensaje);
         }
     }
+    this.verificarIncumplimiento=function(condicion,mensaje){
+        if (!condicion){
+            throw new Error(mensaje)
+        }
+    }
 
 }
 
