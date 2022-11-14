@@ -39,5 +39,5 @@ test("crear un mapa (insertar centros)",()=>{
     mapa.definir();
     mapa.agregarCentroParaMapas("facturacion");
     mapa.agregarCentroParaMapas("distribucion");
-    expect(mapa.mapa[0][1]).toStrictEqual(1);
+    expect(mapa.mapa[0][2]).toStrictEqual(1);
 })
