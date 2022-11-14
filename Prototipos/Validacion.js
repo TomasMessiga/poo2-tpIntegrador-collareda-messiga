@@ -1,11 +1,11 @@
-function Error(){
+function Validacion(){
 
     this.verificarCumplimiento=function (condicion,mensaje){
         if (!condicion){
-            throw new (mensaje);
+            throw new Error(mensaje);
         }
     }
 
 }
 
-module.exports=Error;
+module.exports=Validacion;
