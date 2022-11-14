@@ -1,10 +1,9 @@
 function Error(){
 
-    this.verificar=function (condicion,variable,mensaje){
-        if (condicion){
+    this.verificarCumplimiento=function (condicion,mensaje){
+        if (!condicion){
             throw new (mensaje);
         }
-        return variable;
     }
 
 }
