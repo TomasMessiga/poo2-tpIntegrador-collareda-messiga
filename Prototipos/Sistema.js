@@ -45,7 +45,7 @@ function Sistema(){
         fila=element[0]
         columna=element[1]
         poscola=element[2]
-        return (mapa.mapa[fila][columna][poscola])
+        return ([fila][columna][poscola])
 
         
       });
