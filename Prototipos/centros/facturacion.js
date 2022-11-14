@@ -6,6 +6,15 @@ function Facturacion(){
         if (arreglocondifila.length==cantdefact){
             return arreglocondifila
         }
+        else{   
+            aux=[]
+            for (var i=0 ; i<cantdefact;i++){aux.push(3)}
+            return aux
+
+
+
+
+        }
 
 
 
