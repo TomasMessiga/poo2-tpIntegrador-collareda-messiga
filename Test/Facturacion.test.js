@@ -11,8 +11,16 @@ let coladesalida=new Coladesalida()
 let calidad= new Calidad()
 let distrbucion=new Distrbucion()
 let facturacion=new Facturacion()
-test("incrementar una unidad de tiempo",()=>{
+test('prueba de fabrica',()=>{
     let sistema=new Sistema();
-    sistema.incrementarTiempo();
-    expect(sistema.getTiempo()).toBe(1); 
+    let mapaAuxiliar=new Mapa();
+    let local=new Local('a')
+    let destino=new Destino(0)
+    let paquete=new Paquete(1,1,1,1);
+    let paquete2=new Paquete(2,2,2,2);
+    mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
+    mapaAuxiliar.generar(local,destino);
+    sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1])
+    sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
+    sistema.mover(mapaAuxiliar,paquete)//[[coladesalida,facturacion,calidad,distrbucion],[[paquete2],[paquete],[],[]]]
 })
