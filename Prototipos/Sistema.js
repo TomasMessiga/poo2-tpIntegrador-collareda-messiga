@@ -1,3 +1,4 @@
+const { sort } = require('semver');
 const Mapa=require('../Prototipos/Mapa.js');
 const Paquete=require("../Prototipos/Paquete")
 function Sistema(){
@@ -48,6 +49,9 @@ function Sistema(){
         paquete.push(aux1[aux[i][0]][aux[i][1]][aux[i][2]])
 
     }
+    
+    paquete.sort((a,b) => a.id - b.id);
+
     for (var i=0 ; i<paquete.length;i++){
 
       this.mover(mapa,paquete[i])
