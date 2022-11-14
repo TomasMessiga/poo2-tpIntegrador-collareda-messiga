@@ -27,9 +27,9 @@ test('prueba de fabrica',()=>{
     sistema.mover(mapaAuxiliar,paquete3)
     sistema.mover(mapaAuxiliar,paquete4)
     sistema.mover(mapaAuxiliar,paquete2)
-    //sistema.mover(mapaAuxiliar,paquete3)
-    //sistema.mover(mapaAuxiliar,paquete4)
+    sistema.mover(mapaAuxiliar,paquete3)
+    sistema.mover(mapaAuxiliar,paquete4)
 
    //[[coladesalida,facturacion,calidad,distrbucion],[[paquete2],[paquete],[],[]]]
-    expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete,paquete3,paquete4],[paquete2],[],[]]]);
+    expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete],[paquete2,paquete3,paquete4],[],[]]]);
 })
