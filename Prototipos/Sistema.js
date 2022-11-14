@@ -20,7 +20,7 @@ function Sistema(){
       }
       else{
         muevoA=mapa.mapa[0][columna+1].MeMuevoA(mapa,columna)
-        mapa.mapa[muevA[0]][muevA[1]].push(paquete)
+        mapa.mapa[muevoA[0]][muevoA[1]].push(paquete)
         mapa.mapa[fila][columna].splice(poscola,1)
  
 
