@@ -42,7 +42,7 @@ function Sistema(){
       let aux=mapa.buscartodos()
       for (var i=0 ; i<aux.length;i++){
 
-        return mapa.mapa[aux[i][0]][aux[i][1]][aux[i][2]])
+        return mapa.mapa[aux[i][0]][aux[i][1]][aux[i][2]]
 
     }
      
