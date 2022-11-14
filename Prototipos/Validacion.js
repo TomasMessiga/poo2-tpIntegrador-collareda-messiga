@@ -1,7 +1,7 @@
 function Validacion(){
 
     this.verificarCumplimiento=function (condicion,mensaje){
-        if (!condicion){
+        if (condicion){
             throw new Error(mensaje);
         }
     }
