@@ -73,11 +73,11 @@ test("mapa apto para ser utilizado",()=>{
     mapa.agregarCentroParaMapas("facturacion");
     mapa.agregarCentroParaMapas("calidad");
     mapa.agregarCentroParaMapas("distribucion");
-    expect(mapa.util()).toStrictEqual(proto(true));
+    expect(mapa.util()).toStrictEqual(true);
 })
 test("mapa apto para ser utilizado",()=>{
     let mapa=new Mapa();
     mapa.determinarLimites(1,4);
     mapa.definir();
-    expect(mapa.util()).toStrictEqual(proto(false));
+    expect(mapa.util()).toStrictEqual(false);
 })

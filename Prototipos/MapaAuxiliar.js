@@ -46,7 +46,7 @@ function Mapa(){
     }
 
     this.util=function(){
-        return (this.mapa[0]);
+        return (this.mapa[0].length==limites[1]);
     }
 
 
