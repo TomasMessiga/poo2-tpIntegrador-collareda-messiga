@@ -49,7 +49,7 @@ function Sistema(){
     }
     aux1.forEach(element => {
 
-      this.mover(element)
+      return element
       
     });
     }
