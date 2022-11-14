@@ -3,7 +3,6 @@ const Paquete=require("../Prototipos/Paquete")
 function Sistema(){
     var tiempo=0;
     this.i=0
-
     this.incrementarTiempo=function(){
         tiempo++;
     }
@@ -50,9 +49,7 @@ function Sistema(){
         
       });
       return aux
-
     }
-
 }
 }
 module.exports=Sistema;
