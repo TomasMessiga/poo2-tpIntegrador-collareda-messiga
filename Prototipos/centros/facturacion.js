@@ -17,7 +17,7 @@ function Facturacion(){
             this.limiteColaDeEspera=cola;
         }
     }
- /**
+ 
     this.MeMuevoA=function(mapa,columna,fila){
          
         for (var i=0 ; i<mapa.mapa.length;i++){
@@ -34,7 +34,7 @@ function Facturacion(){
 
     }
     
-    */   
+     
 
 }
 module.exports=Facturacion;

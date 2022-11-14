@@ -17,7 +17,7 @@ function Distribucion(){
             this.limiteColaDeEspera=cola;
         }
     }
-/**
+
 
     this.MeMuevoA=function(mapa,columna){
          
@@ -33,7 +33,7 @@ function Distribucion(){
         }
         return [0,0]
 
-    } */
+    } 
 
 }
 module.exports=Distribucion;
