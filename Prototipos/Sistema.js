@@ -42,13 +42,14 @@ function Sistema(){
     this.avanzartiempo=function(mapa){
       let aux=mapa.buscartodos()
       aux1=mapa.mapa
-      aux2=[]
+      paquete=[]
       for (var i=0 ; i<aux.length;i++){
 
-        return(aux1[aux[i][0]][aux[i][1]][aux[i][2]].id)
+        paquete.push(aux1[aux[i][0]][aux[i][1]][aux[i][2]])
 
     }
-    
+    this.mover(paquete[0])
+    return paquete[0]
        
   
     }
