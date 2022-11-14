@@ -24,7 +24,7 @@ test("crear un mapa (1 local)",()=>{
 
 test("crear un mapa (1 destino)",()=>{
     let mapa=new Mapa();
-    let destino= new Destino(1); 
+    let destino= new Destino('1'); 
     mapa.determinarLimites(1,4);
     mapa.definir();
     let equivalencia=[];
