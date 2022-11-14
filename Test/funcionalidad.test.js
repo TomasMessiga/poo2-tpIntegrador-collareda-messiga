@@ -123,7 +123,7 @@ test("fabricar paquetes para un mapa 4",()=>{
    
   
    
-       expect(mapa.mapa).toStrictEqual();
+       expect(mapaAuxiliar.mapa).toStrictEqual();
     })
  
  
