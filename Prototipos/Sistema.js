@@ -39,14 +39,9 @@ function Sistema(){
     
     }
     this.avanzartiempo=function(mapa){
-      let aux=mapa.buscartodos()
-      let coladesepera=[]
-      aux.forEach(element => {
- 
-        return (element)
-
-        
-      });
+     return (mapa.buscartodos())
+      
+     
      
     }
 }
