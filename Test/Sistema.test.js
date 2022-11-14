@@ -28,5 +28,5 @@ test("crear un mapa (1 destino)",()=>{
     mapa.determinarLimites(1,4);
     mapa.definir();
     let equivalencia=[];
-    expect(mapa.destinos[0]).toStrictEqual(destino.nombre);
+    expect(mapa.destinos[0].nombre).toStrictEqual(destino.nombre);
 })
