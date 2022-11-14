@@ -15,10 +15,18 @@ let facturacion=new Facturacion()
 test("crear un mapa (1 local)",()=>{
     let mapa=new Mapa();
     let local=new Local('A');
-    let destino= new Destino(1); 
     mapa.determinarLimites(1,4);
     mapa.definir();
     let equivalencia=[];
     expect(mapa.locales[0].nombre).toStrictEqual(local.nombre);
 })
 
+
+test("crear un mapa (1 destino)",()=>{
+    let mapa=new Mapa();
+    let destino= new Destino(1); 
+    mapa.determinarLimites(1,4);
+    mapa.definir();
+    let equivalencia=[];
+    expect(mapa.destinos[0]).toStrictEqual(destino.nombre);
+})
