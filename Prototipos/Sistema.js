@@ -46,7 +46,7 @@ function Sistema(){
         aux1.push(mapa.mapa[aux[i][0]][aux[i][1]][aux[i][2]])
 
     }
-     return aux1
+     return mapa.buscar(aux1[0])
     }
 }
 }
