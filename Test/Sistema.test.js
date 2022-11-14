@@ -38,6 +38,5 @@ test("crear un mapa (insertar centros)",()=>{
     mapa.determinarLimites(1,4);
     mapa.definir();
     mapa.agregarCentroParaMapas("facturacion");
-    mapa.agregarCentroParaMapas("distribucion");
-    expect(mapa.mapa[0][3]).toStrictEqual(1);
+    expect(mapa.mapa[0][1]).toStrictEqual(facturacion);
 })
