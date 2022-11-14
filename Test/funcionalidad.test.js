@@ -28,7 +28,7 @@ test("mover 1 pasos pauqete en mapa",()=>{
     sistema.mover(mapaAuxiliar,paquete)
     expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete],[],[],[]]]);
 })
-test("mover 2 pasos pauqete en mapa",()=>{
+test("mover 2 pasos pauqete en mapa 1 ",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
     let local=new Local('a')
@@ -41,7 +41,7 @@ test("mover 2 pasos pauqete en mapa",()=>{
     expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[paquete],[],[]]]);
 })
 
-test("mover 2 pasos pauqete en mapa",()=>{
+test("mover 2 pasos pauqete en mapa 2 ",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
     let local=new Local('a')
@@ -55,7 +55,7 @@ test("mover 2 pasos pauqete en mapa",()=>{
     sistema.mover(paquete)//[[coladesalida,facturacion,calidad,distrbucion],[[paquete2],[paquete],[],[]]]
     expect().toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete2],[paquete],[],[]]]);
 })
-test("fabricar paquetes para un mapa",()=>{
+test("fabricar paquetes para un mapa 3 ",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
     let local=new Local('a')
@@ -66,7 +66,7 @@ test("fabricar paquetes para un mapa",()=>{
     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1]);
     expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete],[],[],[]]]);
 })
-test("fabricar paquetes para un mapa",()=>{
+test("fabricar paquetes para un mapa 4",()=>{
     let sistema=new Sistema();
     let mapaAuxiliar=new Mapa();
     let local=new Local('a')
