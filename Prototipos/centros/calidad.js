@@ -9,6 +9,9 @@ function Calidad(){
     this.limiteProcesamiento=rangoProcesamiento[0];
     this.limiteColaDeEspera=rangoColaDeEspera[0];
 
+    this.colaDeProcesamiento=[];
+    this.colaDeEspera=[];
+
     this.determinarLimites=function(procesamiento,cola){
         if (limitesAdecuados(this.procesamiento,rangoProcesamiento)){
             this.limiteProcesamiento=procesamiento;
