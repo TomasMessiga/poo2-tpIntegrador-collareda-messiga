@@ -35,9 +35,10 @@ function Sistema(){
           this.mover(mapa,paqueteCreado,i);
 
         }
-        
-    
+      }
     }
+    
+    
     this.avanzartiempo=function(mapa){
       let aux=mapa.buscartodos()
       let aux1=[]
@@ -46,8 +47,12 @@ function Sistema(){
         aux1.push(mapa.mapa[aux[i][0]][aux[i][1]][aux[i][2]])
 
     }
-     return mapa.buscar(aux1[0])
+    aux1.forEach(element => {
+
+      this.mover(element)
+      
+    });
     }
-}
+
 }
 module.exports=Sistema;
