@@ -50,7 +50,7 @@ function Sistema(){
 
     }
     
-     paquete=paquete.sort((a,b) => a.id - b.id);
+     paquete=paquete.sort((a,b) => b.id - a.id);
 
     for (var i=0 ; i<paquete.length;i++){
 
