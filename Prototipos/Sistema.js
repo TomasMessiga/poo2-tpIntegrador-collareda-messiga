@@ -41,14 +41,15 @@ function Sistema(){
     
     this.avanzartiempo=function(mapa){
       let aux=mapa.buscartodos()
-      let aux1=[]
+      aux1=mapa.mapa
+      aux2=[]
       for (var i=0 ; i<aux.length;i++){
 
-        aux1.push(mapa.mapa[aux[i][0]][aux[i][1]][aux[i][2]])
+        aux2.push(aux1[aux[i][0]][aux[i][1]][aux[i][2]])
 
     }
     
-       return(aux)
+       return(aux2)
   
     }
 
