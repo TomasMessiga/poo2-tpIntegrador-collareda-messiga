@@ -49,7 +49,7 @@ function Sistema(){
     }
     for (var i=2 ; i<aux1.length;i++){
 
-      return mapa.buscar(aux1[i])
+      return this.mover(aux1[i])
 
   }
   
