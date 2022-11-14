@@ -43,10 +43,9 @@ function Sistema(){
       let aux1=[]
       for (var i=0 ; i<aux.length;i++){
 
-        aux1.push(mapa.mapa[aux[i][0]][aux[i][1]][aux[i][2]])
+        this.mover(mapa.mapa[aux[i][0]][aux[i][1]][aux[i][2]])
 
     }
-     return aux1
     }
 }
 }
