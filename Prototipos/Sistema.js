@@ -48,7 +48,7 @@ function Sistema(){
 
     }
     
-       return(aux1[i])
+       return(aux)
   
     }
 
