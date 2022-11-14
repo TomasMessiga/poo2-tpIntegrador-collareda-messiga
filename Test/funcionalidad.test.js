@@ -51,7 +51,7 @@ test("mover 2 pasos pauqete en mapa",()=>{
     mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
     mapaAuxiliar.generar(local,destino);
     sistema.mover(mapaAuxiliar,paquete)
-    sistema.mover(mapaAuxiliar,paquete)
+    sistema.mover(mapaAuxiliar,paquete2)
     sistema.mover(mapaAuxiliar,paquete)
     expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[],[paquete],[]]]);
 })
