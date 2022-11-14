@@ -18,8 +18,8 @@ test('prueba de fabrica',()=>{
     let destino=new Destino(0)
     let paquete=new Paquete(1,1,1,1);
     let paquete2=new Paquete(2,2,2,2);
-    let paquete3=new Paquete(2,2,2,2);
-    let paquete4=new Paquete(2,2,2,2);
+    let paquete3=new Paquete(3,3,3,3);
+    let paquete4=new Paquete(4,4,4,4);
     mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
     mapaAuxiliar.generar(local,destino);
     sistema.mover(mapaAuxiliar,paquete)
