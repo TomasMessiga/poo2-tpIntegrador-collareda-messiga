@@ -47,11 +47,8 @@ function Sistema(){
         aux1.push(mapa.mapa[aux[i][0]][aux[i][1]][aux[i][2]])
 
     }
-    for (var i=0 ; i<aux1.length;i++){
-
-       return(mapa,aux1[i])
-
-  }
+    
+       return(aux1[i])
   
     }
 
