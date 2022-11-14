@@ -26,8 +26,8 @@ test('prueba de fabrica',()=>{
     sistema.mover(mapaAuxiliar,paquete2)
     sistema.mover(mapaAuxiliar,paquete3)
     sistema.mover(mapaAuxiliar,paquete4)
-    sistema.mover(mapaAuxiliar,paquete2)
-    sistema.mover(mapaAuxiliar,paquete3)
+    //sistema.mover(mapaAuxiliar,paquete2)
+    //sistema.mover(mapaAuxiliar,paquete3)
     sistema.mover(mapaAuxiliar,paquete4)
 
    //[[coladesalida,facturacion,calidad,distrbucion],[[paquete2],[paquete],[],[]]]
