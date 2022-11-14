@@ -1,6 +1,6 @@
 
 function Facturacion(){
-    this.ColadeEspera=function(mapa,columna){
+    this.MeMuevoA=function(mapa,columna){
          
         for (var i=0 ; i<mapa.mapa.length;i++){
 
