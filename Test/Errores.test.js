@@ -13,5 +13,5 @@ test('Recibir un error 2',()=>{
     let mensaje="Cero no es igual que uno";
     expect(() => {
         (causa.verificarIncumplimiento(0==1,mensaje))
-      }).toThrow(new Error(mensaje));
+      }).toThrow( (mensaje));
 })
