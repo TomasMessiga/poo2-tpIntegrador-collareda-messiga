@@ -1,6 +1,7 @@
 const Local=require('../Local.js');
 function Coladesalida(){
     this.local='';
+    this.colaDeProcesamiento=[]
 
     this.generar=(local)=>{
         this.local=local
