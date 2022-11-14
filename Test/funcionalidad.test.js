@@ -36,8 +36,7 @@ test("mover 2 pasos pauqete en mapa",()=>{
     let paquete=new Paquete(1,1,1,1);
     mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
     mapaAuxiliar.generar(local,destino);
-    sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1])
-    sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
+    sistema.mover(mapaAuxiliar,paquete)
     sistema.mover(mapaAuxiliar,paquete)
     expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[paquete],[],[]]]);
 })
@@ -51,8 +50,8 @@ test("mover 2 pasos pauqete en mapa",()=>{
     let paquete2=new Paquete(2,2,2,2);
     mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
     mapaAuxiliar.generar(local,destino);
-    sistema.mover(mapaAuxiliar,paquete)
-    sistema.mover(mapaAuxiliar,paquete2)
+    sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1])
+    sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
     sistema.mover(mapaAuxiliar,paquete)
     expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[paquete2],[paquete],[],[]]]);
 })
@@ -107,25 +106,25 @@ test("fabricar paquetes para un mapa",()=>{
 //     expect(mapaAuxiliar.mapa).toStrictEqual([[coladesalida,facturacion,calidad,distrbucion],[[],[paquete],[],[]],[[],[paquete2],[],[]],[[],[],[],[]]]);
 // })
 
-test("avanzar tiempo pero 4 paquete 1 queda en cola de salida",()=>{
-    let sistema=new Sistema();
-    let mapaAuxiliar=new Mapa();
-    let local=new Local('a')
-    let destino=new Destino(1)
+// test("avanzar tiempo pero 4 paquete 1 queda en cola de salida",()=>{
+//     let sistema=new Sistema();
+//     let mapaAuxiliar=new Mapa();
+//     let local=new Local('a')
+//     let destino=new Destino(1)
 
-    mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
-    mapaAuxiliar.generar(local,destino);
-    sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1])
-    sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
-    //sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
-    //sistema.especificarFabricacion('a',mapaAuxiliar,[3,3,3,3]);
-    //sistema.especificarFabricacion('a',mapaAuxiliar,[4,4,4,4]);
-    aux=sistema.avanzartiempo(mapaAuxiliar)
+//     mapaAuxiliar.centro([coladesalida,facturacion,calidad,distrbucion])
+//     mapaAuxiliar.generar(local,destino);
+//     sistema.especificarFabricacion('a',mapaAuxiliar,[1,1,1,1])
+//     sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
+//     //sistema.especificarFabricacion('a',mapaAuxiliar,[2,2,2,2]);
+//     //sistema.especificarFabricacion('a',mapaAuxiliar,[3,3,3,3]);
+//     //sistema.especificarFabricacion('a',mapaAuxiliar,[4,4,4,4]);
+//     aux=sistema.avanzartiempo(mapaAuxiliar)
    
   
    
-    expect(aux).toStrictEqual(mapaAuxiliar.mapa[1][0]);
-})
+//     expect(aux).toStrictEqual(mapaAuxiliar.mapa[1][0]);
+// })
  
  
 
