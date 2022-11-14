@@ -52,6 +52,7 @@ test("crear un mapa (insertar 2 centros)",()=>{
     let mapa=new Mapa();
     mapa.determinarLimites(1,4);
     mapa.definir();
+    mapa.agregarCentroParaMapas("facturacion");
     mapa.agregarCentroParaMapas("calidad");
     expect(proto(mapa.mapa[0][2])).toStrictEqual(proto(calidad));
 })
@@ -59,6 +60,8 @@ test("crear un mapa (insertar 3 centros)",()=>{
     let mapa=new Mapa();
     mapa.determinarLimites(1,4);
     mapa.definir();
+    mapa.agregarCentroParaMapas("facturacion");
+    mapa.agregarCentroParaMapas("calidad");
     mapa.agregarCentroParaMapas("distribucion");
     expect(proto(mapa.mapa[0][3])).toStrictEqual(proto(distribucion));
 })
