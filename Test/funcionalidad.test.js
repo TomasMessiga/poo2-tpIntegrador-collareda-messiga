@@ -120,10 +120,12 @@ test("fabricar paquetes para un mapa 4",()=>{
        sistema.especificarFabricacion('a',mapaAuxiliar,[4,4,4,4]);
        sistema.especificarFabricacion('a',mapaAuxiliar,[5,5,5,5]);
        aux=sistema.avanzartiempo(mapaAuxiliar)
-   
+       let paquete=new Paquete(5,5,5,5);
+       let paquete2=new Paquete(4,4,4,4);
+       let paquete3=new Paquete(3,3,3,3);
   
    
-       expect(mapaAuxiliar.mapa[1][1]).toStrictEqual();
+       expect(mapaAuxiliar.mapa[1][1]).toStrictEqual([paquete,paquete2,paquete3]);
     })
  
  
