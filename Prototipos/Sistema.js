@@ -1,4 +1,3 @@
-const { sort } = require('semver');
 const Mapa=require('../Prototipos/Mapa.js');
 const Paquete=require("../Prototipos/Paquete")
 function Sistema(){

@@ -56,6 +56,11 @@ function Mapa(){
             return (aux)
                  
             };
+        this.cuantolocales=function(){
+
+
+            return this.LocalDestino.length
+        }
 
 
     }    
