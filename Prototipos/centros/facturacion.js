@@ -2,7 +2,7 @@
 function Facturacion(){
     this.conidicion=[]
     this.condicones=function(arreglocondifila){
-        this=condicion
+        this.condicion=arreglocondifila
 
 
 
