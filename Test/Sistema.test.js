@@ -29,7 +29,7 @@ test("crear un mapa (1 destino)",()=>{
     let destino= new Destino('1'); 
     mapa.determinarLimites(1,4);
     mapa.definir();
-    expect(mapa.destinos[0].nombre).toStrictEqual(destino.nombre);
+    expect(proto(mapa.destinos[0])).toStrictEqual(proto(destino));
 })
 
 
