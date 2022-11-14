@@ -47,11 +47,12 @@ function Sistema(){
         aux1.push(mapa.mapa[aux[i][0]][aux[i][1]][aux[i][2]])
 
     }
-    aux1.forEach(element => {
+    for (var i=0 ; i<aux1.length;i++){
 
-      return element
-      
-    });
+      this.mover(aux1[i])
+
+  }
+  
     }
 
 }
