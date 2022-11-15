@@ -81,6 +81,11 @@ function Sistema(){
       return mapa.mostrarContadorPaquetes();
     }
 
+
+    this.modificarColaCentro=function(mapa,fila,columna,limite){
+      mapa.mapa[fila][columna].determinarLimites(limite);
+    }
+
 }
 
 
