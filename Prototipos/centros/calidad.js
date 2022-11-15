@@ -17,16 +17,15 @@ function Calidad(){
     this.limiteColaDeEspera=rangoColaDeEspera[1];
 
     this.cola=[];
+    this.procesados=[];
 
     this.clasificacion=function(){
         return "centro de calidad";
     }
 
 
-    this.determinarLimites=function(procesamiento,cola){
-        if (limitesAdecuados(this.procesamiento,rangoProcesamiento)){
-            this.limiteProcesamiento=procesamiento;
-        } if (limitesAdecuados(this.colaDeEspera,rangoColaDeEspera)){
+    this.determinarLimites=function(cola){
+        if (limitesAdecuados(this.colaDeEspera,rangoColaDeEspera)){
             this.limiteColaDeEspera=cola;
         }
     }
