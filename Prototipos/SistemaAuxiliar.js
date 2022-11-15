@@ -85,7 +85,7 @@ function Sistema(){
                 mapa.mapa[i][f+1].cola.push(paqueteAux[0]);
               }
             }
-            for (let k=0;;k++){
+            for (let k=0;false;k++){
               
             }
 
