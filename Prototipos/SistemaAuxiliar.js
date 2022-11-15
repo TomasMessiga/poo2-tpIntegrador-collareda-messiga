@@ -16,7 +16,10 @@ function Sistema(){
       if (!(mapa===undefined)){
         for (let i=0;i<mapa.mapa.length;i++){
           for (let f=0;f<mapa.mapa[i].length;f++){
-              console.log(mapa.mapa[i][f])
+            for (let j=0;j<mapa.mapa[i][f].length;j++){
+              let paqueteAux=mapa.mapa[i][f].colaDeProcesamiento;
+              console.log(paqueteAux)
+            }
           }
         }
         tiempo++;
