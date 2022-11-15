@@ -16,7 +16,7 @@ function Sistema(){
       return !(value===undefined);
     }
     const proto=Object.getPrototypeOf;
-
+    
 
     const calcularUrgencia=function(paquete,cantidadCentros){
       let prioridades={"muy rapido": 1 , "rapido": 1.5 , "normal" : 2};
@@ -24,6 +24,9 @@ function Sistema(){
     }
 
     const estadoUrgencia=function(paquete,cantidadCentros){
+      if (proto(paquete)==proto(new Paquete)){
+        return 0;
+      }
       return calcularUrgencia(paquete,cantidadCentros)-paquete.tiempo;
     }
 
