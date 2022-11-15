@@ -75,6 +75,9 @@ function Sistema(){
           cont+=columna.colaDeProcesamiento.length;
         });
       });
+      mapa.destinos.forEach(paquetesDestino => {
+        cont+=paquetesDestino.length;
+      });
       return cont;
     }
 
