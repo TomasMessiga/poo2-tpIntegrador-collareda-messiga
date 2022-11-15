@@ -74,7 +74,7 @@ function Sistema(){
           cont+=columna.colaDeProcesamiento.length;
         });
       });
-      mapa.destinos.forEach(paquetesDestino => {
+      mapa.destinos.forEach(paquetesDestino => {console.log(cont)
         cont+=paquetesDestino.recibidos.length;
       });
       return cont;
