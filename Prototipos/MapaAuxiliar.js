@@ -137,25 +137,25 @@ function Mapa(){
     }
 
     this.puedomoverhaciaarriba=function(pauqete,mapa){
-    pos=this.buscarCoordenadasPaquetePorID()
-    destino=pauqete.Destino-1
-    limites=this.getLimites()
-    fila=limites[0] 
-    columna=limites[1]
-    if (destino-(pos[0]+1)<=columna-pos[0] && destino-(pos[0]-1)<=columna-pos[0] ){
-        return [1,-1]
-    }
-    if (destino-(pos[0]+1)<=columna-(pos[0]+1))
-    {
+        pos=this.buscarCoordenadasPaquetePorID()
+        destino=pauqete.Destino-1
+        limites=this.getLimites()
+        fila=limites[0] 
+        columna=limites[1]
+        if (destino-(pos[0]+1)<=columna-pos[0] && destino-(pos[0]-1)<=columna-pos[0] ){
+            return [1,-1]
+        }
+        if (destino-(pos[0]+1)<=columna-(pos[0]+1))
+        {
             return [1,0]
-    }
-    if (destino-(pos[0]-1)<=columna-(pos[0]+1))
-    {
+        }
+        if (destino-(pos[0]-1)<=columna-(pos[0]+1))
+        {
             return [0,-1]
-    }
-    else{
-        retun [0,0]
-    }
+        }
+        else{
+            return [0,0]
+        }
 
 
 
