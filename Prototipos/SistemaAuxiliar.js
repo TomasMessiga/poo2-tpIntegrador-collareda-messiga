@@ -74,16 +74,13 @@ function Sistema(){
             });
             for (let j=0;j<mapa.mapa[i][f].cola.length && j<mapa.mapa[i][f].limiteProcesamiento;j++){
               let prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
-              let arregloAuxiliar=[];
               if (f==0 && prototipo){
                 let paqueteAux=mapa.mapa[i][f].cola[j];  
                 mapa.mapa[i][f].cola[j]=undefined;
-                arregloAuxiliar.push(paqueteAux);
                 mapa.mapa[i][f+1].cola.push(paqueteAux);
               } else if (f==mapa.mapa[i].length-1 && prototipo){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola[j]=undefined;
-                arregloAuxiliar.push(paqueteAux[0]);
                 mapa.destinos[i].recibidos.push(paqueteAux[0]);
               } else if (prototipo){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
@@ -92,12 +89,7 @@ function Sistema(){
                 mapa.mapa[i][f+1].cola.push(paqueteAux[0]);
               }
             }
-            if (f==mapa.getLimites()[1]-1){
 
-            }
-            for (let k=0;false;k++){
-              
-            }
 
             
             mapa.mapa[i][f].cola=mapa.mapa[i][f].cola.filter(filtrarPorUndefined);
