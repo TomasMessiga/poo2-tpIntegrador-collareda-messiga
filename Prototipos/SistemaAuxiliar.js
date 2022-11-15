@@ -81,8 +81,8 @@ function Sistema(){
               let prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
               if (f==0){
                 let paqueteAux=mapa.mapa[i][f].cola[j];
-                let vertical=mapa.desplazamientoVertical(paqueteAux);   console.log(vertical)
-                if(mapa.mapa[i+vertical[0]][f+1].incorporarPaqueteCola(paqueteAux)){
+                let vertical=mapa.desplazamientoVertical(paqueteAux);  
+                if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteAux)){
                   mapa.mapa[i][f].cola.splice(j,1);
                 }
               } else if (f==mapa.mapa[i].length-1){
@@ -109,9 +109,9 @@ function Sistema(){
                   contAux++;
                   prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
                 } if (!prototipo){
-                  let vertical=mapa.desplazamientoVertical(paqueteAux);  console.log(vertical)
+                  let vertical=mapa.desplazamientoVertical(paqueteAux);  
                   let paqueteParaCola=mapa.mapa[i][f].cola[j];
-                  if(mapa.mapa[i+vertical[0]][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
+                  if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
                     mapa.mapa[i][f].cola.splice(j,1);
                   }
                 }
