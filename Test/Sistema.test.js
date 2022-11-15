@@ -132,7 +132,7 @@ test("funcionamiento de sistema (mover de cola de salida a un centro)",()=>{
     mapa.agregarCentroParaMapas("calidad");
     mapa.agregarCentroParaMapas("distribucion");  
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",1]);
-    sistema.incrementarTiempo(mapa);console.log(mapa.mapa[0][1])
+    sistema.incrementarTiempo(mapa);
     let unPaquete=new Paquete(1,"reloj","muy rapido",1); unPaquete.tiempo=1;
     expect(mapa.buscarPaquetePorID(1)).toStrictEqual(unPaquete);
 })
