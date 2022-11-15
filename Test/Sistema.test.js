@@ -159,3 +159,17 @@ test("funcionamiento de sistema (mover de cola de salida a un centro varios paqu
     sistema.incrementarTiempo(mapa);
     expect(mapa.mapa[0][1].colaDeProcesamiento).toStrictEqual([new Paquete(1,"reloj","muy rapido",1),new Paquete(1,"reloj","muy rapido",2),new Paquete(1,"reloj","muy rapido",3),new Paquete(1,"reloj","muy rapido",4),new Paquete(1,"reloj","muy rapido",5)]);
 })
+
+test("funcionamiento de sistema (mover de cola de salida a dos centros)",()=>{
+    let sistema=new Sistema();
+    let mapa=new Mapa();
+    mapa.determinarLimites(1,4);
+    mapa.definir();
+    mapa.agregarCentroParaMapas("facturacion");
+    mapa.agregarCentroParaMapas("calidad");
+    mapa.agregarCentroParaMapas("distribucion");  
+    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",1]);
+    sistema.incrementarTiempo(mapa);
+    sistema.incrementarTiempo(mapa);
+    expect(mapa.mapa[0][2].colaDeProcesamiento).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)]);
+})
