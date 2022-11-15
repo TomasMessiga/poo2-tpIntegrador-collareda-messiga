@@ -72,6 +72,7 @@ function Sistema(){
             mapa.mapa[i][f].cola.sort(function(b,a){
               return estadoUrgencia(b,mapa.mapa[i].length)-estadoUrgencia(a,mapa.mapa[i].length);
             });
+            let contAux=0;
             for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
               let prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
               if (f==0){
@@ -80,15 +81,21 @@ function Sistema(){
                   mapa.mapa[i][f].cola.splice(j,1);
                 }
               //  mapa.mapa[i][f+1].cola.push(paqueteAux);
-              } else if (f==mapa.mapa[i].length-1 && prototipo){
-                let unPaquete=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);
-                if (j<mapa.mapa[i][f].limiteProcesamiento){
-                  mapa.mapa[i][f].cola.splice(j,1,unPaquete);
-                }
+              } else if (f==mapa.mapa[i].length-1){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);
-                  
-                mapa.mapa[i][f].cola.splice(j,1);
-                mapa.destinos[i].recibidos.push(paqueteAux[0]);
+                if (contAux<mapa.mapa[i][f].limiteProcesamiento  && prototipo){
+                  mapa.mapa[i][f].cola.splice(j,1,paqueteAux);
+                  contAux++;
+                  prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
+                } if (!prototipo){
+                  let paqueteParaDestino=mapa[i][f].cola[j];
+                  mapa.destinos[i].incorporarPaqueteCola(paqueteParaDestino[0]);
+                  mapa.mapa[i][f].cola.splice(j,1);
+
+
+                }
+ //               mapa.mapa[i][f].cola.splice(j,1);
+       //         mapa.destinos[i].recibidos.push(paqueteAux[0]);
                 
                 
                 /*

@@ -8,6 +8,10 @@ function ColaSalida(){
         return "cola de salida";
     }
 
+    this.incorporarPaqueteCola=function(paquete){
+        this.cola.push(paquete);
+    }
+
 
 
 
