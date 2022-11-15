@@ -2,7 +2,7 @@
 
 function Destino(nombre){
     this.nombre=nombre;
-    this.recibidos=[]
+    this.cola=[]
 }  
  
 module.exports=Destino;
