@@ -59,7 +59,7 @@ function Sistema(){
           if (!(paquete===undefined)){            
             paquete.id=mapa.mostrarContadorPaquetes()+1;
             mapa.modificarContadorPaquetes();
-            mapa.mapa[cont][0].colaDeProcesamiento.push(paquete);
+            mapa.mapa[cont][0].cola.push(paquete);
           }
         }
         cont++;
