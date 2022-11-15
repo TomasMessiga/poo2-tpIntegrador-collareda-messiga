@@ -22,7 +22,7 @@ function Sistema(){
 
       if (!(mapa===undefined)){
         for (let i=mapa.mapa.length-1;i>=0;i++){
-          for (let f=mapa.mapa[i].length;f>=0;f++){
+          for (let f=mapa.mapa[i].length-1;f>=0;f++){
             for (let j=0;j<mapa.mapa[i][f].colaDeProcesamiento.length;j++){
               let paqueteAux=mapa.mapa[i][f].colaDeProcesamiento[j];
               if (proto(paqueteAux)==proto(new Paquete())){
