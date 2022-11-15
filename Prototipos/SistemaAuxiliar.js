@@ -80,7 +80,7 @@ function Sistema(){
                 mapa.mapa[i][f].cola[j]=undefined;
                 mapa.destinos[i].recibidos.push(paqueteAux);
               } else {
-                let paqueteAux=mapa.mapa[i][f]  .cola[j] ;  
+                let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola[j]=undefined;
                 mapa.mapa[i][f+1].cola[j]=paqueteAux[0];
               }
