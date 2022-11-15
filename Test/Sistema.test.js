@@ -89,14 +89,7 @@ test("funcionamiento de sistema",()=>{
     expect(sistema.getTiempo()).toStrictEqual(1);
 })
 
-test("funcionamiento de sistema reinicio",()=>{
-    let sistema=new Sistema();
-    sistema.incrementarTiempo(new Mapa());
-    sistema.incrementarTiempo(new Mapa());
-    sistema.incrementarTiempo(new Mapa());
-    sistema.reiniciarTiempo();
-    expect(sistema.getTiempo()).toStrictEqual(0);
-})
+
 
 test("funcionamiento de sistema (fabricar un paquete)",()=>{
     let sistema=new Sistema();

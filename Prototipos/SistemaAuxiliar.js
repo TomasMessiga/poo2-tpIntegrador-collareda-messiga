@@ -17,6 +17,12 @@ function Sistema(){
     }
     const proto=Object.getPrototypeOf;
 
+
+    const calcularUrgencia=function(paquete,cantidadLocales){
+      let prioridades={"muy rapido": 1 , "rapido": 1.5 , "normal" : 2};
+      return prioridades[paquete.tipoDeEnvio]*cantidadLocales;
+    }
+
     this.incrementarTiempo=function(mapa){
 
       if (!(mapa===undefined)){
@@ -44,9 +50,6 @@ function Sistema(){
       }
     }
 
-    this.reiniciarTiempo=function(){
-      tiempo=0;
-    }
 
     this.getTiempo=function(){return tiempo;}
 
