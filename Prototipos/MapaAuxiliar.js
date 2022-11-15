@@ -120,7 +120,6 @@ function Mapa(){
 
     this.desplazamientoVertical=function(paquete){
         var pos=this.buscarCoordenadasPaquetePorID(paquete.id);
-        console.log(pos)
         var destino=paquete.Destino-1
         var fila=limites[0] 
         var columna=limites[1]
