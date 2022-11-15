@@ -7,6 +7,7 @@ const Calidad =require('../Prototipos/Centros/calidad.js');
 const Distrbucion = require('../Prototipos/Centros/distribucion.js');
 const Facturacion = require('../Prototipos/Centros/facturacion.js');
 const ColaSalida = require('../Prototipos/Centros/ColaSalida.js');
+const { array } = require('yargs');
 
 let colaSalida= new ColaSalida()
 let calidad= new Calidad()
@@ -261,5 +262,5 @@ test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
-    expect(mapa.destinos[0].lenght).toStrictEqual(2);
+    expect(mapa.destinos[0].length).toStrictEqual(2);
 })
