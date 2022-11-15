@@ -24,9 +24,6 @@ function Sistema(){
     }
 
     const estadoUrgencia=function(paquete,cantidadCentros){
-      if (proto(paquete)!=proto(new Paquete())){
-        return 0;
-      }
       return calcularUrgencia(paquete,cantidadCentros)-paquete.tiempo;
     }
 
@@ -72,7 +69,7 @@ function Sistema(){
             mapa.mapa[i][f].cola.sort(function(b,a){
               return estadoUrgencia(b,mapa.mapa[i].length)-estadoUrgencia(a,mapa.mapa[i].length);
             });
-            for (let j=0;j<mapa.mapa[i][f].cola.length && j<mapa.mapa[i][f].limiteProcesamiento;j++){
+            for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
               let prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
               if (f==0 && prototipo){
                 let paqueteAux=mapa.mapa[i][f].cola[j];  
@@ -88,7 +85,12 @@ function Sistema(){
                 mapa.mapa[i][f+1].cola.push(paqueteAux[0]);
               }
             }
+            if (true){
 
+            }
+            for (let k=0;false;k++){
+              
+            }
 
             
             mapa.mapa[i][f].cola=mapa.mapa[i][f].cola.filter(filtrarPorUndefined);
