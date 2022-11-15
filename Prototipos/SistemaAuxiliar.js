@@ -66,7 +66,7 @@ function Sistema(){
         mapa.incrementarTiempoPaquetes();
         for (let i=0;i<mapa.mapa.length;i++){
           for (let f=mapa.mapa[i].length-1;f>=0;f--){
-            mapa.mapa[i][f].cola.sort(function(a,b){
+            mapa.mapa[i][f].cola.sort(function(b,a){
               return estadoUrgencia(b,mapa.mapa[i].length)-estadoUrgencia(a,mapa.mapa[i].length);
             });
             for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
