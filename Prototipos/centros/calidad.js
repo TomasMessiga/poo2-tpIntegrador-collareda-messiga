@@ -39,7 +39,7 @@ function Calidad(){
 
 
     this.procesarPaquete=function(paquete){
-        paquete=[paquete];
+        return paquete=[paquete];
     }
 
     this.incorporarPaqueteCola=function(paquete){
