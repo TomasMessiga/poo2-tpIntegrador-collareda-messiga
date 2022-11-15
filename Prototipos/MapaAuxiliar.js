@@ -16,6 +16,7 @@ function Mapa(){
         if (m>=4 && m>=n)
         limites=[n,m];
     }
+    
     this.definir=function(){
         if (limites[1]>=4 && limites[1]>=limites[1]){
             this.mapa=[];

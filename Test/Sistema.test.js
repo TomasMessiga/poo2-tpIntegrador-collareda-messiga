@@ -81,3 +81,10 @@ test("mapa apto para ser utilizado",()=>{
     mapa.definir();
     expect(mapa.util()).toStrictEqual(false);
 })
+
+
+test("funcionamiento de sistema",()=>{
+    let sistema=new Sistema();
+    sistema.incrementarTiempo();
+    expect(sistema.getTiempo()).toStrictEqual(1);
+})
