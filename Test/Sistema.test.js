@@ -169,13 +169,13 @@ test("funcionamiento de sistema (contador de paquetes)",()=>{
     mapa.agregarCentroParaMapas("facturacion");
     mapa.agregarCentroParaMapas("calidad");
     mapa.agregarCentroParaMapas("distribucion");  
-    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",1]);
-    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",2]);
-    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",3]);
-    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",4]);
-    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",5]);
-    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",6]);
-    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",7]);
+    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
+    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
+    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
+    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
+    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
+    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
+    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
     sistema.incrementarTiempo(mapa);
     expect(mapa.mostrarContadorPaquetes()).toStrictEqual(5);
 })
