@@ -37,7 +37,7 @@ function Mapa(){
     this.incrementarTiempoPaquetes=function(){
         this.mapa.forEach(fila => {
             fila.forEach(local => {
-                local.forEach(paqueteAux => {
+                local.fila.forEach(paqueteAux => {
                     paqueteAux.tiempo+=1;
                 });
             });
