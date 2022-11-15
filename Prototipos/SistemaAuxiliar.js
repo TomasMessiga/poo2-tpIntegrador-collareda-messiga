@@ -74,13 +74,13 @@ function Sistema(){
               if (f==0){
                 let paqueteAux=mapa.mapa[i][f].cola[j];  
                 mapa.mapa[i][f].cola[j]=undefined;
-                mapa.mapa[i][f+1].cola[j]=paqueteAux;
-              } else if (f==mapa.mapa[i].length){
+                mapa.mapa[i][f+1].cola[j]=paqueteAux[0];
+              } else if (f==mapa.mapa[i].length-1){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola[j]=undefined;
                 mapa.destinos[i].recibidos.push(paqueteAux);
               } else {
-                let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
+                let paqueteAux=mapa.mapa[i][f]  .cola[j] ;  
                 mapa.mapa[i][f].cola[j]=undefined;
                 mapa.mapa[i][f+1].cola[j]=paqueteAux[0];
               }
