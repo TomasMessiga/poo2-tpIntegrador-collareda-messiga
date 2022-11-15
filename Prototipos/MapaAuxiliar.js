@@ -56,6 +56,12 @@ function Mapa(){
         return true;
     }
 
+    this.buscarPorID=function(numero){
+        for (let i=0;i<this.mapa.length;i){
+            console.log(this.mapa[i]);
+        }
+    }
+
     this.util=function(){
         return (this.mapa[0].length==limites[1]);
     }
