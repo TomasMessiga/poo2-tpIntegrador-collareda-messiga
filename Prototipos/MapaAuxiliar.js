@@ -121,19 +121,19 @@ function Mapa(){
     this.desplazamientoVertical=function(paquete){
         var pos=this.buscarCoordenadasPaquetePorID(paquete.id);
         
-        var destino=paquete.Destino-1
-        console.log(destino)
+        var destino=paquete.destino-1
+        console.log(limites)
         var fila=limites[0] 
         var columna=limites[1]
         
-        if ((pos[0]+1)-destino<=columna-pos[0] && destino-(pos[0]-1)<=columna-pos[0] ){
+        if (destino-(pos[0]+1)<=columna-pos[0] && destino-(pos[0]-1)<=columna-pos[0] ){
             return [1,-1];
         }
-        if ((pos[0]+1)-destino<=columna-(pos[0]+1))
+        if (destino-(pos[0]+1)<=columna-(pos[0]+1))
         {
             return [1,0];
         }
-        if ((pos[0]-1)-destino<=columna-(pos[0]+1))
+        if (destino-(pos[0]-1)<=columna-(pos[0]+1))
         {
             return [0,-1];
         }
