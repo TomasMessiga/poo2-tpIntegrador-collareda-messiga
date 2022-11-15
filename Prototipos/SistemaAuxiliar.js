@@ -80,7 +80,6 @@ function Sistema(){
                 if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteAux)){
                   mapa.mapa[i][f].cola.splice(j,1);
                 }
-              //  mapa.mapa[i][f+1].cola.push(paqueteAux);
               } else if (f==mapa.mapa[i].length-1){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);
                 if (contAux<mapa.mapa[i][f].limiteProcesamiento  && prototipo){
@@ -91,12 +90,7 @@ function Sistema(){
                   let paqueteParaDestino=mapa.mapa[i][f].cola[j];
                   mapa.destinos[i].incorporarPaqueteCola(paqueteParaDestino[0]);
                   mapa.mapa[i][f].cola.splice(j,1);
-
-
                 }
- //               mapa.mapa[i][f].cola.splice(j,1);
-       //         mapa.destinos[i].recibidos.push(paqueteAux[0]);
-                
                 
                 /*
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
