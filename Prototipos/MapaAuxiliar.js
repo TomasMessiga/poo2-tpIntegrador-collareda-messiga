@@ -57,7 +57,7 @@ function Mapa(){
     }
 
     this.buscarPorID=function(numero){
-        for (let i=0;i<this.mapa.length;i){
+        for (let i=0;i<this.mapa.length;i++){
             console.log(this.mapa[i]);
         }
     }
