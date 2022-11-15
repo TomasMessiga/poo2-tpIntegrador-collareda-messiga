@@ -41,8 +41,8 @@ function Sistema(){
       let cont=0;
       mapa.mapa.forEach(element => {
         console.log(element)
-        element[0].forEach(element =>{
-          cont+=element.length;
+        element.forEach(element =>{
+          cont+=element.colaDeProcesamiento.length;
         });
       });
       return cont;
