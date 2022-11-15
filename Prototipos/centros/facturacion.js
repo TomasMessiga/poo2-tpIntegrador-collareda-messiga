@@ -21,9 +21,7 @@ function Facturacion(){
 
 
     this.procesarPaquete=function(paquete){
-        let paqueteProcesado=[];
-        paqueteProcesado.push(paquete);
-        return paquete;
+        return [paquete];
     }
 
     this.incorporarPaqueteCola=function(paquete){
