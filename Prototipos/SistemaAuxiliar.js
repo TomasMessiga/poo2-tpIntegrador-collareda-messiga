@@ -60,7 +60,6 @@ function Sistema(){
           if (!(paquete===undefined)){            
             mapa.modificarContadorPaquetes();
             paquete.id=mapa.mostrarContadorPaquetes();
-            console.log(paquete.id)
             mapa.mapa[cont][0].colaDeProcesamiento.push(paquete);
           }
         }
