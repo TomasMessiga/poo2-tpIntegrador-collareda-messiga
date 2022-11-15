@@ -153,6 +153,9 @@ function Mapa(){
     {
             return [0,-1]
     }
+    else{
+        retun [0,0]
+    }
 
 
 
