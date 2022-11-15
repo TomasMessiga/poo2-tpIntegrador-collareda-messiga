@@ -81,7 +81,7 @@ function Sistema(){
               let prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
               if (f==0){
                 let paqueteAux=mapa.mapa[i][f].cola[j];
-          //      let vertical=mapa.desplazamientoVertical(paqueteAux);  
+         //       let vertical=mapa.desplazamientoVertical(paqueteAux[0]);  
                 if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteAux)){
                   mapa.mapa[i][f].cola.splice(j,1);
                 }
@@ -101,7 +101,7 @@ function Sistema(){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola.splice(j,1);
                 mapa.destinos[i].recibidos.push(paqueteAux[0]);*/
-              } else {
+              } else if (prototipo){
 
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);
                 if (contAux<mapa.mapa[i][f].limiteProcesamiento  && prototipo){
@@ -109,7 +109,7 @@ function Sistema(){
                   contAux++;
                   prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
                 } if (!prototipo){
-              //    let vertical=mapa.desplazamientoVertical(paqueteAux[0]);  
+         //         let vertical=mapa.desplazamientoVertical(paqueteAux);  
                   let paqueteParaCola=mapa.mapa[i][f].cola[j];
                   if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
                     mapa.mapa[i][f].cola.splice(j,1);
