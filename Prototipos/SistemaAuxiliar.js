@@ -85,7 +85,6 @@ function Sistema(){
               } else if (prototipo){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola[j]=undefined;
-                arregloAuxiliar.push(paqueteAux[0]);
                 mapa.mapa[i][f+1].cola.push(paqueteAux[0]);
               }
             }
