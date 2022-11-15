@@ -88,7 +88,7 @@ function Sistema(){
                   contAux++;
                   prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
                 } if (!prototipo){
-                  let paqueteParaDestino=mapa[i][f].cola[j];
+                  let paqueteParaDestino=mapa.mapa[i][f].cola[j];
                   mapa.destinos[i].incorporarPaqueteCola(paqueteParaDestino[0]);
                   mapa.mapa[i][f].cola.splice(j,1);
 
