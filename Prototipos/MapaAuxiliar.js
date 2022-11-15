@@ -118,9 +118,9 @@ function Mapa(){
         return contadorPaquetes;
     }
 
-    this.desplazamientoVertical=function(pauqete,mapa){
+    this.desplazamientoVertical=function(paquete){
         var pos=this.buscarCoordenadasPaquetePorID()
-        var destino=pauqete.Destino-1
+        var destino=paquete.Destino-1
         var fila=limites[0] 
         var columna=limites[1]
         if (destino-(pos[0]+1)<=columna-pos[0] && destino-(pos[0]-1)<=columna-pos[0] ){
