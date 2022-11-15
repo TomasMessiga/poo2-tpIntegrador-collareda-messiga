@@ -43,7 +43,11 @@ function Calidad(){
     }
 
     this.incorporarPaqueteCola=function(paquete){
-        this.cola.push(paquete);
+        if (this.cola.length<this.limiteColaDeEspera){
+            this.cola.push(paquete);
+            return true;
+        }
+        return false;
     }
 
 
