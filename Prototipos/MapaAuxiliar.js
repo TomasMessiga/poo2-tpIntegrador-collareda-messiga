@@ -34,6 +34,16 @@ function Mapa(){
         }
     }
 
+    this.incrementarTiempoPaquetes=function(){
+        this.mapa.forEach(fila => {
+            fila.forEach(local => {
+                local.forEach(paqueteAux => {
+                    paqueteAux.tiempo+=1;
+                });
+            });
+        });
+    }
+
 
     this.agregarCentroParaMapas=function(nombre){
         let centro=undefined;
