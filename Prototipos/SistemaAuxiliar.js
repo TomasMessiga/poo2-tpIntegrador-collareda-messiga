@@ -22,7 +22,7 @@ function Sistema(){
               if (!(columna.colaDeProcesamiento[i]===undefined)){
                 let cajaExtraida=columna.colaDeProcesamiento[i];
                 columna.colaDeProcesamiento.splice(i,1);
-                fila[cont].colaDeProcesamiento.push(cajaExtraida);
+                console.log(fila[cont])//.colaDeProcesamiento.push(cajaExtraida);
               }
             }
           });
