@@ -58,7 +58,7 @@ function Sistema(){
         if (unLocal.nombre==nombreLocal){
           let paquete=unLocal.producirPaquete(especificaciones);
           if (!(paquete===undefined)){            
-            paquete.id=this.contarPaquetes(mapa)+1;
+            paquete.id=mapa.mostrarContadorPaquetes()+1;
             mapa.mapa[cont][0].colaDeProcesamiento.push(paquete);
           }
         }
