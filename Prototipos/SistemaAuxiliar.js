@@ -32,10 +32,10 @@ function Sistema(){
       if (!(mapa===undefined)){        
         mapa.incrementarTiempoPaquetes();
         for (let i=0;i<mapa.mapa.length;i++){
-          for (let f=mapa.mapa[i].length-1;f>=0;f--){console.log (mapa.mapa[i].length)
+          for (let f=mapa.mapa[i].length-1;f>=0;f--){
             mapa.mapa[i][f].cola.sort(function(a,b){
               return estadoUrgencia(b,mapa.mapa[i].length)-estadoUrgencia(a,mapa.mapa[i].length);
-            });
+            });console.log (mapa.mapa[i][f])
             for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
               let paqueteAux=mapa.mapa[i][f].cola[j];
               
