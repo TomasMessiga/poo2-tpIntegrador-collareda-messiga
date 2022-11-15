@@ -88,3 +88,12 @@ test("funcionamiento de sistema",()=>{
     sistema.incrementarTiempo();
     expect(sistema.getTiempo()).toStrictEqual(1);
 })
+
+test("funcionamiento de sistema reinicio",()=>{
+    let sistema=new Sistema();
+    sistema.incrementarTiempo();
+    sistema.incrementarTiempo();
+    sistema.incrementarTiempo();
+    sistema.reiniciarTiempo();
+    expect(sistema.getTiempo()).toStrictEqual(0);
+})
