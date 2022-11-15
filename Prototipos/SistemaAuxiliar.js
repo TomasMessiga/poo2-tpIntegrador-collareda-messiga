@@ -23,11 +23,15 @@ function Sistema(){
       return prioridades[paquete.tipoDeEnvio]*cantidadLocales;
     }
 
+
     this.incrementarTiempo=function(mapa){
 
       if (!(mapa===undefined)){
         for (let i=mapa.mapa.length-1;i>=0;i--){
           for (let f=mapa.mapa[i].length-1;f>=0;f--){
+            mapa.mapa[i][f].cola.sort(function(a,b){
+              return b.id-a.id;
+            });
             for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
               let paqueteAux=mapa.mapa[i][f].cola[j];
               

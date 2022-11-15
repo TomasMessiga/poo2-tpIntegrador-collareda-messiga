@@ -33,6 +33,8 @@ function Mapa(){
             }
         }
     }
+
+
     this.agregarCentroParaMapas=function(nombre){
         let centro=undefined;
         if (nombre=="facturacion"){
@@ -81,7 +83,7 @@ function Mapa(){
         }
         return undefined;
     }
-    
+
 
 
 
