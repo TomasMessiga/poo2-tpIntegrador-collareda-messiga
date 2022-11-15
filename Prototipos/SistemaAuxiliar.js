@@ -24,8 +24,8 @@ function Sistema(){
         for (let i=mapa.mapa.length-1;i>=0;i--){
           for (let f=mapa.mapa[i].length-1;f>=0;f--){
             for (let j=0;j<mapa.mapa[i][f].colaDeProcesamiento.length;j++){
-              let paqueteAux=mapa.mapa[i][f].colaDeProcesamiento[j];
-              if (proto(paqueteAux)==proto(new Paquete()) && f!=mapa.mapa[i].length-1){console.log(mapa.mapa[i][f].limiteProcesamiento)
+              let paqueteAux=mapa.mapa[i][f].colaDeProcesamiento[j];console.log(mapa.mapa[i][f].limiteProcesamiento)
+              if (proto(paqueteAux)==proto(new Paquete()) && f!=mapa.mapa[i].length-1){
              //   if (mapa.mapa[i+1][f+1].limiteProcesamiento<=mapa.mapa[i+1][f+1].colaDeProcesamiento.length){
                   mapa.mapa[i][f].colaDeProcesamiento[j]=undefined;
                   mapa.mapa[i][f+1].colaDeProcesamiento[j]=paqueteAux;
