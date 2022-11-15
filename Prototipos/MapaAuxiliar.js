@@ -13,9 +13,20 @@ function Mapa(){
 
     var limites=[0,0];
 
+    this.getLimites=function(){
+        return limites;
+    }
+
+    
+
+
     this.determinarLimites=function(n,m){
-        if (m>=4 && m>=n)
-        limites=[n,m];
+        if (m>=4 && m>=n){
+            limites=[n,m];
+        } else {
+            throw new Error("Los limites ingresados son incorrectos");
+        }
+        
     }
 
     this.definir=function(){

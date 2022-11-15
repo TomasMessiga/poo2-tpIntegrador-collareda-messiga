@@ -17,7 +17,6 @@ function Calidad(){
     this.limiteColaDeEspera=rangoColaDeEspera[1];
 
     this.cola=[];
-    this.procesados=[];
 
     this.clasificacion=function(){
         return "centro de calidad";
@@ -40,7 +39,7 @@ function Calidad(){
 
 
     this.procesarPaquete=function(paquete){
-        this.procesados.push(paquete);
+        paquete=[paquete];
     }
 
     this.incorporarPaqueteCola=function(paquete){

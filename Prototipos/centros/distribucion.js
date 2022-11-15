@@ -10,7 +10,6 @@ function Distribucion(){
     this.limiteColaDeEspera=rangoColaDeEspera[1];
 
     this.cola=[];
-    this.procesados=[];
 
     this.clasificacion=function(){
         return "centro de distribucion";
@@ -27,7 +26,7 @@ function Distribucion(){
     }
 
     this.procesarPaquete=function(paquete){
-        this.procesados.push(paquete);
+        paquete=[paquete];
     }
 
     this.incorporarPaqueteCola=function(paquete){

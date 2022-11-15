@@ -8,11 +8,10 @@ function Facturacion(){
     this.limiteColaDeEspera=rangoColaDeEspera[1];
 
     this.cola=[];
-    this.procesados=[];
 
 
-    this.clasificacion=function(){
-        return "centro de facturacion";
+    this.procesarPaquete=function(paquete){
+        paquete=[paquete];
     }
 
 
