@@ -28,6 +28,9 @@ function Sistema(){
               if (proto(paqueteAux)==proto(new Paquete()) && f!=mapa.mapa[i].length-1){
                 mapa.mapa[i][f].colaDeProcesamiento[j]=undefined;
                 mapa.mapa[i][f+1].colaDeProcesamiento[j]=paqueteAux;
+              } else if (proto(paqueteAux)==proto(new Paquete()) && f==mapa.mapa[i].length-1){
+                mapa.mapa[i][f].colaDeProcesamiento[j]=undefined;
+                mapa.destinos[i].recibidos.push(paqueteAux);
               }
             }
             mapa.mapa[i][f].colaDeProcesamiento=mapa.mapa[i][f].colaDeProcesamiento.filter(filtrarPorUndefined);
