@@ -124,6 +124,7 @@ function Mapa(){
         var destino=paquete.destino-1
         var fila=limites[0] 
         var columna=limites[1]
+        console.log("el destino es "+destino)
         if (fila==destino){
             return [0,0]
         }
