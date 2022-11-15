@@ -15,7 +15,7 @@ function Sistema(){
     this.incrementarTiempo=function(mapa){
       if (!(mapa===undefined)){
         for (let i=0;i<mapa.mapa.length;i++){
-          for (let f=0;f<mapa.mapa[i];f++){
+          for (let f=0;f<mapa.mapa[i].length;f++){
               console.log(mapa.mapa[i][f])
           }
         }
