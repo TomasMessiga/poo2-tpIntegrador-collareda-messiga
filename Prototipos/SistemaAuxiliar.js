@@ -24,7 +24,7 @@ function Sistema(){
     }
 
     const estadoUrgencia=function(paquete,cantidadCentros){
-      return paquete.tiempo-cantidadCentros;
+      return paquete.tiempo-calcularUrgencia(paquete,cantidadCentros);
     }
 
     this.incrementarTiempo=function(mapa){

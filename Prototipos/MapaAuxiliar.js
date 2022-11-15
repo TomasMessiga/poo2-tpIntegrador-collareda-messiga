@@ -59,14 +59,8 @@ function Mapa(){
         });
     }
 
-    const centrosRequeridos=function(){
-        this.mapa.forEach(element => {
-            element.forEach(centroAuxiliar => {
-                
-            });
-        });
-        return true;
-    }
+
+
 
     this.buscarPaquetePorID=function(numero){
         for (let i=0;i<this.mapa.length;i++){
