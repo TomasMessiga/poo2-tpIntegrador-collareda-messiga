@@ -133,7 +133,8 @@ test("funcionamiento de sistema (mover de cola de salida a un centro)",()=>{
     mapa.agregarCentroParaMapas("distribucion");  
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",1]);
     sistema.incrementarTiempo(mapa);
-    expect(mapa.buscarPaquetePorID(1)).toStrictEqual(new Paquete(1,"reloj","muy rapido",1));
+    let unPaquete=new Paquete(1,"reloj","muy rapido",1); unPaquete.tiempo=1;
+    expect(mapa.buscarPaquetePorID(1)).toStrictEqual(unPaquete);
 })
 
 test("funcionamiento de sistema (mover de cola de salida a un centro varios paquetes)",()=>{
@@ -150,7 +151,7 @@ test("funcionamiento de sistema (mover de cola de salida a un centro varios paqu
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
     sistema.incrementarTiempo(mapa);
-    expect(mapa.mapa[0][1].cola).toStrictEqual([new Paquete(1,"reloj","muy rapido",5),new Paquete(1,"reloj","muy rapido",4),new Paquete(1,"reloj","muy rapido",3),new Paquete(1,"reloj","muy rapido",2),new Paquete(1,"reloj","muy rapido",1)]);
+    expect(mapa.mostrarContadorPaquetes()).toStrictEqual();
 })
 
 
