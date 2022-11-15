@@ -126,14 +126,14 @@ function Mapa(){
         var fila=limites[0] 
         var columna=limites[1]
         
-        if (destino-(pos[0]+1)<=columna-pos[0] && destino-(pos[0]-1)<=columna-pos[0] ){
+        if ((fila-destino)-(pos[0]+1)<=columna-pos[0] && destino-(pos[0]-1)<=columna-pos[0] ){
             return [1,-1];
         }
-        if (destino-(pos[0]+1)<=columna-(pos[0]+1))
+        if ((fila-destino)-(pos[0]+1)<=columna-(pos[0]+1))
         {
             return [1,0];
         }
-        if (destino-(pos[0]-1)<=columna-(pos[0]+1))
+        if ((fila-destino)-(pos[0]-1)<=columna-(pos[0]+1))
         {
             return [0,-1];
         }
