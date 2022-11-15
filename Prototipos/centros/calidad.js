@@ -25,6 +25,14 @@ function Calidad(){
         }
     }
 
+    this.destinarUnPaquete=function(paquete){
+        if (this.colaDeProcesamiento.length<this.limiteProcesamiento){
+            this.colaDeProcesamiento.push(paquete);
+        } else if (this.colaDeEspera.length<this.limiteColaDeEspera){
+            this.colaDeEspera.push(paquete);
+        }
+    }
+
 
 
 
