@@ -75,7 +75,7 @@ function Sistema(){
                 let paqueteAux=mapa.mapa[i][f].cola[j];  
                 mapa.mapa[i][f].cola[j]=undefined;
                 mapa.mapa[i][f+1].cola[j]=paqueteAux;
-              } else if (f==mapa.mapa[i].length-1){
+              } else if (f==mapa.mapa[i].length){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola[j]=undefined;
                 mapa.destinos[i].recibidos.push(paqueteAux);
