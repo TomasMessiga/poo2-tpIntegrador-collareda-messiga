@@ -14,20 +14,9 @@ function Sistema(){
 
     this.incrementarTiempo=function(mapa){
       if (!(mapa===undefined)){
-        mapa.mapa.forEach(fila => {
-          let cont=0;
-          fila.forEach(columna => {
-            cont++;
-            for (let i=0;i<columna.colaDeProcesamiento.length;i++){
-              if (!(columna.colaDeProcesamiento[i]===undefined)){
-                let cajaExtraida=columna.colaDeProcesamiento[i];
-                columna.colaDeProcesamiento[i]=undefined;
-                console.log(fila[cont].colaDeProcesamiento.push(cajaExtraida));
-                //.colaDeProcesamiento.push(cajaExtraida);
-              }
-            }
-          });
-        });
+        for (let i=0;mapa.mapa.length;i++){
+          console.log(mapa.mapa[i])
+        }
         tiempo++;
       }
     }
