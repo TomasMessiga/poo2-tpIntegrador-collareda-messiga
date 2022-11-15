@@ -151,7 +151,7 @@ test("funcionamiento de sistema (mover de cola de salida a un centro varios paqu
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
     sistema.incrementarTiempo(mapa);
-    expect(mapa.mostrarContadorPaquetes()).toStrictEqual();
+    expect(mapa.mostrarContadorPaquetes()).toStrictEqual(5);
 })
 
 
