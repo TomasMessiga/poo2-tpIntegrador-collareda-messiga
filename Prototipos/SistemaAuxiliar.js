@@ -39,10 +39,10 @@ function Sistema(){
 
     this.contarPaquetes=function(mapa){
       let cont=0;
-      mapa.mapa.forEach(element => {
-        console.log(element)
-        element.forEach(element =>{
-          cont+=element.colaDeProcesamiento.length;
+      mapa.mapa.forEach(fila => {
+        
+        fila.forEach(columna =>{console.log(columna)
+          cont+=columna.colaDeProcesamiento.length;
         });
       });
       return cont;
