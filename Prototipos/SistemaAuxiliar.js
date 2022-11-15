@@ -81,10 +81,20 @@ function Sistema(){
                 }
               //  mapa.mapa[i][f+1].cola.push(paqueteAux);
               } else if (f==mapa.mapa[i].length-1 && prototipo){
+                let unPaquete=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);
+                if (j<mapa.mapa[i][f].limiteProcesamiento){
+                  mapa.mapa[i][f].cola.splice(j,1,unPaquete);
+                }
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);
                   
                 mapa.mapa[i][f].cola.splice(j,1);
                 mapa.destinos[i].recibidos.push(paqueteAux[0]);
+                
+                
+                /*
+                let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
+                mapa.mapa[i][f].cola.splice(j,1);
+                mapa.destinos[i].recibidos.push(paqueteAux[0]);*/
               } else if (prototipo){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola.splice(j,1);
