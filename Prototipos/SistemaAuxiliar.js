@@ -14,7 +14,11 @@ function Sistema(){
 
     this.incrementarTiempo=function(mapa){
       if (!(mapa===undefined)){
-        
+        mapa.mapa.forEach(fila => {
+          fila.forEach(columna => {
+            console.log(columna)
+          });
+        });
         tiempo++;
       }
     }
