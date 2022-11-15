@@ -17,8 +17,14 @@ function Sistema(){
         mapa.mapa.forEach(fila => {
           let cont=0;
           fila.forEach(columna => {
-            cont++;
-            console.log(columna.colaDeProcesamiento)
+            cont++;console.log(fila)
+            for (let i=0;i<columna.colaDeProcesamiento.length;i++){
+              if (!(columna.colaDeProcesamiento[i]===undefined)){
+                let cajaExtraida=columna.colaDeProcesamiento[i];
+                columna.colaDeProcesamiento.splice(i,1);
+          //      fila[cont]
+              }
+            }
           });
         });
         tiempo++;
