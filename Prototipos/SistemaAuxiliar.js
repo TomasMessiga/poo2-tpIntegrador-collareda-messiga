@@ -78,6 +78,8 @@ function Sistema(){
                 let paqueteAux=mapa.mapa[i][f].cola[j];  
                 if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteAux)){
                   mapa.mapa[i][f].cola.splice(j,1);
+                } else {
+                  mapa.mapa[i][f].cola[f]=paqueteAux;
                 }
               //  mapa.mapa[i][f+1].cola.push(paqueteAux);
               } else if (f==mapa.mapa[i].length-1 && prototipo){
