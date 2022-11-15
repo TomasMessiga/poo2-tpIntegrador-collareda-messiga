@@ -17,7 +17,6 @@ function Sistema(){
     }
     const proto=Object.getPrototypeOf;
 
-
     this.incrementarTiempo=function(mapa){
 
       if (!(mapa===undefined)){
@@ -36,10 +35,6 @@ function Sistema(){
               } else if (proto(paqueteAux)==proto(new Paquete()) && f==mapa.mapa[i].length-1){
                 mapa.mapa[i][f].colaDeProcesamiento[j]=undefined;
                 mapa.destinos[i].recibidos.push(paqueteAux);
-                while(mapa.mapa[i][f].colaDeEspera.length!=0){
-                  let paqueteParaDestino=mapa.mapa[i][f].colaDeEspera.pop();
-                  mapa.destinos[i].recibidos.push(paqueteParaDestino);
-                }
               }
             }
             mapa.mapa[i][f].colaDeProcesamiento=mapa.mapa[i][f].colaDeProcesamiento.filter(filtrarPorUndefined);
