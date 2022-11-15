@@ -56,18 +56,33 @@ function Mapa(){
         return true;
     }
 
-    this.buscarPorID=function(numero){
+    this.buscarPaquetePorID=function(numero){
         for (let i=0;i<this.mapa.length;i++){
             for (let j=0;j<this.mapa[i].length;j++){
                 for (let k=0;k<this.mapa[i][j].cola.length;k++){
                     if (this.mapa[i][j].cola[k].id===numero){
-                        console.log(this.mapa[i][j].cola[k].id===numero)
+                        return this.mapa[i][j].cola[k];
                     }
-                }
-                
+                }    
             }
         }
+        return undefined;
     }
+    
+    this.buscarCoordenadasPaquetePorID=function(numero){
+        for (let i=0;i<this.mapa.length;i++){
+            for (let j=0;j<this.mapa[i].length;j++){
+                for (let k=0;k<this.mapa[i][j].cola.length;k++){
+                    if (this.mapa[i][j].cola[k].id===numero){
+                        return [i,j,k];
+                    }
+                }    
+            }
+        }
+        return undefined;
+    }
+
+
 
     this.util=function(){
         return (this.mapa[0].length==limites[1]);
