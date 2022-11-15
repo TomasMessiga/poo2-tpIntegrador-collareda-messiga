@@ -37,7 +37,7 @@ function Mapa(){
     this.incrementarTiempoPaquetes=function(){
         this.mapa.forEach(fila => {
             fila.forEach(local => {
-                console.log(local.fila)
+                console.log(local)
 
             });
         });
