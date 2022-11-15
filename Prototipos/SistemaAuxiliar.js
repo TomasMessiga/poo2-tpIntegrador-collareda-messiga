@@ -145,7 +145,7 @@ function Sistema(){
 
     this.fabricarUnPaquete=function(mapa,nombreLocal,especificaciones){
       let cont=0;
-      mapa.locales.forEach(unLocal => {console.log((unLocal.nombre==nombreLocal) +" "+nombreLocal);
+      mapa.locales.forEach(unLocal => {
         if (unLocal.nombre==nombreLocal){
           let paquete=unLocal.producirPaquete(especificaciones);
           if (!(paquete===undefined)){            

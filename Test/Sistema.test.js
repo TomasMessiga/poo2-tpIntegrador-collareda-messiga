@@ -256,6 +256,7 @@ test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
     mapa.agregarCentroParaMapas("distribucion");  
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
     sistema.fabricarUnPaquete(mapa,"B",[1,"reloj","normal"]);
+    console.log(mapma.mapa)
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
