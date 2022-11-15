@@ -13,8 +13,10 @@ function Sistema(){
     }
 
     this.incrementarTiempo=function(mapa){
-        tiempo++;
+      if (!(mapa===undefined)){
         
+        tiempo++;
+      }
     }
 
     this.reiniciarTiempo=function(){
