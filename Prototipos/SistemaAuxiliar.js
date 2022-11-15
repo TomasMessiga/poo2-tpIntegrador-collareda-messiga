@@ -36,25 +36,21 @@ function Sistema(){
             mapa.mapa[i][f].cola.sort(function(a,b){
               return estadoUrgencia(b,mapa.mapa[i].length)-estadoUrgencia(a,mapa.mapa[i].length);
             });
-            for (let j=0;j<mapa.mapa[i][f].limiteProcesamiento;j++){
-              mapa.mapa[i][f].cola
-              mapa.mapa[i][f].procesados.push(paqueteAux);
-            }
-            mapa.mapa[i][f].procesados.sort(function(a,b){
-              return estadoUrgencia(b,mapa.getLimites()[1])-estadoUrgencia(a,mapa.getLimites()[1]);
-            });
-            for (let k=0;k<mapa.mapa[i][f].procesados.length;k++){
-              if (f==mapa.getLimites()[1]-1){
-                let paqueteDestinar=mapa.mapa[i][f].procesados.push();
-                mapa.destinos[i].recibidos.push(paqueteAux);
-              } else if (f==0){
-                let paqueteDestinar=mapa.mapa[i][f].cola.push();
+            for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
+              let paqueteAux=mapa.mapa[i][f].cola[j];
+              
+              if (proto(paqueteAux)==proto(new Paquete()) && f!=mapa.mapa[i].length-1){
+                  mapa.mapa[i][f].cola[j]=undefined;
+                  mapa.mapa[i][f+1].cola[j]=paqueteAux;
+
+              } else if (proto(paqueteAux)==proto(new Paquete()) && f==mapa.mapa[i].length-1){
+                mapa.mapa[i][f].cola[j]=undefined;
                 mapa.destinos[i].recibidos.push(paqueteAux);
               }
-
             }
 
             
+            mapa.mapa[i][f].cola=mapa.mapa[i][f].cola.filter(filtrarPorUndefined);
           }
         }
         tiempo++;
@@ -64,7 +60,7 @@ function Sistema(){
       
       if (!(mapa===undefined)){        
         mapa.incrementarTiempoPaquetes();
-        for (let i=0;i<mapa.mapa.length;i++){
+        for (let i=0;i<mapa.getLimites()[0];i++){
           for (let f=mapa.mapa[i].length-1;f>=0;f--){
             mapa.mapa[i][f].cola.sort(function(a,b){
               return estadoUrgencia(b,mapa.mapa[i].length)-estadoUrgencia(a,mapa.mapa[i].length);
