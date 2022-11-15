@@ -31,7 +31,7 @@ function Sistema(){
 
       if (!(mapa===undefined)){        
         mapa.incrementarTiempoPaquetes();
-        for (let i=mapa.mapa.length-1;i>=0;i--){
+        for (let i=0;i<mapa.mapa.length;i--){
           for (let f=mapa.mapa[i].length-1;f>=0;f--){
             mapa.mapa[i][f].cola.sort(function(a,b){
               return estadoUrgencia(b)-estadoUrgencia(a);
