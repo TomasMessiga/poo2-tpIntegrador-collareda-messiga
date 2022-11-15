@@ -34,11 +34,7 @@ function Sistema(){
                 mapa.destinos[i].recibidos.push(paqueteAux);
               }
             }
-            
-            mapa.mapa[i][f].colaDeProcesamiento.forEach(unPaquete => {
-              console.log(mapa.mapa[i][f])
-           //   unPaquete=undefined;
-            });
+
             
             mapa.mapa[i][f].colaDeProcesamiento=mapa.mapa[i][f].colaDeProcesamiento.filter(filtrarPorUndefined);
           }
