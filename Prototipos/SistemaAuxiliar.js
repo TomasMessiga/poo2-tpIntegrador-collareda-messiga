@@ -68,13 +68,7 @@ function Sistema(){
     }
 
     this.contarPaquetes=function(mapa){
-      let cont=0;
-      mapa.mapa.forEach(fila => {
-        fila.forEach(columna =>{
-          cont+=columna.colaDeProcesamiento.length;
-        });
-      });
-      return cont;
+      return mapa.mostrarContadorPaquetes();
     }
 
 }
