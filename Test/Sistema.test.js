@@ -254,12 +254,12 @@ test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
     mapa.agregarCentroParaMapas("calidad");
     mapa.agregarCentroParaMapas("distribucion");  
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
-    sistema.fabricarUnPaquete(mapa,"B",[2,"reloj","normal"]);
+    sistema.fabricarUnPaquete(mapa,"B",[1,"reloj","normal"]);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
-  //  expect(mapa.destinos).toStrictEqual(2);
+    expect(mapa.destinos).toStrictEqual(2);
 })
