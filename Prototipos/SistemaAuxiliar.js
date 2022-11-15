@@ -24,7 +24,7 @@ function Sistema(){
         for (let i=0;i<mapa.mapa.length;i++){
           for (let f=0;f<mapa.mapa[i].length;f++){
             for (let j=0;j<mapa.mapa[i][f].colaDeProcesamiento.length;j++){
-              let paqueteAux=mapa.mapa[i][f].colaDeProcesamiento[j];console.log(mapa.mapa[i][f].colaDeProcesamiento);
+              let paqueteAux=mapa.mapa[i][f].colaDeProcesamiento[j];console.log(mapa.mapa[i]);
               if (proto(paqueteAux)==proto(new Paquete())){
                 mapa.mapa[i][f].colaDeProcesamiento[j]=undefined;
                 mapa.mapa[i][f+1].colaDeProcesamiento[j]=paqueteAux;
