@@ -119,6 +119,27 @@ function Mapa(){
         return contadorPaquetes;
     }
 
+    this.puedomoverhaciaarriba=function(pauqete,mapa){
+    pos=this.buscarCoordenadasPaquetePorID()
+    destino=pauqete.Destino-1
+    limites=this.getLimites()
+    fila=limites[0]
+    columna=limites[1]
+    if (fila-(pos[0]+1)>=columna-pos[0] && fila-(pos[0]-1)>=columna-pos[0] ){
+        return [true,true]
+    }
+    if (fila-(pos[0]+1)>=columna-pos[0])
+    {
+            return [true,false]
+    }
+    if (fila-(pos[0]-1)>=columna-pos[0])
+    {
+            return [true,false]
+    }
+
+
+
+    }
 
 
 
