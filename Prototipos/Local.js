@@ -12,7 +12,6 @@ function Local(nombre){
     const crearUnPaquete=function(especificaciones){
         disponibilidad--;
         let paquete=new Paquete(especificaciones[0],especificaciones[1],especificaciones[2],especificaciones[3]);
-        console.log(paquete)
         return paquete;
     }
 
