@@ -11,7 +11,9 @@ function Facturacion(){
 
 
     this.procesarPaquete=function(paquete){
-        return paquete=[paquete];
+        let paqueteProcesado=[];
+        paqueteProcesado.push(paquete);
+        return paquete;
     }
 
 
