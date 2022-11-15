@@ -9,7 +9,7 @@ function Local(nombre){
     
     var disponibilidad=5;
 
-    const crearUnPaquete=function(especificaciones){
+    const crearUnPaquete=function(especificaciones){console.log(77)
         disponibilidad--;
         return new Paquete(especificaciones[0],especificaciones[1],especificaciones[2],especificaciones[3]);
     }
