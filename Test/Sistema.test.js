@@ -85,15 +85,15 @@ test("mapa apto para ser utilizado",()=>{
 
 test("funcionamiento de sistema",()=>{
     let sistema=new Sistema();
-    sistema.incrementarTiempo();
+    sistema.incrementarTiempo(new Mapa());
     expect(sistema.getTiempo()).toStrictEqual(1);
 })
 
 test("funcionamiento de sistema reinicio",()=>{
     let sistema=new Sistema();
-    sistema.incrementarTiempo();
-    sistema.incrementarTiempo();
-    sistema.incrementarTiempo();
+    sistema.incrementarTiempo(new Mapa());
+    sistema.incrementarTiempo(new Mapa());
+    sistema.incrementarTiempo(new Mapa());
     sistema.reiniciarTiempo();
     expect(sistema.getTiempo()).toStrictEqual(0);
 })
