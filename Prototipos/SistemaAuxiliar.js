@@ -70,7 +70,6 @@ function Sistema(){
               return estadoUrgencia(b,mapa.mapa[i].length)-estadoUrgencia(a,mapa.mapa[i].length);
             });
             for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
-              
               if (f==0){
                 let paqueteAux=mapa.mapa[i][f].cola[j];  
                 mapa.mapa[i][f].cola[j]=undefined;
