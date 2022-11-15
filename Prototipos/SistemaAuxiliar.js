@@ -70,8 +70,9 @@ function Sistema(){
               return estadoUrgencia(b,mapa.mapa[i].length)-estadoUrgencia(a,mapa.mapa[i].length);
             });
             for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
+              
               if (f==0){
-                let paqueteAux=mapa.mapa[i][f].cola[j];  
+                let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola[j]=undefined;
                 mapa.mapa[i][f+1].cola[j]=paqueteAux[0];
               } else if (f==mapa.mapa[i].length-1){
