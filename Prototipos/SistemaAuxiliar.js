@@ -78,7 +78,7 @@ function Sistema(){
               } else if (f==mapa.mapa[i].length-1){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola[j]=undefined;
-                mapa.destinos[i].recibidos.push(paqueteAux);
+                mapa.destinos[i].recibidos.push(paqueteAux[0]);
               } else {
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola[j]=undefined;
