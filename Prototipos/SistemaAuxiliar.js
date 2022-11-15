@@ -15,7 +15,8 @@ function Sistema(){
     const filtrarPorUndefined=function(value, index, array) {
       return !(value===undefined);
     }
-    
+    const proto=Object.getPrototypeOf;
+
 
     this.incrementarTiempo=function(mapa){
 
@@ -24,7 +25,7 @@ function Sistema(){
           for (let f=0;f<mapa.mapa[i].length;f++){
             for (let j=0;j<mapa.mapa[i][f].colaDeProcesamiento.length;j++){
               let paqueteAux=mapa.mapa[i][f].colaDeProcesamiento[j];
-              if (!(paqueteAux===undefined)){console.log(paqueteAux===undefined);
+              if (proto(paqueteAux)==proto(new Paquete())){console.log(paqueteAux===undefined);
                 mapa.mapa[i][f].colaDeProcesamiento[j]=undefined;
                 mapa.mapa[i][f+1].colaDeProcesamiento[j]=paqueteAux;
               }
