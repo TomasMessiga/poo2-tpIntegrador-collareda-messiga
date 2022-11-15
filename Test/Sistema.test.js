@@ -177,7 +177,7 @@ test("funcionamiento de sistema (contador de paquetes)",()=>{
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",6]);
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",7]);
     sistema.incrementarTiempo(mapa);
-    expect(mapa.contarPaquetes()).toStrictEqual(5);
+    expect(mapa.mostrarContadorPaquetes()).toStrictEqual(5);
 })
 
 test("funcionamiento de sistema (mover de cola de salida a dos centros)",()=>{
