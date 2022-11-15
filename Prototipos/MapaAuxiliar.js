@@ -4,6 +4,8 @@ const Facturacion = require('../Prototipos/centros/facturacion.js');
 const Distribucion = require('../Prototipos/centros/distribucion.js');
 const Calidad = require('../Prototipos/centros/calidad.js');
 const ColaSalida = require('./Centros/ColaSalida.js');
+const Paquete = require('./Paquete.js');
+const { fuchsia } = require('color-name');
 
 function Mapa(){ 
     this.mapa=[];
@@ -59,11 +61,24 @@ function Mapa(){
         return (this.mapa[0].length==limites[1]);
     }
 
-    var clavesReservadas=[];
+    var contadorPaquetes=0;
 
-    this.designarPaquetesID=function(){
-    //    for ()
+    this.modificarContadorPaquetes=function(){
+        contadorPaquetes++;
     }
+
+/** 
+    this.designarPaquetesID=function(){
+        this.mapa.forEach(fila => {
+            fila.forEach(columna => {
+                columna.forEach(unPaquete => {
+                    if (unPaquete.id==undefined && clavesPaquetesReservadas.length==0){
+                        unPaquete.id
+                    }
+                });
+            });
+        });
+    }*/
 
 
     }    

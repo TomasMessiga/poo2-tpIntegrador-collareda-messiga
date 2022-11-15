@@ -59,6 +59,7 @@ function Sistema(){
           let paquete=unLocal.producirPaquete(especificaciones);
           if (!(paquete===undefined)){
             mapa.mapa[cont][0].colaDeProcesamiento.push(paquete);
+            mapa.modificarContadorPaquetes();
           }
         }
         cont++;
