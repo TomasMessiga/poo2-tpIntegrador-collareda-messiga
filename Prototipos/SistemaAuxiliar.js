@@ -36,8 +36,8 @@ function Sistema(){
             }
             
             mapa.mapa[i][f].colaDeProcesamiento.forEach(unPaquete => {
-              console.log(mapa.mapa[i][f].colaDeEspera.push(unPaquete))
-              unPaquete=undefined;
+              console.log(mapa.mapa[i][f])
+           //   unPaquete=undefined;
             });
             
             mapa.mapa[i][f].colaDeProcesamiento=mapa.mapa[i][f].colaDeProcesamiento.filter(filtrarPorUndefined);
