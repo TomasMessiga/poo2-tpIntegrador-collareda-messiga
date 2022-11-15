@@ -97,3 +97,15 @@ test("funcionamiento de sistema reinicio",()=>{
     sistema.reiniciarTiempo();
     expect(sistema.getTiempo()).toStrictEqual(0);
 })
+
+test("funcionamiento de sistema (fabricar un paquete)",()=>{
+    let sistema=new Sistema();
+    let mapa=new Mapa();
+    mapa.determinarLimites(1,4);
+    mapa.definir();
+    mapa.agregarCentroParaMapas("facturacion");
+    mapa.agregarCentroParaMapas("calidad");
+    mapa.agregarCentroParaMapas("distribucion");  
+    sistema.fabricarUnPaquete("A",["reloj",4]);  
+    expect(mapa.mapa[0][0].colaDeProcesamiento[0]).toStrictEqual(0);
+})

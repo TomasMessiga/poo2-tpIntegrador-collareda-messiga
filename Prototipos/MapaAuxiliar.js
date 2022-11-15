@@ -16,7 +16,7 @@ function Mapa(){
         if (m>=4 && m>=n)
         limites=[n,m];
     }
-    
+
     this.definir=function(){
         if (limites[1]>=4 && limites[1]>=limites[1]){
             this.mapa=[];
@@ -26,9 +26,9 @@ function Mapa(){
                 let claveLocal=String.fromCharCode(65+i);
                 let claveDestino=(i+1).toString();
                 this.locales.push(new Local(claveLocal));
+                this.destinos.push(new Destino(claveDestino));
                 this.mapa.push([]);
                 this.mapa[i].push(new ColaSalida());
-                this.destinos.push(new Destino(claveDestino));
             }
         }
     }
