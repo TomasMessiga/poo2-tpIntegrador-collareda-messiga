@@ -109,6 +109,7 @@ function Sistema(){
                   contAux++;
                   prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
                 } if (!prototipo){
+                  let vertical=mapa.desplazamientoVertical(paqueteAux);  
                   let paqueteParaCola=mapa.mapa[i][f].cola[j];
                   if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
                     mapa.mapa[i][f].cola.splice(j,1);
