@@ -236,7 +236,6 @@ test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
     sistema.fabricarUnPaquete(mapa,"A",[2,"reloj","normal"]);
     sistema.fabricarUnPaquete(mapa,"A",[3,"reloj","rapido"]);
     sistema.incrementarTiempo(mapa);
-    console.log(mapa.mapa[0][1])
     expect(mapa.destinos[0].recibidos.length).toStrictEqual(1);
 })
 
