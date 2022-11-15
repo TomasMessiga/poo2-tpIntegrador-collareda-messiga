@@ -221,6 +221,6 @@ test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
-    expect(mapa.destinos[0].recibidos).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)])
+    expect(mapa.destinos[0].recibidos).toStrictEqual([new Paquete(1,"reloj","muy rapido",1),new Paquete(1,"reloj","muy rapido",1)])
 })
 
