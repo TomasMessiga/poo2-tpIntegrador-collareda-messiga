@@ -29,7 +29,8 @@ function Sistema(){
 
     this.incrementarTiempo=function(mapa){
 
-      if (!(mapa===undefined)){
+      if (!(mapa===undefined)){        
+        mapa.incrementarTiempoPaquetes();
         for (let i=mapa.mapa.length-1;i>=0;i--){
           for (let f=mapa.mapa[i].length-1;f>=0;f--){
             mapa.mapa[i][f].cola.sort(function(a,b){
@@ -52,7 +53,6 @@ function Sistema(){
             mapa.mapa[i][f].cola=mapa.mapa[i][f].cola.filter(filtrarPorUndefined);
           }
         }
-        mapa.incrementarTiempoPaquetes();
         tiempo++;
       }
     }
