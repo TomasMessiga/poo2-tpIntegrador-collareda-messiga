@@ -28,7 +28,7 @@ function Sistema(){
       mapa.locales.forEach(unLocal => {
         if (unLocal.nombre==nombreLocal){
           let paquete=unLocal.producirPaquete(especificaciones);
-          console.log( mapa.mapa[cont])
+          console.log( mapa.mapa[cont][0])
           
         }
         cont++;
