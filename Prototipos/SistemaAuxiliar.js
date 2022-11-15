@@ -15,7 +15,7 @@ function Sistema(){
     this.incrementarTiempo=function(mapa){
       if (!(mapa===undefined)){
         mapa.mapa.forEach(fila => {
-          fila.forEach(columna => {
+          fila.forEach(columna,indice => {
             console.log(columna)
           });
         });
