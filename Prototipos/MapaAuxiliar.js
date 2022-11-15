@@ -59,7 +59,11 @@ function Mapa(){
         return (this.mapa[0].length==limites[1]);
     }
 
+    var clavesReservadas=[];
 
+    this.designarPaquetesID=function(){
+    //    for ()
+    }
 
 
     }    
