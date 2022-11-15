@@ -21,7 +21,7 @@ function Sistema(){
             for (let i=0;i<columna.colaDeProcesamiento.length;i++){
               if (!(columna.colaDeProcesamiento[i]===undefined)){
                 let cajaExtraida=columna.colaDeProcesamiento[i];
-                columna.colaDeProcesamiento.splice(i,1);
+                columna.colaDeProcesamiento[i]=undefined;
                 console.log(fila[cont].colaDeProcesamiento.push(cajaExtraida));
                 //.colaDeProcesamiento.push(cajaExtraida);
               }
