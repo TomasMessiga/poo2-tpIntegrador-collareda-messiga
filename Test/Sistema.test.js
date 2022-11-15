@@ -203,7 +203,22 @@ test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
-    console.log(mapa.destinos[0].recibidos)
     expect(mapa.destinos[0].recibidos).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)]);
 })
 
+
+test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
+    let sistema=new Sistema();
+    let mapa=new Mapa();
+    mapa.determinarLimites(1,4);
+    mapa.definir();
+    mapa.agregarCentroParaMapas("facturacion");
+    mapa.agregarCentroParaMapas("calidad");
+    mapa.agregarCentroParaMapas("distribucion");  
+    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",1]);
+    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",1]);
+    sistema.incrementarTiempo(mapa);
+    sistema.incrementarTiempo(mapa);
+    sistema.incrementarTiempo(mapa);
+    sistema.incrementarTiempo(mapa);
+    expect(mapa.destinos[0].recibidos).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)]);
