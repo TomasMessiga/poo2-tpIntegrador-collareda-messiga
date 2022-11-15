@@ -28,7 +28,7 @@ function Sistema(){
     }
 
     this.incrementarTiempo=function(mapa){
-
+/** 
       if (!(mapa===undefined)){        
         mapa.incrementarTiempoPaquetes();
         for (let i=0;i<mapa.mapa.length;i++){
@@ -59,9 +59,9 @@ function Sistema(){
         }
         tiempo++;
       } 
- 
+       */
 
-      /**
+      
       if (!(mapa===undefined)){        
         mapa.incrementarTiempoPaquetes();
         for (let i=0;i<mapa.mapa.length;i++){
@@ -87,7 +87,7 @@ function Sistema(){
           }
         }
         tiempo++;
-      } */
+      } 
     }
 
 
