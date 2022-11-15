@@ -186,6 +186,6 @@ test("funcionamiento de sistema (mover de cola de salida a tres centros)",()=>{
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
-    expect(mapa.mapa[0][3]).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)]);
+    expect(mapa.mapa[0][3].colaDeProcesamiento).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)]);
 })
 
