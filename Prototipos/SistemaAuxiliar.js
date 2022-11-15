@@ -83,8 +83,8 @@ function Sistema(){
             }
 
             
-            mapa.mapa[i][f].cola=mapa.mapa[i][f].cola.filter(filtrarPorUndefined);
-          }console.log(mapa.mapa[i])
+            mapa.mapa[i][f].cola=mapa.mapa[i][f].cola.filter(filtrarPorUndefined);console.log(mapa.mapa[i][f])
+          }
         }
         tiempo++;
       } 
