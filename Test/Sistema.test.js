@@ -174,8 +174,10 @@ test("funcionamiento de sistema (contador de paquetes)",()=>{
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",3]);
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",4]);
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",5]);
+    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",6]);
+    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",7]);
     sistema.incrementarTiempo(mapa);
-    expect(mapa.mapa[0][1].colaDeProcesamiento).toStrictEqual([new Paquete(1,"reloj","muy rapido",1),new Paquete(1,"reloj","muy rapido",2),new Paquete(1,"reloj","muy rapido",3),new Paquete(1,"reloj","muy rapido",4),new Paquete(1,"reloj","muy rapido",5)]);
+    expect(mapa.contarPaquetes()).toStrictEqual(5);
 })
 
 test("funcionamiento de sistema (mover de cola de salida a dos centros)",()=>{
