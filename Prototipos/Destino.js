@@ -5,7 +5,7 @@ function Destino(nombre){
     this.recibidos=[]
 
     this.incorporarPaqueteCola=function(paquete){
-        this.cola.push(paquete);
+        this.recibidos.push(paquete);
     }
 
 
