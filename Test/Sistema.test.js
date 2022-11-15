@@ -186,7 +186,7 @@ test("funcionamiento de sistema (mover de cola de salida a dos centros)",()=>{
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",1]);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
-    let unPaquete=new Paquete(1,"reloj","muy rapido",1); unPaquete.tiempo=2;
+    let unPaquete=new Paquete(1,"reloj","muy rapido",1); unPaquete.tiempo=2;console.log(mapa.mapa[0])
     expect(mapa.mapa[0][2].cola).toStrictEqual([unPaquete]);
 })
 
