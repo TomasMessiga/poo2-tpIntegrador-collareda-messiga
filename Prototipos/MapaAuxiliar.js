@@ -66,6 +66,9 @@ function Mapa(){
     this.modificarContadorPaquetes=function(){
         contadorPaquetes++;
     }
+    this.mostrarContadorPaquetes=function(){
+        return contadorPaquetes;
+    }
 
 /** 
     this.designarPaquetesID=function(){
