@@ -45,24 +45,6 @@ function Mapa(){
         }
     }
 
-    this.paqueteVecindadDerecha=function(fila,columna){
-        if (columna+1<this.getLimites()[1]){
-            return true;
-        }
-        return false;
-    }
-    this.paqueteVecindadArribaDerecha=function(fila,columna){
-        if (columna+1<this.getLimites()[1] && fila-1>=0){
-            return true;
-        }
-        return false;
-    }
-    this.paqueteVecindadAbajoDerecha=function(fila,columna){
-        if (columna+1<this.getLimites()[1] && fila+1<this.getLimites()[0]){
-            return true;
-        }
-        return false;
-    }
 
 
 
@@ -136,7 +118,7 @@ function Mapa(){
         return contadorPaquetes;
     }
 
-    this.puedomoverhaciaarriba=function(pauqete,mapa){
+    this.desplazamientoVertical=function(pauqete,mapa){
         var pos=this.buscarCoordenadasPaquetePorID()
         var destino=pauqete.Destino-1
         var fila=limites[0] 
