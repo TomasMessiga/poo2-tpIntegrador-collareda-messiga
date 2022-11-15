@@ -30,6 +30,16 @@ function Sistema(){
       return calcularUrgencia(paquete,cantidadCentros)-paquete.tiempo;
     }
 
+    const posiblesDestinosPaquete=function(fila,columna,posicionPaquete,mapa){
+      let alternativas=[];
+      let destino=mapa.mapa[fila][columna].cola[posicionPaquete].destino;
+      let limites=mapa.getLimites();
+      if (fila){}
+      return alternativas
+    }
+
+
+
     this.incrementarTiempo=function(mapa){
 /** 
       if (!(mapa===undefined)){        

@@ -45,9 +45,26 @@ function Mapa(){
         }
     }
 
-    this.desplazarUnPaquete=function(paquete){
-
+    this.paqueteVecindadDerecha=function(fila,columna){
+        if (columna+1<this.getLimites()[1]){
+            return true;
+        }
+        return false;
     }
+    this.paqueteVecindadArribaDerecha=function(fila,columna){
+        if (columna+1<this.getLimites()[1] && fila-1>=0){
+            return true;
+        }
+        return false;
+    }
+    this.paqueteVecindadAbajoDerecha=function(fila,columna){
+        if (columna+1<this.getLimites()[1] && fila+1<this.getLimites()[0]){
+            return true;
+        }
+        return false;
+    }
+
+
 
     this.incrementarTiempoPaquetes=function(){
         this.mapa.forEach(fila => {
