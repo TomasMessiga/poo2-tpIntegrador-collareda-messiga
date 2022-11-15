@@ -21,9 +21,6 @@ function Distribucion(){
         }
     }
 
-    this.clasificacion=function(){
-        return "centro de distribucion";
-    }
 
     this.procesarPaquete=function(paquete){
         return [paquete];

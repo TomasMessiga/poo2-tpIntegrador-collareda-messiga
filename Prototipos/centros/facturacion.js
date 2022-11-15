@@ -10,7 +10,9 @@ function Facturacion(){
     this.cola=[];
 
 
-
+    this.clasificacion=function(){
+        return "centro de facturacion";
+    }
 
     this.determinarLimites=function(cola){
         if (limitesAdecuados(this.colaDeEspera,rangoColaDeEspera)){
