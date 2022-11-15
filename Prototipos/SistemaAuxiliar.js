@@ -52,7 +52,7 @@ function Sistema(){
             mapa.mapa[i][f].cola=mapa.mapa[i][f].cola.filter(filtrarPorUndefined);
           }
         }
-
+        mapa.incrementarTiempoPaquetes();
         tiempo++;
       }
     }
