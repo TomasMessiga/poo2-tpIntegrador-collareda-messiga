@@ -4,8 +4,8 @@ function Distribucion(){
     const rangoProcesamiento=[1,10];
     const rangoColaDeEspera=[10,30];
 
-    this.limiteProcesamiento=rangoProcesamiento[0];
-    this.limiteColaDeEspera=rangoColaDeEspera[0];
+    this.limiteProcesamiento=rangoProcesamiento[1];
+    this.limiteColaDeEspera=rangoColaDeEspera[1];
 
     this.colaDeProcesamiento=[];
     this.colaDeEspera=[];
