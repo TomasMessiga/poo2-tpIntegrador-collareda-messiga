@@ -18,13 +18,13 @@ function Sistema(){
     const proto=Object.getPrototypeOf;
 
 
-    const calcularUrgencia=function(paquete,cantidadLocales){
+    const calcularUrgencia=function(paquete,cantidadCentros){
       let prioridades={"muy rapido": 1 , "rapido": 1.5 , "normal" : 2};
-      return prioridades[paquete.tipoDeEnvio]*cantidadLocales;
+      return prioridades[paquete.tipoDeEnvio]*cantidadCentros;
     }
 
-    const estadoUrgencia=function(paquete){
-      return paquete.tiempo;
+    const estadoUrgencia=function(paquete,cantidadCentros){
+      return cantidadCentros-paquete.tiempo;
     }
 
     this.incrementarTiempo=function(mapa){
@@ -34,7 +34,7 @@ function Sistema(){
         for (let i=0;i<mapa.mapa.length;i++){
           for (let f=mapa.mapa[i].length-1;f>=0;f--){
             mapa.mapa[i][f].cola.sort(function(a,b){
-              return estadoUrgencia(b)-estadoUrgencia(a);
+              return estadoUrgencia(b,mapa.mapa.length)-estadoUrgencia(a,mapa.mapa.length);
             });console.log( mapa.mapa[i][f])
             for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
               let paqueteAux=mapa.mapa[i][f].cola[j];
