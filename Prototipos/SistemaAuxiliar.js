@@ -70,20 +70,23 @@ function Sistema(){
               return estadoUrgencia(b,mapa.mapa[i].length)-estadoUrgencia(a,mapa.mapa[i].length);
             });
             for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
-              
-              if (f==0){
+              let prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
+              if (f==0 && prototipo){
                 let paqueteAux=mapa.mapa[i][f].cola[j];  
                 mapa.mapa[i][f].cola[j]=undefined;
                 mapa.mapa[i][f+1].cola.push(paqueteAux);
-              } else if (f==mapa.mapa[i].length-1){
+              } else if (f==mapa.mapa[i].length-1 && prototipo){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola[j]=undefined;
                 mapa.destinos[i].recibidos.push(paqueteAux[0]);
-              } else {
+              } else if (prototipo){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola[j]=undefined;
                 mapa.mapa[i][f+1].cola.push(paqueteAux[0]);
               }
+            }
+            for (let k=0;;k++){
+              
             }
 
             
