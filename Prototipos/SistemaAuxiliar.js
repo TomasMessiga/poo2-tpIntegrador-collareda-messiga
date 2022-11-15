@@ -33,6 +33,7 @@ function Sistema(){
             mapa.mapa[i][f].colaDeProcesamiento=mapa.mapa[i][f].colaDeProcesamiento.filter(filtrarPorUndefined);
           }
         }
+
         tiempo++;
       }
     }
