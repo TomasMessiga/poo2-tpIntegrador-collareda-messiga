@@ -25,7 +25,7 @@ function Sistema(){
 
     this.fabricarUnPaquete=function(mapa,nombreLocal,especificaciones){
       let cont=0;
-      mapa.locales.forEach(unLocal => {
+      mapa.locales.forEach(unLocal,indice => {
         if (unLocal.nombre==nombreLocal){
           let paquete=unLocal.producirPaquete(especificaciones);
           if (!(paquete===undefined)){
