@@ -76,8 +76,7 @@ function Sistema(){
         });
       });
       mapa.destinos.forEach(paquetesDestino => {
-        console.log(paquetesDestino.length)
-        cont+=paquetesDestino.length;
+        cont+=paquetesDestino.recibidos.length;
       });
       return cont;
     }
