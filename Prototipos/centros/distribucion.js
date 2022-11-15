@@ -1,3 +1,5 @@
+const { fuchsia } = require("color-name");
+const Paquete = require("../Paquete");
 
 function Distribucion(){
 
@@ -22,6 +24,14 @@ function Distribucion(){
 
     this.clasificacion=function(){
         return "centro de distribucion";
+    }
+
+    this.procesarPaquete=function(paquete){
+        this.procesados.push(paquete);
+    }
+
+    this.incorporarPaqueteCola=function(paquete){
+        this.cola.push(paquete);
     }
 
 

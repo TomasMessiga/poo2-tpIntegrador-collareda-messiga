@@ -22,6 +22,17 @@ function Facturacion(){
         }
     }
  
+
+
+    this.procesarPaquete=function(paquete){
+        this.procesados.push(paquete);
+    }
+
+    this.incorporarPaqueteCola=function(paquete){
+        this.cola.push(paquete);
+    }
+
+
     this.MeMuevoA=function(mapa,columna,fila){
          
         for (var i=0 ; i<mapa.mapa.length;i++){

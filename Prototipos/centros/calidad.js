@@ -39,6 +39,15 @@ function Calidad(){
     }
 
 
+    this.procesarPaquete=function(paquete){
+        this.procesados.push(paquete);
+    }
+
+    this.incorporarPaqueteCola=function(paquete){
+        this.cola.push(paquete);
+    }
+
+
 
 
 
