@@ -125,9 +125,7 @@ function Mapa(){
         var fila=limites[0] 
         var columna=limites[1]
         console.log("el destino es "+destino)
-        if (fila==destino){
-            return [0,0]
-        }
+    
         if ((fila-destino)-(pos[0]+1)<=columna-pos[0] && (fila-destino)-(pos[0]-1)<=columna-pos[0]){
             return [1,-1];
         }
