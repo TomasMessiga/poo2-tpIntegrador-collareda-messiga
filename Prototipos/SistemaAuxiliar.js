@@ -24,11 +24,14 @@ function Sistema(){
 
 
     this.fabricarUnPaquete=function(mapa,nombreLocal,especificaciones){
+      let cont=0;
       mapa.locales.forEach(unLocal => {
         if (unLocal.nombre==nombreLocal){
-          let paquete=unLocal.producirPaquete(especificaciones);console.log(paquete)
-          return paquete;
+          let paquete=unLocal.producirPaquete(especificaciones);
+          return mapa.mapa[cont]
+          
         }
+        cont++;
       });
 
     }
