@@ -122,7 +122,7 @@ function Mapa(){
         var pos=this.buscarCoordenadasPaquetePorID(paquete.id);
         
         var destino=paquete.Destino-1
-        console.log(limites)
+        console.log(destino)
         var fila=limites[0] 
         var columna=limites[1]
         
