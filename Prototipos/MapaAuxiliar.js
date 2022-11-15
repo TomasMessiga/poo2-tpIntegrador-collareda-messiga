@@ -119,13 +119,11 @@ function Mapa(){
     }
 
     this.desplazamientoVertical=function(paquete){
-        console.log(paquete);
         var pos=this.buscarCoordenadasPaquetePorID(paquete.id);
        
         var destino=paquete.destino
         var fila=limites[0] 
         var columna=limites[1]
-        console.log("el destino es "+destino)
     
         if ((fila-destino)-(pos[0]+1)<=columna-pos[0] && (fila-destino)-(pos[0]-1)<=columna-pos[0]){
             return [1,-1];
