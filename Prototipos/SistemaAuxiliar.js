@@ -70,15 +70,19 @@ function Sistema(){
               return estadoUrgencia(b,mapa.mapa[i].length)-estadoUrgencia(a,mapa.mapa[i].length);
             });
             for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
-              let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);
               
-              if (proto(paqueteAux)==proto(new Paquete()) && f!=mapa.mapa[i].length-1){
-                  mapa.mapa[i][f].cola[j]=undefined;
-                  mapa.mapa[i][f+1].cola[j]=paqueteAux[0];
-
-              } else if (proto(paqueteAux)==proto(new Paquete()) && f==mapa.mapa[i].length-1){
+              if (f==0){
+                let paqueteAux=mapa.mapa[i][f].cola[j];  
+                mapa.mapa[i][f].cola[j]=undefined;
+                mapa.mapa[i][f+1].cola[j]=paqueteAux[0];
+              } else if (f==mapa.mapa[i].length-1){
+                let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola[j]=undefined;
                 mapa.destinos[i].recibidos.push(paqueteAux);
+              } else {
+                let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
+                mapa.mapa[i][f].cola[j]=undefined;
+                mapa.mapa[i][f+1].cola[j]=paqueteAux[0];
               }
             }
 
