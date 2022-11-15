@@ -12,8 +12,9 @@ function Sistema(){
       mapa.determinarLimites(filas,columnas);
     }
 
-    this.incrementarTiempo=function(){
+    this.incrementarTiempo=function(mapa){
         tiempo++;
+        
     }
 
     this.reiniciarTiempo=function(){
