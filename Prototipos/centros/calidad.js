@@ -12,6 +12,11 @@ function Calidad(){
     this.colaDeProcesamiento=[];
     this.colaDeEspera=[];
 
+    this.clasificacion=function(){
+        return "centro de calidad";
+    }
+
+
     this.determinarLimites=function(procesamiento,cola){
         if (limitesAdecuados(this.procesamiento,rangoProcesamiento)){
             this.limiteProcesamiento=procesamiento;

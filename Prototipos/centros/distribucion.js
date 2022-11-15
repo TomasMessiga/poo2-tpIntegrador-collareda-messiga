@@ -10,12 +10,20 @@ function Distribucion(){
     this.colaDeProcesamiento=[];
     this.colaDeEspera=[];
 
+    this.clasificacion=function(){
+        return "centro de distribucion";
+    }
+
     this.determinarLimites=function(procesamiento,cola){
         if (limitesAdecuados(this.procesamiento,rangoProcesamiento)){
             this.limiteProcesamiento=procesamiento;
         } if (limitesAdecuados(this.colaDeEspera,rangoColaDeEspera)){
             this.limiteColaDeEspera=cola;
         }
+    }
+
+    this.clasificacion=function(){
+        return "centro de distribucion";
     }
 
 

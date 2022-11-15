@@ -10,6 +10,12 @@ function Facturacion(){
     this.colaDeProcesamiento=[];
     this.colaDeEspera=[];
 
+
+    this.clasificacion=function(){
+        return "centro de facturacion";
+    }
+
+
     this.determinarLimites=function(procesamiento,cola){
         if (limitesAdecuados(this.procesamiento,rangoProcesamiento)){
             this.limiteProcesamiento=procesamiento;

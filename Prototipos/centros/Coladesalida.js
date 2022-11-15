@@ -9,9 +9,6 @@ function Coladesalida(){
 
     }
 
-    this.clasificacion=function(){
-        return ;
-    }
 }
 
 module.exports=Coladesalida;
