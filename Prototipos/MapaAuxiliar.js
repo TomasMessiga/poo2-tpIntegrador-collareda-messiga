@@ -37,8 +37,9 @@ function Mapa(){
     this.incrementarTiempoPaquetes=function(){
         this.mapa.forEach(fila => {
             fila.forEach(local => {
-                console.log(local)
-
+                local.cola.forEach(paqueteAux => {
+                    paqueteAux.tiempo+=1;
+                });
             });
         });
     }
