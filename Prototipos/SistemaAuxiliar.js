@@ -23,7 +23,7 @@ function Sistema(){
       return prioridades[paquete.tipoDeEnvio]*cantidadCentros;
     }
 
-    const estadoUrgencia=function(paquete,cantidadCentros){console.log(cantidadCentros-paquete.tiempo)
+    const estadoUrgencia=function(paquete,cantidadCentros){console.log(cantidadCentros)
       return cantidadCentros-paquete.tiempo;
     }
 
