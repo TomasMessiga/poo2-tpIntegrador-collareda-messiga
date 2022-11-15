@@ -23,7 +23,7 @@ function Sistema(){
       return prioridades[paquete.tipoDeEnvio]*cantidadCentros;
     }
 
-    const estadoUrgencia=function(paquete,cantidadCentros){console.log(cantidadCentros)
+    const estadoUrgencia=function(paquete,cantidadCentros){
       return cantidadCentros-paquete.tiempo;
     }
 
@@ -34,7 +34,7 @@ function Sistema(){
         for (let i=0;i<mapa.mapa.length;i++){
           for (let f=mapa.mapa[i].length-1;f>=0;f--){
             mapa.mapa[i][f].cola.sort(function(a,b){
-              return estadoUrgencia(b,mapa.mapa.length)-estadoUrgencia(a,mapa.mapa.length);
+              return estadoUrgencia(b,mapa.mapa[i].length)-estadoUrgencia(a,mapa.mapa[i].length);
             });console.log( mapa.mapa[i][f])
             for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
               let paqueteAux=mapa.mapa[i][f].cola[j];
