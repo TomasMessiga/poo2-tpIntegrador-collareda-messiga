@@ -132,7 +132,7 @@ function Mapa(){
         }
         if (destino-(pos[0]-1)<=columna-(pos[0]+1))
         {
-            return [0,-1];
+            return [-1,0];
         }
         else{
             return [0,0];
