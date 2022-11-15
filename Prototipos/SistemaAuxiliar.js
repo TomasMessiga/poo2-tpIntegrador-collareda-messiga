@@ -25,7 +25,7 @@ function Sistema(){
           for (let f=mapa.mapa[i].length-1;f>=0;f--){
             for (let j=0;j<mapa.mapa[i][f].colaDeProcesamiento.length;j++){
               let paqueteAux=mapa.mapa[i][f].colaDeProcesamiento[j];
-              if (proto(paqueteAux)==proto(new Paquete())){
+              if (proto(paqueteAux)==proto(new Paquete()) && f!=mapa.mapa[i].length-1){
                 mapa.mapa[i][f].colaDeProcesamiento[j]=undefined;
                 mapa.mapa[i][f+1].colaDeProcesamiento[j]=paqueteAux;
               }
