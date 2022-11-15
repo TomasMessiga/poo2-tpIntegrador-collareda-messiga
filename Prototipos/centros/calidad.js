@@ -1,3 +1,10 @@
+const Destino=require('../Destino.js'); 
+const Facturacion = require('../centros/facturacion.js');
+const Distribucion = require('../centros/distribucion.js');
+//const Calidad =require('../Centros/calidad.js');
+
+const proto=Object.getPrototypeOf;
+
 
 function Calidad(){
 
@@ -9,8 +16,7 @@ function Calidad(){
     this.limiteProcesamiento=rangoProcesamiento[1];
     this.limiteColaDeEspera=rangoColaDeEspera[1];
 
-    this.colaDeProcesamiento=[];
-    this.colaDeEspera=[];
+    this.cola=[];
 
     this.clasificacion=function(){
         return "centro de calidad";
@@ -25,10 +31,10 @@ function Calidad(){
         }
     }
 
-    this.destinarUnPaquete=function(paquete){
-        if (this.colaDeProcesamiento.length<this.limiteProcesamiento){
-            this.colaDeProcesamiento.push(paquete);
-        } else if (this.colaDeEspera.length<this.limiteColaDeEspera){
+    this.destinarUnPaquete=function(destino,paquete){
+        if (proto(destino)==proto(new Destino())){
+            destino.recibidos.push(paquete);
+        } else {
             this.colaDeEspera.push(paquete);
         }
     }

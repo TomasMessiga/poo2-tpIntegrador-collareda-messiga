@@ -2,7 +2,7 @@
 
 
 function ColaSalida(){
-    this.colaDeProcesamiento=[]
+    this.cola=[]
 
     this.clasificacion=function(){
         return "cola de salida";

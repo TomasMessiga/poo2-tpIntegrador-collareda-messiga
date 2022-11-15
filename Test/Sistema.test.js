@@ -125,7 +125,7 @@ test("funcionamiento de sistema (fabricar varios paquete)",()=>{
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",4]);  
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",5]);  
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",6]);  
-    expect(mapa.mapa[0][0].colaDeProcesamiento.length).toStrictEqual(sistema.contarPaquetes(mapa));
+    expect(mapa.mapa[0][0].cola.length).toStrictEqual(sistema.contarPaquetes(mapa));
 })
 
 
@@ -140,7 +140,7 @@ test("funcionamiento de sistema (mover de cola de salida a un centro)",()=>{
     mapa.agregarCentroParaMapas("distribucion");  
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",1]);
     sistema.incrementarTiempo(mapa);
- //   expect(mapa.mapa[0][1].colaDeProcesamiento).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)]);
+    expect(mapa.mapa[0][1].cola).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)]);
 })
 
 test("funcionamiento de sistema (mover de cola de salida a un centro varios paquetes)",()=>{
@@ -157,7 +157,7 @@ test("funcionamiento de sistema (mover de cola de salida a un centro varios paqu
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",4]);
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",5]);
     sistema.incrementarTiempo(mapa);
- //   expect(mapa.mapa[0][1].colaDeProcesamiento).toStrictEqual([new Paquete(1,"reloj","muy rapido",1),new Paquete(1,"reloj","muy rapido",2),new Paquete(1,"reloj","muy rapido",3),new Paquete(1,"reloj","muy rapido",4),new Paquete(1,"reloj","muy rapido",5)]);
+    expect(mapa.mapa[0][1].cola).toStrictEqual([new Paquete(1,"reloj","muy rapido",1),new Paquete(1,"reloj","muy rapido",2),new Paquete(1,"reloj","muy rapido",3),new Paquete(1,"reloj","muy rapido",4),new Paquete(1,"reloj","muy rapido",5)]);
 })
 
 
@@ -177,7 +177,7 @@ test("funcionamiento de sistema (contador de paquetes)",()=>{
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",6]);
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",7]);
     sistema.incrementarTiempo(mapa);
-//    expect(mapa.mostrarContadorPaquetes()).toStrictEqual(5);
+    expect(mapa.mostrarContadorPaquetes()).toStrictEqual(5);
 })
 
 test("funcionamiento de sistema (mover de cola de salida a dos centros)",()=>{
@@ -191,7 +191,7 @@ test("funcionamiento de sistema (mover de cola de salida a dos centros)",()=>{
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",1]);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
-//    expect(mapa.mapa[0][2].colaDeProcesamiento).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)]);
+    expect(mapa.mapa[0][2].cola).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)]);
 })
 
 test("funcionamiento de sistema (mover de cola de salida a tres centros)",()=>{
@@ -206,7 +206,7 @@ test("funcionamiento de sistema (mover de cola de salida a tres centros)",()=>{
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
-//    expect(mapa.mapa[0][3].colaDeProcesamiento).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)]);
+    expect(mapa.mapa[0][3].cola).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)]);
 })
 
 
@@ -223,7 +223,7 @@ test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
-//    expect(mapa.destinos[0].recibidos).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)]);
+    expect(mapa.destinos[0].recibidos).toStrictEqual([new Paquete(1,"reloj","muy rapido",1)]);
 })
 
 

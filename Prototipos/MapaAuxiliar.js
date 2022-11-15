@@ -2,10 +2,9 @@ const Local=require('../Prototipos/Local.js');
 const Destino=require('../Prototipos/Destino.js'); 
 const Facturacion = require('../Prototipos/centros/facturacion.js');
 const Distribucion = require('../Prototipos/centros/distribucion.js');
-const Calidad = require('../Prototipos/centros/calidad.js');
-const ColaSalida = require('./Centros/ColaSalida.js');
-const Paquete = require('./Paquete.js');
-const { fuchsia } = require('color-name');
+const Calidad =require('../Prototipos/Centros/calidad.js');
+const ColaSalida = require('../Prototipos/Centros/ColaSalida.js');
+const Paquete = require('../Prototipos/Paquete.js');
 
 function Mapa(){ 
     this.mapa=[];

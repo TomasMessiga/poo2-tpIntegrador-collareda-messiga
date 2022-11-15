@@ -7,8 +7,7 @@ function Facturacion(){
     this.limiteProcesamiento=rangoProcesamiento[1];
     this.limiteColaDeEspera=rangoColaDeEspera[1];
 
-    this.colaDeProcesamiento=[];
-    this.colaDeEspera=[];
+    this.cola=[];
 
 
     this.clasificacion=function(){
