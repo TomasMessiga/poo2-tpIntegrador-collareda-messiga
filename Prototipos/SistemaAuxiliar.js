@@ -26,17 +26,20 @@ function Sistema(){
               let paqueteAux=mapa.mapa[i][f].colaDeProcesamiento[j];
               
               if (proto(paqueteAux)==proto(new Paquete()) && f!=mapa.mapa[i].length-1){
-             //   if (mapa.mapa[i+1][f+1].limiteProcesamiento<=mapa.mapa[i+1][f+1].colaDeProcesamiento.length){
                   mapa.mapa[i][f].colaDeProcesamiento[j]=undefined;
                   mapa.mapa[i][f+1].colaDeProcesamiento[j]=paqueteAux;
-             //  } else {
 
-       //         }
               } else if (proto(paqueteAux)==proto(new Paquete()) && f==mapa.mapa[i].length-1){
                 mapa.mapa[i][f].colaDeProcesamiento[j]=undefined;
                 mapa.destinos[i].recibidos.push(paqueteAux);
               }
             }
+            
+            mapa.mapa[i][f].colaDeProcesamiento.forEach(unPaquete => {
+              mapa.mapa[i][f].colaDeEspera.push(unPaquete);
+              unPaquete=undefined;
+            });
+            
             mapa.mapa[i][f].colaDeProcesamiento=mapa.mapa[i][f].colaDeProcesamiento.filter(filtrarPorUndefined);
           }
         }
