@@ -23,6 +23,15 @@ function Sistema(){
     this.getTiempo=function(){return tiempo;}
 
 
+    this.fabricarUnPaquete=function(mapa,nombreLocal,especificaciones){
+      mapa.locales.forEach(unLocal => {
+        if (unLocal.nombre==nombreLocal){
+          unLocal.producirPaquete(especificaciones);
+        }
+      });
+
+    }
+
 }
 
 

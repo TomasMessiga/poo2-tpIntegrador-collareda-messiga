@@ -26,7 +26,7 @@ test("crear un mapa (1 local)",()=>{
 
 test("crear un mapa (1 destino)",()=>{
     let mapa=new Mapa();
-    let destino= new Destino('1'); 
+    let destino= new Destino(1); 
     mapa.determinarLimites(1,4);
     mapa.definir();
     expect(proto(mapa.destinos[0])).toStrictEqual(proto(destino));
@@ -106,6 +106,6 @@ test("funcionamiento de sistema (fabricar un paquete)",()=>{
     mapa.agregarCentroParaMapas("facturacion");
     mapa.agregarCentroParaMapas("calidad");
     mapa.agregarCentroParaMapas("distribucion");  
-    sistema.fabricarUnPaquete("A",["reloj",4]);  
+    sistema.fabricarUnPaquete(mapa,["A",1,"reloj","muy rapido",1]);  
     expect(mapa.mapa[0][0].colaDeProcesamiento[0]).toStrictEqual(0);
 })

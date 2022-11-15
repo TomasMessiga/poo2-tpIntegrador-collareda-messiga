@@ -24,7 +24,7 @@ function Mapa(){
             this.destinos=[];
             for (let i=0;i<limites[0];i++){
                 let claveLocal=String.fromCharCode(65+i);
-                let claveDestino=(i+1).toString();
+                let claveDestino=(i+1);
                 this.locales.push(new Local(claveLocal));
                 this.destinos.push(new Destino(claveDestino));
                 this.mapa.push([]);
