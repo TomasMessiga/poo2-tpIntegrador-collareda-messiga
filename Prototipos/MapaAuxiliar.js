@@ -142,16 +142,16 @@ function Mapa(){
     limites=this.getLimites()
     fila=limites[0] 
     columna=limites[1]
-    if (fila-(pos[0]+1)>=columna-pos[0] && fila-(pos[0]-1)>=columna-pos[0] ){
-        return [true,true]
+    if (destino-(pos[0]+1)<=columna-pos[0] && destino-(pos[0]-1)<=columna-pos[0] ){
+        return [1,-1]
     }
-    if (fila-(pos[0]+1)>=columna-pos[0])
+    if (destino-(pos[0]+1)<=columna-(pos[0]+1))
     {
-            return [true,false]
+            return [1,0]
     }
-    if (fila-(pos[0]-1)>=columna-pos[0])
+    if (destino-(pos[0]-1)<=columna-(pos[0]+1))
     {
-            return [true,false]
+            return [0,-1]
     }
 
 
