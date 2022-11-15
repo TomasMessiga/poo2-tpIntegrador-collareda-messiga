@@ -124,12 +124,7 @@ function Sistema(){
                 */
               }
             }
-            if (true){
 
-            }
-            for (let k=0;false;k++){
-              
-            }
 
             
         //    mapa.mapa[i][f].cola=mapa.mapa[i][f].cola.filter(filtrarPorUndefined);
