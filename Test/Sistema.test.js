@@ -127,3 +127,18 @@ test("funcionamiento de sistema (fabricar varios paquete)",()=>{
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",6]);  
     expect(mapa.mapa[0][0].colaDeProcesamiento.length).toStrictEqual(sistema.contarPaquetes(mapa));
 })
+
+
+
+test("funcionamiento de sistema (mover de cola de salida a un centro)",()=>{
+    let sistema=new Sistema();
+    let mapa=new Mapa();
+    mapa.determinarLimites(1,4);
+    mapa.definir();
+    mapa.agregarCentroParaMapas("facturacion");
+    mapa.agregarCentroParaMapas("calidad");
+    mapa.agregarCentroParaMapas("distribucion");  
+    sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",1]);
+    sistema.incrementarTiempo();
+    expect(mapa.mapa[0][1].colaDeProcesamiento[0]).toStrictEqual(new Paquete(1,"reloj","muy rapido",1));
+})
