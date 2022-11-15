@@ -125,5 +125,5 @@ test("funcionamiento de sistema (fabricar varios paquete)",()=>{
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",4]);  
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",5]);  
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",6]);  
-    expect(mapa.mapa[0][0].colaDeProcesamiento.length).toStrictEqual(5);
+    expect(mapa.mapa[0][0].colaDeProcesamiento.length).toStrictEqual(sistema.contarPaquetes(mapa));
 })

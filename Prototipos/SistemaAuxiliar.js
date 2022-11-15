@@ -37,6 +37,16 @@ function Sistema(){
 
     }
 
+    this.contarPaquetes=function(mapa){
+      let cont=0;
+      mapa.mapa.forEach(element => {
+        element[0].forEach(element =>{
+          cont+=element.length;
+        });
+      });
+      return cont;
+    }
+
 }
 
 
