@@ -21,8 +21,8 @@ function Sistema(){
     this.incrementarTiempo=function(mapa){
 
       if (!(mapa===undefined)){
-        for (let i=mapa.mapa.length-1;i>=0;i--){
-          for (let f=mapa.mapa[i].length-1;f>=0;f--){console.log(mapa.mapa[i][f])
+        for (let i=mapa.mapa.length-1;i>=0;i--){console.log(mapa.mapa[i]);
+          for (let f=mapa.mapa[i].length-1;f>=0;f--){
             for (let j=0;j<mapa.mapa[i][f].colaDeProcesamiento.length;j++){
               let paqueteAux=mapa.mapa[i][f].colaDeProcesamiento[j];
               
