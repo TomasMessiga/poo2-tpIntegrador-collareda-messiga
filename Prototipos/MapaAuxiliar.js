@@ -70,18 +70,7 @@ function Mapa(){
         return contadorPaquetes;
     }
 
-/** 
-    this.designarPaquetesID=function(){
-        this.mapa.forEach(fila => {
-            fila.forEach(columna => {
-                columna.forEach(unPaquete => {
-                    if (unPaquete.id==undefined && clavesPaquetesReservadas.length==0){
-                        unPaquete.id
-                    }
-                });
-            });
-        });
-    }*/
+
 
 
     }    
