@@ -8,6 +8,10 @@ function Coladesalida(){
         return "cola de salida de"+local.nombre
 
     }
+
+    this.clasificacion=function(){
+        return ;
+    }
 }
 
 module.exports=Coladesalida;

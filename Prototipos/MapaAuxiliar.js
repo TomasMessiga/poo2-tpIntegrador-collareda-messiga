@@ -45,6 +45,15 @@ function Mapa(){
         });
     }
 
+    const centrosRequeridos=function(){
+        this.mapa.forEach(element => {
+            element.forEach(centroAuxiliar => {
+                
+            });
+        });
+        return true;
+    }
+
     this.util=function(){
         return (this.mapa[0].length==limites[1]);
     }
