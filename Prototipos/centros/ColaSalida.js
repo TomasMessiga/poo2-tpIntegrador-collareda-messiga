@@ -9,6 +9,8 @@ function ColaSalida(){
     }
 
 
+
+
 }
 
 module.exports=ColaSalida;

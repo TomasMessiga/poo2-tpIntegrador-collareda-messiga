@@ -76,8 +76,10 @@ function Sistema(){
               let prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
               if (f==0 && prototipo){
                 let paqueteAux=mapa.mapa[i][f].cola[j];  
-                mapa.mapa[i][f].cola[j]=undefined;
-                mapa.mapa[i][f+1].cola.push(paqueteAux);
+                if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteAux)){
+                  mapa.mapa[i][f].cola[j]=undefined;
+                }
+              //  mapa.mapa[i][f+1].cola.push(paqueteAux);
               } else if (f==mapa.mapa[i].length-1 && prototipo){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola[j]=undefined;

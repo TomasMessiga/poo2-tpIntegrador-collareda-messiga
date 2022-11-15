@@ -17,7 +17,7 @@ function Mapa(){
         return limites;
     }
 
-    
+
 
 
     this.determinarLimites=function(n,m){
@@ -43,6 +43,10 @@ function Mapa(){
                 this.mapa[i].push(new ColaSalida());
             }
         }
+    }
+
+    this.desplazarUnPaquete=function(paquete){
+
     }
 
     this.incrementarTiempoPaquetes=function(){
