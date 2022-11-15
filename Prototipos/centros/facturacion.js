@@ -10,11 +10,6 @@ function Facturacion(){
     this.cola=[];
 
 
-    this.procesarPaquete=function(paquete){
-        let paqueteProcesado=[];
-        paqueteProcesado.push(paquete);
-        return paquete;
-    }
 
 
     this.determinarLimites=function(cola){
@@ -26,7 +21,9 @@ function Facturacion(){
 
 
     this.procesarPaquete=function(paquete){
-        this.procesados.push(paquete);
+        let paqueteProcesado=[];
+        paqueteProcesado.push(paquete);
+        return paquete;
     }
 
     this.incorporarPaqueteCola=function(paquete){
