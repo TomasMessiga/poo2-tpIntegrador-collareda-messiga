@@ -107,5 +107,5 @@ test("funcionamiento de sistema (fabricar un paquete)",()=>{
     mapa.agregarCentroParaMapas("calidad");
     mapa.agregarCentroParaMapas("distribucion");  
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido",1]);  
-    expect(mapa.mapa[0][0].colaDeProcesamiento[0]).toStrictEqual(0);
+    expect(mapa.mapa[0][0].colaDeProcesamiento[0]).toStrictEqual(new Paquete(1,"reloj","muy rapido",1));
 })
