@@ -136,7 +136,7 @@ function Mapa(){
        
        console.log(pos)
      
-        if (columna-(pos[0]+1)>=(destino) && pos[0]!=destino)
+        if (columna-(pos[1]+1)>=destino && pos[0]!=destino)
         { 
             return [-1,0];
         }
