@@ -120,9 +120,9 @@ function Mapa(){
 
     this.desplazamientoVertical=function(paquete){
         var pos=this.buscarCoordenadasPaquetePorID(paquete.id);
-        var destino=paquete.destino-1
-        var fila=limites[0] 
-        var columna=limites[1]
+        var destino=paquete.destino-1;
+        var fila=limites[0] ;
+        var columna=limites[1];
     
         if ((fila-destino)-(pos[0]+1)<=columna-pos[0] && (fila-destino)-(pos[0]-1)<=columna-pos[0]){
             return [1,-1];
