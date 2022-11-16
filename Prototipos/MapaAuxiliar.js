@@ -133,7 +133,7 @@ function Mapa(){
         var fila=limites[0] ;
         var columna=limites[1];
         
-       
+        console.log("estoy en "+pa)
        console.log("estoy en "+pos)
      
         if (columna-(pos[1]+1)==destino+fila)
