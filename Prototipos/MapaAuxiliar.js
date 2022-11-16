@@ -99,7 +99,7 @@ function Mapa(){
                         if (this.mapa[i][j].cola[k].id===numero){
                             return [i,j,k];
                         }
-                    } else {
+                    } else {console.log(this.mapa[i][j].cola[k])
                         if ((this.mapa[i][j].cola[k][0]).id===numero){
                             return [i,j,k];
                         }
