@@ -108,7 +108,7 @@ function Mapa(){
                 }    
             }
         }
-        return [];
+        return undefined;
     }
 
 
