@@ -134,8 +134,8 @@ function Mapa(){
         var columna=limites[1];
         result1=columna-(pos[1]+1)
         result2=+destino+(pos[0]+1)
-       console.log("columna"+result1)
-       console.log("fila "+result2)
+       console.log("columna: "+result1)
+       console.log("fila: "+result2)
      
         if (columna-(pos[1]+1)>=destino+(pos[0]+1) && fila<[pos[0]+1])
         { 
