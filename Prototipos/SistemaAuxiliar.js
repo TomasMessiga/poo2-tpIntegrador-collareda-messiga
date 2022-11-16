@@ -112,7 +112,7 @@ function Sistema(){
              //     let vertical=mapa.desplazamientoVertical(paqueteAux);  console.log(vertical)
                   let paqueteParaCola=mapa.mapa[i][f].cola[j];
                   if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
-                    mapa.mapa[i][f].cola.splice(j,1);
+                    mapa.mapa[i][f].cola.splice(j,1); 
                   }
                 }
 
