@@ -109,7 +109,7 @@ function Sistema(){
                   let vertical=mapa.desplazamientoVertical(paqueteParaCola[0]);                  //   console.log(vertical)
                   if(mapa.mapa[i+vertical][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
                     mapa.mapa[i][f].cola.splice(j,1);
-                  } else if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
+                  } else if(mapa.mapa[i+vertical][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
                     mapa.mapa[i][f].cola.splice(j,1);
                   }
                 }
