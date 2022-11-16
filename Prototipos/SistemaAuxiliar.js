@@ -105,7 +105,7 @@ function Sistema(){
                 } if (!prototipo){
                   let paqueteParaCola=mapa.mapa[i][f].cola[j];
                   let vertical=mapa.desplazamientoVertical(paqueteParaCola);
-                  if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
+                  if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola)){
                     mapa.mapa[i][f].cola.splice(j,1);
                   }
                 }
