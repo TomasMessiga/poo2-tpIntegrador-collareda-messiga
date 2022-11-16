@@ -110,7 +110,7 @@ function Sistema(){
                     p=-1
 
                  }
-                  if(mapa.mapa[5][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
+                  if(mapa.mapa[0][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
                     mapa.mapa[i][f].cola.splice(j,1);
                   }
                 }
