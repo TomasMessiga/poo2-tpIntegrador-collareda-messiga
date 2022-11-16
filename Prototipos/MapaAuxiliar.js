@@ -136,7 +136,7 @@ function Mapa(){
         console.log("estoy en "+paquete)
        console.log("estoy en "+pos)
      
-        if (pos[1]-(pos[0])==destino)
+        if ((pos[1]+1)-(pos[0]+1)==destino)
         { 
             return [-1,0];
         }
