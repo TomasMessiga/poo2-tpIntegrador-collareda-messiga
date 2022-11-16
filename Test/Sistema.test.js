@@ -249,18 +249,19 @@ test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
 test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
     let sistema=new Sistema();
     let mapa=new Mapa();
-    mapa.determinarLimites(2,4);
+    mapa.determinarLimites(3,4);
     mapa.definir();
     mapa.agregarCentroParaMapas("facturacion");
     mapa.agregarCentroParaMapas("calidad");
     mapa.agregarCentroParaMapas("distribucion");  
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
     sistema.fabricarUnPaquete(mapa,"B",[1,"reloj","normal"]);
+    sistema.fabricarUnPaquete(mapa,"C",[1,"reloj","normal"]);
     sistema.incrementarTiempo(mapa);
    sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa); 
- //   expect(mapa.destinos[0].recibidos.length).toStrictEqual(2);
+ expect(mapa.destinos[0].recibidos.length).toStrictEqual(2);
 })
