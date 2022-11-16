@@ -240,6 +240,7 @@ test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
     sistema.incrementarTiempo(mapa);console.log(mapa.destinos[0])
     sistema.incrementarTiempo(mapa);console.log(mapa.destinos[0])
     sistema.incrementarTiempo(mapa);console.log(mapa.destinos[0])
+    sistema.incrementarTiempo(mapa);console.log(mapa.destinos[0])
     expect(mapa.destinos[0].recibidos.length).toStrictEqual(3);
 })
 
