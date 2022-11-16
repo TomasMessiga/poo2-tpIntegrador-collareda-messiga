@@ -82,7 +82,7 @@ function Sistema(){
               if (f==0){
                 let paqueteAux=mapa.mapa[i][f].cola[j];
          //       let vertical=mapa.desplazamientoVertical(paqueteAux[0]);  
-                if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteAux)){console.log(4)
+                if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteAux)){
                   mapa.mapa[i][f].cola.splice(j,1);
                 }
               } else if (f==mapa.mapa[i].length-1){
