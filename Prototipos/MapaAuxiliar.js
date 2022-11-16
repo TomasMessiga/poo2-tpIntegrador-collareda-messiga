@@ -93,7 +93,7 @@ function Mapa(){
         for (let i=0;i<this.mapa.length;i++){
             for (let j=0;j<this.mapa[i].length;j++){
                 for (let k=0;k<this.mapa[i][j].cola.length;k++){
-                    if (this.mapa[i][j].cola[k].id===numero){
+                    if (this.mapa[i][j].cola[k].id===numero || this.mapa[i][j].cola[k][0].id===numero){
                         return [i,j,k];
                     }
                 }    
@@ -118,7 +118,7 @@ function Mapa(){
         return contadorPaquetes;
     }
 
-    this.desplazamientoVertical=function(paquete){return paquete;
+    this.desplazamientoVertical=function(paquete){
         var pos=this.buscarCoordenadasPaquetePorID(paquete.id);
         var destino=paquete.destino-1;
         var fila=limites[0] ;
