@@ -105,7 +105,7 @@ function Sistema(){
                 } if (!prototipo){
                   let paqueteParaCola=mapa.mapa[i][f].cola[j];
                   let vertical=0
-                  if (i-f==paqueteParaCola[0].destino){
+                  if (i==2){
                     vertical=-1
                   }            //        console.log(vertical)
                   if(mapa.mapa[i+vertical][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
