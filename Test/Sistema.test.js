@@ -262,6 +262,6 @@ test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
-
-    expect(mapa.destinos).toStrictEqual(2);
+    console.log(mapa.destinos)
+    expect(mapa.destinos[0].length).toStrictEqual(2);
 })
