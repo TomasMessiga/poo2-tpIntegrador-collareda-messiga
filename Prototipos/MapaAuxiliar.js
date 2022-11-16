@@ -138,7 +138,7 @@ function Mapa(){
      
         if (columna-(pos[0]+1)>=(destino) && pos[0]!=destino)
         { 
-            return [1,0];
+            return [-1,0];
         }
         if (pos[0]==destino )
         {
