@@ -203,7 +203,7 @@ test("funcionamiento de sistema (mover de cola de salida a tres centros)",()=>{
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     let unPaquete=new Paquete(1,"reloj","muy rapido",1); unPaquete.tiempo=3;
- //   expect(mapa.mapa[0][3].cola).toStrictEqual([unPaquete]);
+    expect(mapa.mapa[0][3].cola).toStrictEqual([unPaquete]);
 })
 
 
@@ -221,7 +221,7 @@ test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     let unPaquete=new Paquete(1,"reloj","muy rapido",1); unPaquete.tiempo=4;
- //   expect(mapa.destinos[0].recibidos).toStrictEqual([unPaquete]);
+    expect(mapa.destinos[0].recibidos).toStrictEqual([unPaquete]);
 })
 
 
@@ -242,7 +242,7 @@ test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
-//    expect(mapa.destinos[0].recibidos.length).toStrictEqual(3);
+    expect(mapa.destinos[0].recibidos.length).toStrictEqual(3);
 })
 
 

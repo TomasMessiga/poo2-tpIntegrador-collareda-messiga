@@ -5,7 +5,7 @@ function Sistema(){
 
     var tiempo=0;
     this.i=0
-     
+    
     var dimensionesDeTrabajo=[0,0];
 
     this.establecerDimensiones=function(filas,columnas,mapa){
@@ -29,10 +29,6 @@ function Sistema(){
       }
       return calcularUrgencia(paquete,cantidadCentros)-paquete.tiempo;
     }
-
-
-
-
 
     this.incrementarTiempo=function(mapa){
 /** 
@@ -58,9 +54,7 @@ function Sistema(){
                 let paqueteDestinar=mapa.mapa[i][f].cola.push();
                 mapa.destinos[i].recibidos.push(paqueteAux);
               }
-
             }
-
             
           }
         }
@@ -80,8 +74,7 @@ function Sistema(){
             for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
               let prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
               if (f==0){
-                let paqueteAux=mapa.mapa[i][f].cola[j];
-         //       let vertical=mapa.desplazamientoVertical(paqueteAux[0]);  
+                let paqueteAux=mapa.mapa[i][f].cola[j];  
                 if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteAux)){
                   mapa.mapa[i][f].cola.splice(j,1);
                 }
@@ -101,16 +94,14 @@ function Sistema(){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola.splice(j,1);
                 mapa.destinos[i].recibidos.push(paqueteAux[0]);*/
-              } else {
+              } else if (prototipo){
 
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);
-                console.log(paqueteAux)
                 if (contAux<mapa.mapa[i][f].limiteProcesamiento  && prototipo){
-                  mapa.mapa[i][f].cola.splice(j,1,paqueteAux[0]);
+                  mapa.mapa[i][f].cola.splice(j,1,paqueteAux);
                   contAux++;
                   prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
                 } if (!prototipo){
-         //         let vertical=mapa.desplazamientoVertical(paqueteAux);  
                   let paqueteParaCola=mapa.mapa[i][f].cola[j];
                   if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
                     mapa.mapa[i][f].cola.splice(j,1);
@@ -125,7 +116,12 @@ function Sistema(){
                 */
               }
             }
+            if (true){
 
+            }
+            for (let k=0;false;k++){
+              
+            }
 
             
         //    mapa.mapa[i][f].cola=mapa.mapa[i][f].cola.filter(filtrarPorUndefined);
