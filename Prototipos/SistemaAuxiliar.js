@@ -74,7 +74,8 @@ function Sistema(){
             for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
               let prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
               if (f==0){
-                let paqueteAux=mapa.mapa[i][f].cola[j];  
+                let paqueteAux=mapa.mapa[i][f].cola[j];                  
+                let vertical=mapa.desplazamientoVertical(paqueteAux);
                 if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteAux)){
                   mapa.mapa[i][f].cola.splice(j,1);
                 }
