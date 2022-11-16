@@ -138,7 +138,7 @@ function Mapa(){
      
         if ((pos[1]+1)-(pos[0])==fila)
         { 
-            return [+1,0];
+            return [-1,0];
         }
         else (pos[0]==destino )
         {
