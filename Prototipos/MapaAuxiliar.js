@@ -130,7 +130,7 @@ function Mapa(){
     this.desplazamientoVertical=function(paquete){
         var pos=this.buscarCoordenadasPaquetePorID(paquete.id);
         var destino=paquete.destino-1;
-        var fila=limites[0] ;
+        var fila=limites[0] ; 
         var columna=limites[1];
         
         console.log("estoy en "+paquete)
