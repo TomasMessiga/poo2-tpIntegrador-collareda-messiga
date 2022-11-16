@@ -93,13 +93,13 @@ function Mapa(){
         for (let i=0;i<this.mapa.length;i++){
             for (let j=0;j<this.mapa[i].length;j++){
                 for (let k=0;k<this.mapa[i][j].cola.length;k++){
-                    if (this.mapa[i][j].cola[k].id===numero){console.log(this.mapa[i][j].cola[k]);
+                    if (this.mapa[i][j].cola[k].id===numero){
                         return [i,j,k];
                     }
                 }    
             }
         }
-        return undefined;
+        return [];
     }
 
 
