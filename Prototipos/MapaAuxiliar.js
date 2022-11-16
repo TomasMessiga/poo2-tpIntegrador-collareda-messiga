@@ -132,8 +132,10 @@ function Mapa(){
         var destino=paquete.destino-1;
         var fila=limites[0] ;
         var columna=limites[1];
-       console.log(("columna")+columna-(pos[1]+1))
-       console.log(("fila ")+destino+(pos[0]+1))
+        result1=columna-(pos[1]+1)
+        result2=+destino+(pos[0]+1)
+       console.log("columna"+result1)
+       console.log("fila "+result2)
      
         if (columna-(pos[1]+1)>=destino+(pos[0]+1))
         { 
