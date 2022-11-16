@@ -136,15 +136,12 @@ function Mapa(){
        console.log("columna: "+columna)
        console.log("fila: "+fila)
      
-        if (columna-(pos[0]+1)>=(fila-destino)-pos[0])
+        if (columna-(pos[0]+1)>=(destino)
         { 
             return [1,0];
         }
-        if (columna-(pos[1]+1)>=destino+(pos[0]-1) && 0<[pos[0]-1] )
+        if (pos[0]==destino )
         {
-            return [0,-1];
-        }
-        else{
             return [0,0];
         } 
 
