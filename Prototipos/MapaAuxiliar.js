@@ -95,7 +95,7 @@ function Mapa(){
         for (let i=0;i<this.mapa.length;i++){
             for (let j=0;j<this.mapa[i].length;j++){
                 for (let k=0;k<this.mapa[i][j].cola.length;k++){
-                    if (proto(this.mapa[i][j].cola)==proto(new Paquete())){
+                    if (proto(this.mapa[i][j].cola[k])==proto(new Paquete())){
                         if (this.mapa[i][j].cola[k].id===numero){
                             return [i,j,k];
                         }
