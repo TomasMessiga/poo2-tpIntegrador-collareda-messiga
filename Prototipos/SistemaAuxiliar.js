@@ -75,7 +75,8 @@ function Sistema(){
               let prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
               if (f==0){
                 let paqueteAux=mapa.mapa[i][f].cola[j];                  
-               // let vertical=mapa.desplazamientoVertical(paqueteAux);             //     console.log(vertical)
+               // let vertical=mapa.desplazamientoVertical(paqueteAux);
+                            //     console.log(vertical)
                 if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteAux)){
                   mapa.mapa[i][f].cola.splice(j,1);
                 } 
@@ -104,11 +105,12 @@ function Sistema(){
                   prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
                 } if (!prototipo){
                   let paqueteParaCola=mapa.mapa[i][f].cola[j];
-                  let vertical=0
-                  if (i==2){
-                    vertical=-1
-                  }                   console.log([i,f])
-                  if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
+                 p=0
+                  if(i==1){
+                    p=-1
+
+                 }
+                  if(mapa.mapa[i+p][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
                     mapa.mapa[i][f].cola.splice(j,1);
                   }
                 }
