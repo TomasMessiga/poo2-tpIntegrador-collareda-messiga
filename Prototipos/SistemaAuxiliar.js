@@ -101,7 +101,7 @@ function Sistema(){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola.splice(j,1);
                 mapa.destinos[i].recibidos.push(paqueteAux[0]);*/
-              } else if (prototipo){
+              } else if (prototipo){ 
 
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);
                 if (contAux<mapa.mapa[i][f].limiteProcesamiento  && prototipo){
