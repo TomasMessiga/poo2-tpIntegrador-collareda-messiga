@@ -140,7 +140,7 @@ function Mapa(){
         { 
             return [-1,0];
         }
-        else if (pos[0]==destino )
+        else 
         {
             return [0,0];
         } 
