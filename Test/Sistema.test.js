@@ -257,8 +257,8 @@ test("funcionamiento de sistema (mover de cola de salida a destino)",()=>{
     sistema.fabricarUnPaquete(mapa,"A",[1,"reloj","muy rapido"]);
     sistema.fabricarUnPaquete(mapa,"B",[1,"reloj","normal"]);
     sistema.incrementarTiempo(mapa);
-   /*  sistema.incrementarTiempo(mapa);
-    sistema.incrementarTiempo(mapa);
+   sistema.incrementarTiempo(mapa);
+   /* sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa);
     sistema.incrementarTiempo(mapa); */
