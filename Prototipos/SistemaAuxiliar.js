@@ -107,7 +107,7 @@ function Sistema(){
                 } if (!prototipo){
                   let paqueteParaCola=mapa.mapa[i][f].cola[j];
                   let vertical=mapa.desplazamientoVertical(paqueteParaCola[0]);                  //   console.log(vertical)
-                  if(mapa.mapa[(i+vertical[0])][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
+                  if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
                     mapa.mapa[i][f].cola.splice(j,1);
                   } else if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
                     mapa.mapa[i][f].cola.splice(j,1);
