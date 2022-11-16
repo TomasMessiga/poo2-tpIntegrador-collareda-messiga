@@ -107,8 +107,8 @@ function Sistema(){
                   let vertical=0
                   if (i==2){
                     vertical=-1
-                  }                   console.log(vertical)
-                  if(mapa.mapa[i+vertical][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
+                  }                   console.log([i,f])
+                  if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
                     mapa.mapa[i][f].cola.splice(j,1);
                   }
                 }
