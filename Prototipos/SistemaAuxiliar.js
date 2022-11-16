@@ -75,10 +75,8 @@ function Sistema(){
               let prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
               if (f==0){
                 let paqueteAux=mapa.mapa[i][f].cola[j];                  
-                let vertical=mapa.desplazamientoVertical(paqueteAux);// console.log(vertical+" origen cola sialida")
+                let vertical=mapa.desplazamientoVertical(paqueteAux); 
                 if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteAux)){
-                  mapa.mapa[i][f].cola.splice(j,1);
-                } else if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteAux)){
                   mapa.mapa[i][f].cola.splice(j,1);
                 }
               } else if (f==mapa.mapa[i].length-1){
@@ -106,10 +104,8 @@ function Sistema(){
                   prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
                 } if (!prototipo){
                   let paqueteParaCola=mapa.mapa[i][f].cola[j]; 
-                  let vertical=mapa.desplazamientoVertical(paqueteParaCola[0]);// console.log(vertical+" centros")
+                  let vertical=mapa.desplazamientoVertical(paqueteParaCola[0]);
                   if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola)){
-                    mapa.mapa[i][f].cola.splice(j,1);
-                  } else if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola)){
                     mapa.mapa[i][f].cola.splice(j,1);
                   }
                 }
