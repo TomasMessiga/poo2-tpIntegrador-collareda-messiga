@@ -77,6 +77,7 @@ function Mapa(){
 
 
     this.buscarPaquetePorID=function(numero){
+        
         for (let i=0;i<this.mapa.length;i++){
             for (let j=0;j<this.mapa[i].length;j++){
                 for (let k=0;k<this.mapa[i][j].cola.length;k++){
@@ -90,12 +91,20 @@ function Mapa(){
     }
     
     this.buscarCoordenadasPaquetePorID=function(numero){
+        const proto=Object.getPrototypeOf;
         for (let i=0;i<this.mapa.length;i++){
             for (let j=0;j<this.mapa[i].length;j++){
                 for (let k=0;k<this.mapa[i][j].cola.length;k++){
-                    if (this.mapa[i][j].cola[k].id===numero){
-                        return [i,j,k];
+                    if (proto(this.mapa[i][j].cola)==proto(new Paquete())){
+                        if (this.mapa[i][j].cola[k].id===numero){
+                            return [i,j,k];
+                        }
+                    } else {
+                        if ((this.mapa[i][j].cola[k][0]).id===numero){
+                            return [i,j,k];
+                        }
                     }
+
                 }    
             }
         }
