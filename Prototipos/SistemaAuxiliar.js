@@ -30,6 +30,10 @@ function Sistema(){
       return calcularUrgencia(paquete,cantidadCentros)-paquete.tiempo;
     }
 
+
+
+
+
     this.incrementarTiempo=function(mapa){
 /** 
       if (!(mapa===undefined)){        
@@ -54,7 +58,9 @@ function Sistema(){
                 let paqueteDestinar=mapa.mapa[i][f].cola.push();
                 mapa.destinos[i].recibidos.push(paqueteAux);
               }
+
             }
+
             
           }
         }
@@ -74,12 +80,11 @@ function Sistema(){
             for (let j=0;j<mapa.mapa[i][f].cola.length;j++){
               let prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
               if (f==0){
-                let paqueteAux=mapa.mapa[i][f].cola[j];                  
-               // let vertical=mapa.desplazamientoVertical(paqueteAux);
-                            //     console.log(vertical)
-                if(mapa.mapa[0][f+1].incorporarPaqueteCola(paqueteAux)){
+                let paqueteAux=mapa.mapa[i][f].cola[j];
+                let vertical=mapa.desplazamientoVertical(paqueteAux);  console.log(vertical)
+                if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteAux)){
                   mapa.mapa[i][f].cola.splice(j,1);
-                } 
+                }
               } else if (f==mapa.mapa[i].length-1){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);
                 if (contAux<mapa.mapa[i][f].limiteProcesamiento  && prototipo){
@@ -96,7 +101,7 @@ function Sistema(){
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);  
                 mapa.mapa[i][f].cola.splice(j,1);
                 mapa.destinos[i].recibidos.push(paqueteAux[0]);*/
-              } else {
+              } else if (prototipo){
 
                 let paqueteAux=mapa.mapa[i][f].procesarPaquete(mapa.mapa[i][f].cola[j]);
                 if (contAux<mapa.mapa[i][f].limiteProcesamiento  && prototipo){
@@ -104,9 +109,9 @@ function Sistema(){
                   contAux++;
                   prototipo=proto(mapa.mapa[i][f].cola[j])==proto(new Paquete());
                 } if (!prototipo){
+                  let vertical=mapa.desplazamientoVertical(paqueteAux);  console.log(vertical)
                   let paqueteParaCola=mapa.mapa[i][f].cola[j];
-                
-                  if(mapa.mapa[0][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
+                  if(mapa.mapa[i][f+1].incorporarPaqueteCola(paqueteParaCola[0])){
                     mapa.mapa[i][f].cola.splice(j,1);
                   }
                 }
