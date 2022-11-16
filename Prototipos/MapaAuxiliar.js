@@ -118,8 +118,8 @@ function Mapa(){
         return contadorPaquetes;
     }
 
-    this.desplazamientoVertical=function(paquete){
-        var pos=this.buscarCoordenadasPaquetePorID(paquete.id);return pos;
+    this.desplazamientoVertical=function(paquete){return paquete;
+        var pos=this.buscarCoordenadasPaquetePorID(paquete.id);
         var destino=paquete.destino-1;
         var fila=limites[0] ;
         var columna=limites[1];
