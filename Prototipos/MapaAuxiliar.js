@@ -141,7 +141,7 @@ function Mapa(){
         { 
             return [1,0];
         }
-        if (columna-(pos[1]+1)>=destino+(pos[0]-1))
+        if (columna-(pos[1]+1)>=destino+(pos[0]-1) && 0<[pos[0]-1] )
         {
             return [0,-1];
         }
